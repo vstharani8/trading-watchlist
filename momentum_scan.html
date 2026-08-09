@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Momentum Scan — 2026-08-09</title>
+<style>
+  :root {
+    --bg: #0d1117; --surface: #161b22; --border: #30363d;
+    --text: #c9d1d9; --muted: #8b949e; --accent: #58a6ff;
+    --green: #3fb950; --red: #f85149; --yellow: #d29922;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--text);
+    margin: 0; padding: 24px; line-height: 1.5;
+  }
+  .container { max-width: 1100px; margin: 0 auto; }
+  h1 {
+    border-bottom: 1px solid var(--border); padding-bottom: 12px;
+    margin-bottom: 8px; font-size: 22px;
+  }
+  .updated { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+  .stats {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px; margin: 16px 0 24px 0;
+  }
+  .stat {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 6px; padding: 10px 14px;
+  }
+  .stat-label { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .stat-value { color: var(--text); font-size: 18px; font-weight: 600; margin-top: 4px; }
+  h2.sector {
+    color: var(--accent); font-size: 16px; margin: 24px 0 8px 0;
+    padding-bottom: 4px; border-bottom: 1px solid var(--border);
+  }
+  table.stocks {
+    width: 100%; border-collapse: collapse; margin-bottom: 16px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
+    overflow: hidden;
+  }
+  th { background: var(--surface); color: var(--muted); text-align: left;
+       padding: 8px 12px; font-size: 12px; font-weight: 600;
+       border-bottom: 1px solid var(--border); }
+  td { padding: 6px 12px; font-size: 13px; border-bottom: 1px solid var(--border); }
+  tr:last-child td { border-bottom: none; }
+  tr:hover { background: rgba(88,166,255,0.05); }
+  .ticker { font-weight: 600; color: var(--accent); }
+  .pos { color: var(--green); }
+  .neg { color: var(--red); }
+  .status { font-size: 12px; }
+  footer { color: var(--muted); font-size: 12px; margin-top: 32px;
+            padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>📈 Momentum Scan — 2026-08-09</h1>
+<div class="updated">Auto-generated from cron (Mon-Fri 6 AM SGT). Source: Yahoo Finance.</div>
+
+<div class="stats">
+<div class="stat"><div class="stat-label">Total stocks</div><div class="stat-value">33</div></div><div class="stat"><div class="stat-label">TIGHT (actionable)</div><div class="stat-value">2</div></div><div class="stat"><div class="stat-label">Pullback</div><div class="stat-value">1</div></div><div class="stat"><div class="stat-label">Early entry</div><div class="stat-value">0</div></div><div class="stat"><div class="stat-label">Extended</div><div class="stat-value">30</div></div><div class="stat"><div class="stat-label">Universe scanned</div><div class="stat-value">2,998</div></div><div class="stat"><div class="stat-label">S&P 500 change</div><div class="stat-value">+0.62%</div></div>
+</div>
+
+<h2 class="sector">Commercial Services</h2>
+<table class="stocks">
+<thead>
+<tr><th>Ticker</th><th>RS</th><th>Price</th><th>1M%</th><th>→EMA10</th><th>Status</th></tr>
+</thead>
+<tbody>
+<tr><td class="ticker">RHI</td><td>85.2</td><td>$42.74</td><td class="pos">+25.3%</td><td class="pos">+6.7%</td><td class="status">⚠️ EXT</td></tr>
+</tbody>
+</table>
+<h2 class="sector">Consumer Services</h2>
+<table class="stocks">
+<thead>
+<tr><th>Ticker</th><th>RS</th><th>Price</th><th>1M%</th><th>→EMA10</th><th>Status</th></tr>
+</thead>
+<tbody>
+<tr><td class="ticker">AMC</td><td>88.6</td><td>$2.59</td><td class="pos">+54.2%</td><td class="neg">-0.5%</td><td class="status">🔥 TIGHT</td></tr>
+</tbody>
+</table>
+<h2 class="sector">Electronic Technology</h2>
+<table class="stocks">
+<thead>
+<tr><th>Ticker</th><th>RS</th><th>Price</th><th>1M%</th><th>→EMA10</th><th>Status</th></tr>
+</thead>
+<tbody>
+<tr><td class="ticker">HPE</td><td>97.3</td><td>$53.22</td><td class="pos">+22.9%</td><td class="pos">+5.5%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">AMBA</td><td>78.4</td><td>$86.78</td><td class="pos">+21.2%</td><td class="pos">+8.7%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">TSEM</td><td>98.4</td><td>$252.49</td><td class="pos">+20.1%</td><td class="pos">+10.2%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">AEHR</td><td>99.4</td><td>$103.07</td><td class="pos">+57.7%</td><td class="pos">+11.3%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">UMAC</td><td>97.4</td><td>$26.11</td><td class="pos">+30.6%</td><td class="pos">+12.2%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">AAOI</td><td>99.2</td><td>$135.63</td><td class="pos">+20.0%</td><td class="pos">+16.4%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">COHR</td><td>96.4</td><td>$379.13</td><td class="pos">+21.5%</td><td class="pos">+21.0%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">NLST</td><td>0.0</td><td>$3.92</td><td class="pos">+35.2%</td><td class="pos">+25.5%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">RDW</td><td>84.7</td><td>$13.59</td><td class="pos">+32.8%</td><td class="pos">+28.4%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">AEVA</td><td>96.5</td><td>$26.62</td><td class="pos">+26.7%</td><td class="pos">+29.5%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">AXTI</td><td>100.0</td><td>$88.58</td><td class="pos">+50.7%</td><td class="pos">+34.1%</td><td class="status">⚠️ EXT</td></tr>
+</tbody>
+</table>
+<h2 class="sector">Energy Minerals</h2>
+<table class="stocks">
+<thead>
+<tr><th>Ticker</th><th>RS</th><th>Price</th><th>1M%</th><th>→EMA10</th><th>Status</th></tr>
+</thead>
+<tbody>
+<tr><td class="ticker">PBF</td><td>95.6</td><td>$61.71</td><td class="pos">+23.3%</td><td class="neg">-3.2%</td><td class="status">↩ PULLBACK</td></tr>
+</tbody>
+</table>
+<h2 class="sector">Health Technology</h2>
+<table class="stocks">
+<thead>
+<tr><th>Ticker</th><th>RS</th><th>Price</th><th>1M%</th><th>→EMA10</th><th>Status</th></tr>
+</thead>
+<tbody>
+<tr><td class="ticker">ADPT</td><td>93.8</td><td>$24.93</td><td class="pos">+24.0%</td><td class="pos">+5.4%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">AMLX</td><td>95.9</td><td>$22.82</td><td class="pos">+25.7%</td><td class="pos">+7.2%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">TXG</td><td>99.1</td><td>$52.03</td><td class="pos">+40.6%</td><td class="pos">+9.1%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">BFLY</td><td>99.6</td><td>$8.83</td><td class="pos">+20.6%</td><td class="pos">+9.6%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">PGEN</td><td>97.9</td><td>$7.23</td><td class="pos">+33.9%</td><td class="pos">+12.4%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">IOVA</td><td>97.5</td><td>$6.34</td><td class="pos">+46.4%</td><td class="pos">+24.4%</td><td class="status">⚠️ EXT</td></tr>
+</tbody>
+</table>
+<h2 class="sector">Non-Energy Minerals</h2>
+<table class="stocks">
+<thead>
+<tr><th>Ticker</th><th>RS</th><th>Price</th><th>1M%</th><th>→EMA10</th><th>Status</th></tr>
+</thead>
+<tbody>
+<tr><td class="ticker">TGB</td><td>90.5</td><td>$8.32</td><td class="pos">+30.0%</td><td class="pos">+8.8%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">SVM</td><td>85.7</td><td>$11.45</td><td class="pos">+23.7%</td><td class="pos">+11.5%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">EGO</td><td>70.6</td><td>$37.92</td><td class="pos">+22.2%</td><td class="pos">+11.9%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">HBM</td><td>92.6</td><td>$27.61</td><td class="pos">+32.1%</td><td class="pos">+12.0%</td><td class="status">⚠️ EXT</td></tr>
+</tbody>
+</table>
+<h2 class="sector">Process Industries</h2>
+<table class="stocks">
+<thead>
+<tr><th>Ticker</th><th>RS</th><th>Price</th><th>1M%</th><th>→EMA10</th><th>Status</th></tr>
+</thead>
+<tbody>
+<tr><td class="ticker">LWLG</td><td>97.3</td><td>$8.11</td><td class="pos">+22.3%</td><td class="pos">+14.0%</td><td class="status">⚠️ EXT</td></tr>
+</tbody>
+</table>
+<h2 class="sector">Producer Manufacturing</h2>
+<table class="stocks">
+<thead>
+<tr><th>Ticker</th><th>RS</th><th>Price</th><th>1M%</th><th>→EMA10</th><th>Status</th></tr>
+</thead>
+<tbody>
+<tr><td class="ticker">LITE</td><td>99.3</td><td>$890.17</td><td class="pos">+29.2%</td><td class="pos">+11.5%</td><td class="status">⚠️ EXT</td></tr>
+</tbody>
+</table>
+<h2 class="sector">Retail Trade</h2>
+<table class="stocks">
+<thead>
+<tr><th>Ticker</th><th>RS</th><th>Price</th><th>1M%</th><th>→EMA10</th><th>Status</th></tr>
+</thead>
+<tbody>
+<tr><td class="ticker">W</td><td>85.6</td><td>$106.60</td><td class="pos">+20.4%</td><td class="pos">+7.4%</td><td class="status">⚠️ EXT</td></tr>
+</tbody>
+</table>
+<h2 class="sector">Technology Services</h2>
+<table class="stocks">
+<thead>
+<tr><th>Ticker</th><th>RS</th><th>Price</th><th>1M%</th><th>→EMA10</th><th>Status</th></tr>
+</thead>
+<tbody>
+<tr><td class="ticker">FSLY</td><td>97.5</td><td>$22.96</td><td class="pos">+26.5%</td><td class="pos">+1.0%</td><td class="status">🔥 TIGHT</td></tr>
+<tr><td class="ticker">ZETA</td><td>88.8</td><td>$26.64</td><td class="pos">+25.4%</td><td class="pos">+11.1%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">FIVN</td><td>91.9</td><td>$33.99</td><td class="pos">+40.6%</td><td class="pos">+17.8%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">U</td><td>90.8</td><td>$43.00</td><td class="pos">+48.8%</td><td class="pos">+20.0%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">CRSR</td><td>97.1</td><td>$14.35</td><td class="pos">+64.7%</td><td class="pos">+26.6%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">APPS</td><td>99.4</td><td>$14.34</td><td class="pos">+43.1%</td><td class="pos">+28.8%</td><td class="status">⚠️ EXT</td></tr>
+</tbody>
+</table>
+
+
+<footer>
+Momentum scan filter: Perf.W > 20% &middot; EMA50 &gt; EMA200 &middot; AvgVol &gt; 2M &middot; ADR &gt; 5% &middot; MCap &gt; 1B
+<br>Status legend: 🔥 TIGHT (actionable) &middot; ↩ PULLBACK &middot; 🟡 EARLY &middot; ⚠️ EXTENDED
+</footer>
+
+</div>
+</body>
+</html>
