@@ -1,0 +1,3 @@
+# Large audit files can be regenerated
+*.log
+.DS_Store
