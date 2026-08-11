@@ -1,0 +1,160 @@
+{
+  "date": "2026-07-23",
+  "strong_sectors": [
+    "Commercial Services",
+    "Energy Minerals",
+    "Health Services",
+    "Health Technology"
+  ],
+  "watchlist": [
+    {
+      "source": "compression",
+      "ticker": "DYN",
+      "setup": "Tight",
+      "rs": 92.0,
+      "score": 63.4,
+      "price": 23.21,
+      "chg": -2.6,
+      "dist10": -0.6,
+      "dist20": 2.6,
+      "ema_spread": 3.2,
+      "adr": 5.9,
+      "tier": "tier2",
+      "sector": "Health Technology",
+      "industry": "Biotechnology",
+      "hard_cut_count": 1,
+      "candle_signature": {
+        "verdict": "neutral",
+        "close_pos_pct": 91.5,
+        "lower_wick": 0.37,
+        "upper_wick": 0.14,
+        "body_pct": 68.9
+      },
+      "_rank_score": 95.6,
+      "_reasons": [
+        "strong sector (Health Technology)",
+        "compression Tight",
+        "RS 92 sweet spot",
+        "d10 -0.6% tight"
+      ],
+      "_extension_watch": false,
+      "_strong_pullback": false,
+      "_setup_tier": "CLEAN",
+      "_size_multiplier": 1.0,
+      "_decision": "BUY",
+      "_decision_label": "\u2713SP clean",
+      "_decision_reason": "\u2713SP clean + neutral + dist10 -0.6% in entry zone",
+      "_down_hc_count": 1,
+      "_unrecovered_down_hc": 0,
+      "_recovered_down_hc": 1,
+      "_recovery_map": {
+        "20": true
+      },
+      "_up_hc_count": 0,
+      "_ema20_zone": true,
+      "_dist20": 2.51,
+      "_ema20": 22.64,
+      "_ema20_zone_band": "E20\u2713 \u00b12.5%",
+      "_deduped_count": 1
+    },
+    {
+      "source": "momentum",
+      "ticker": "ADPT",
+      "setup": "TIGHT",
+      "rs": 91.7,
+      "1M": 25.4,
+      "price": 21.95,
+      "chg": -2.79,
+      "dist10": 0.2,
+      "dist20": 4.2,
+      "adr": 5.9,
+      "sector": "Health Technology",
+      "industry": "Biotechnology",
+      "hard_cut_count": 3,
+      "candle_signature": {
+        "verdict": "shakeout-and-recover",
+        "close_pos_pct": 36.9,
+        "lower_wick": 0.41,
+        "upper_wick": 0.4,
+        "body_pct": 27.0
+      },
+      "_rank_score": 90.0,
+      "_reasons": [
+        "strong sector (Health Technology)",
+        "momentum TIGHT",
+        "RS 92 sweet spot",
+        "d10 +0.2% lifted",
+        "1M +25% ok"
+      ],
+      "_extension_watch": false,
+      "_strong_pullback": false,
+      "_setup_tier": "CLEAN",
+      "_size_multiplier": 1.0,
+      "_decision": "BUY",
+      "_decision_label": "\u2713SP shallow",
+      "_decision_reason": "\u2713SP shallow + shakeout-and-recover + dist10 +0.2% in entry zone",
+      "_down_hc_count": 1,
+      "_unrecovered_down_hc": 0,
+      "_recovered_down_hc": 1,
+      "_recovery_map": {
+        "11": true
+      },
+      "_up_hc_count": 2,
+      "_ema20_zone": true,
+      "_dist20": 3.76,
+      "_ema20": 21.15,
+      "_ema20_zone_band": "E20\u2713 \u00b13.8%",
+      "_deduped_count": 1
+    },
+    {
+      "source": "momentum",
+      "ticker": "ERAS",
+      "setup": "TIGHT",
+      "rs": 99.9,
+      "1M": 39.6,
+      "price": 19.51,
+      "chg": 0.67,
+      "dist10": 2.3,
+      "dist20": 7.4,
+      "adr": 6.7,
+      "sector": "Health Technology",
+      "industry": "Pharmaceuticals: Major",
+      "hard_cut_count": 5,
+      "candle_signature": {
+        "verdict": "neutral",
+        "close_pos_pct": 68.8,
+        "lower_wick": 0.079,
+        "upper_wick": 0.295,
+        "body_pct": 60.4
+      },
+      "_rank_score": 30.0,
+      "_reasons": [
+        "strong sector (Health Technology)",
+        "momentum TIGHT",
+        "RS 100 mild extension \u26a0",
+        "d10 +2.3% lifted",
+        "1M +40% ok"
+      ],
+      "_extension_watch": true,
+      "_strong_pullback": false,
+      "_setup_tier": "CHOP",
+      "_size_multiplier": 0.5,
+      "_decision": "WATCH",
+      "_decision_label": "WATCH",
+      "_decision_reason": "tier CHOP, sig neutral",
+      "_down_hc_count": 1,
+      "_unrecovered_down_hc": 0,
+      "_recovered_down_hc": 1,
+      "_recovery_map": {
+        "20": true
+      },
+      "_up_hc_count": 4,
+      "_ema20_zone": false,
+      "_dist20": 7.23,
+      "_ema20": 18.19,
+      "_ema20_zone_band": "E20\u2717 +7.2%",
+      "_deduped_count": 1
+    }
+  ],
+  "dropped_count": 19
+}

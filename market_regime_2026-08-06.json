@@ -1,0 +1,26 @@
+{
+  "date": "2026-08-06",
+  "updated_utc": "02:05",
+  "regime": "LONG",
+  "signal": "\ud83d\udfe2 LONG \u2014 Both indices above EMA10/20, no distribution",
+  "spy": {
+    "price": 769.79,
+    "change_pct": -0.19965514111989385,
+    "above_ema10": true,
+    "above_ema20": true,
+    "ema10": 753.292637726146,
+    "ema20": 749.2258284267454,
+    "range_pct": 96.3,
+    "max_consec_down": 1
+  },
+  "qqq": {
+    "price": 717.3,
+    "change_pct": -0.9048836084824298,
+    "above_ema10": true,
+    "above_ema20": true,
+    "ema10": 699.8301818423679,
+    "ema20": 701.1373881842516,
+    "range_pct": 89.5,
+    "max_consec_down": 1
+  }
+}

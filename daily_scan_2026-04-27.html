@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Swing Scan — Monday, Apr 27, 2026</title>
+<style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface2: #1c2128;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --green: #3fb950;
+    --green-dim: #1a3a24;
+    --red: #f85149;
+    --red-dim: #3a1a1a;
+    --yellow: #d29922;
+    --yellow-dim: #3a2a0a;
+    --blue: #58a6ff;
+    --purple: #bc8cff;
+    --orange: #ffa657;
+    --accent: #238636;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    padding: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 16px;
+  }
+  .header h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.3px;
+  }
+  .header .subtitle {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 3px;
+  }
+  .timestamp {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    text-align: right;
+  }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+  }
+  .card-title {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--muted);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .regime-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+  }
+  .regime-cash { background: var(--red-dim); color: var(--red); border: 1px solid var(--red); }
+  .regime-long { background: var(--green-dim); color: var(--green); border: 1px solid var(--green); }
+
+  .stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+  }
+  .stat-row:last-child { border-bottom: none; }
+  .stat-label { color: var(--muted); }
+  .stat-val { font-family: 'JetBrains Mono', monospace; font-weight: 600; }
+
+  .progress-wrap { margin-top: 3px; height: 4px; background: var(--border); border-radius: 2px; }
+  .progress-fill { height: 100%; border-radius: 2px; }
+
+  .spx-strip {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .spx-chip {
+    flex: 1;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .spx-chip .sym { font-size: 12px; font-weight: 700; color: var(--muted); margin-bottom: 4px; }
+  .spx-chip .val { font-size: 22px; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+  .spx-chip .perfs { display: flex; gap: 10px; margin-top: 4px; font-size: 11px; color: var(--muted); }
+  .spx-chip .perfs span { font-family: 'JetBrains Mono', monospace; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  thead th {
+    text-align: left;
+    padding: 6px 10px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--muted);
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+  thead th.r { text-align: right; }
+  tbody tr { border-bottom: 1px solid #1e242c; }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: var(--surface2); }
+  tbody td { padding: 7px 10px; }
+  tbody td.r { text-align: right; font-family: 'JetBrains Mono', monospace; }
+  tbody td.ticker { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 13px; color: var(--blue); }
+  tbody td.mono { font-family: 'JetBrains Mono', monospace; }
+  a.ticker-link { text-decoration: none; color: inherit; }
+  a.ticker-link:hover { color: #79c0ff; text-decoration: underline; }
+
+  .green { color: var(--green); }
+  .red { color: var(--red); }
+  .yellow { color: var(--yellow); }
+  .muted { color: var(--muted); }
+  .orange { color: var(--orange); }
+  .purple { color: var(--purple); }
+
+  .tier-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    background: var(--surface2);
+    border-radius: 6px;
+    margin: 12px 0 0 0;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 1px 7px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+  }
+  .badge-t1 { background: #1f3a1a; color: #3fb950; border: 1px solid #238636; }
+  .badge-t2 { background: #2a2510; color: #d29922; border: 1px solid #7d6514; }
+  .badge-t3 { background: #1a2038; color: #58a6ff; border: 1px solid #1f6feb; }
+  .badge-setup { background: var(--surface2); color: var(--purple); border: 1px solid #4a3a6e; font-size: 10px; padding: 1px 6px; border-radius: 4px; }
+  .badge-coil { background: #1a2038; color: var(--blue); border: 1px solid #1f6feb; font-size: 10px; padding: 1px 6px; border-radius: 4px; }
+  .badge-under { background: #1f3a1a; color: var(--green); border: 1px solid #238636; font-size: 10px; padding: 1px 6px; border-radius: 4px; }
+
+  .pick-card {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .pick-card .pick-left .ticker { font-size: 16px; font-weight: 700; font-family: 'JetBrains Mono', monospace; color: var(--blue); }
+  .pick-card .pick-left .sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .pick-card .pick-right { text-align: right; }
+  .pick-card .pick-right .price { font-size: 15px; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+  .pick-card .pick-right .levels { font-size: 11px; color: var(--muted); margin-top: 3px; font-family: 'JetBrains Mono', monospace; }
+
+  .warning-banner {
+    background: #2a1a0a;
+    border: 1px solid var(--yellow);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: var(--yellow);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .warning-banner .icon { font-size: 18px; }
+  .warning-banner strong { font-size: 13px; }
+
+  .section-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 20px 0 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  .index-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+  }
+  .index-row:last-child { border-bottom: none; }
+  .ema-check { display: flex; gap: 6px; font-size: 11px; margin-top: 2px; }
+  .ema-chip {
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+  }
+  .ema-above { background: var(--green-dim); color: var(--green); }
+  .ema-below { background: var(--red-dim); color: var(--red); }
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1>📊 Daily Swing Scan</h1>
+    <div class="subtitle">EMA Undercut & Rally · IBD RS Strategy</div>
+  </div>
+  <div class="timestamp">
+    Monday, Apr 27, 2026<br>
+    Pre-market / EOD snapshot
+  </div>
+</div>
+
+
+<div class="warning-banner">
+  <span class="icon">⚠️</span>
+  <div>
+    <strong>CASH — Do not enter new long positions.</strong>
+    SPY &amp; QQQ both below EMA10 and EMA20, sitting in the lower half of their 10-day range with 2 consecutive down days. Wait for regime to flip LONG before acting on any setup.
+  </div>
+</div>
+
+<div class="spx-strip">
+  <div class="spx-chip">
+    <div class="sym">SPX</div>
+    <div class="val green">+0.80%</div>
+    <div class="perfs">
+      <span>1W <span class="green">+1.28%</span></span>
+      <span>1M <span class="green">+8.59%</span></span>
+      <span>RS Universe: 2,999 stocks</span>
+    </div>
+  </div>
+  <div class="spx-chip">
+    <div class="sym">SPY</div>
+    <div class="val green">$713.94 <span style="font-size:14px">+0.77%</span></div>
+    <div class="ema-check">
+      <span class="ema-chip ema-above">EMA10 +1.74%</span>
+      <span class="ema-chip ema-above">EMA20 +3.43%</span>
+    </div>
+    <div class="perfs" style="margin-top:5px"><span>Range pos: <span class="green">108.6%</span> of 10-day</span> <span>2 consec ↑</span></div>
+  </div>
+  <div class="spx-chip">
+    <div class="sym">QQQ</div>
+    <div class="val green">$663.88 <span style="font-size:14px">+1.91%</span></div>
+    <div class="ema-check">
+      <span class="ema-chip ema-above">EMA10 +3.37%</span>
+      <span class="ema-chip ema-above">EMA20 +5.89%</span>
+    </div>
+    <div class="perfs" style="margin-top:5px"><span>Range pos: <span class="green">119.9%</span> of 10-day</span> <span>2 consec ↑</span></div>
+  </div>
+</div>
+
+<div class="grid-2">
+  <div class="card">
+    <div class="card-title">📉 Market Breadth</div>
+    
+    <div class="stat-row">
+      <span class="stat-label">Advancing / Declining</span>
+      <span class="stat-val green">50.3% / 45.1%</span>
+    </div>
+    <div class="progress-wrap" style="margin-bottom:8px">
+      <div class="progress-fill" style="width:50.3%;background:#3fb950"></div>
+    </div>
+
+    <div class="stat-row">
+      <span class="stat-label">New Highs / New Lows</span>
+      <span class="stat-val green">69.6% / 30.4%</span>
+    </div>
+    <div class="progress-wrap" style="margin-bottom:8px">
+      <div class="progress-fill" style="width:69.6%;background:#3fb950"></div>
+    </div>
+
+    <div class="stat-row">
+      <span class="stat-label">Above SMA 50</span>
+      <span class="stat-val yellow">59.0%</span>
+    </div>
+    <div class="progress-wrap" style="margin-bottom:8px">
+      <div class="progress-fill" style="width:59.0%;background:#d29922"></div>
+    </div>
+
+    <div class="stat-row">
+      <span class="stat-label">Above SMA 200</span>
+      <span class="stat-val yellow">50.3%</span>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-fill" style="width:50.3%;background:#d29922"></div>
+    </div>
+
+    <div style="margin-top:12px;padding:8px;background:#3a2a0a;border-radius:5px;font-size:12px;color:#d29922;text-align:center;font-weight:600;">
+      🟡 MIXED — Neutral Breadth
+    </div>
+    
+  </div>
+
+  <div class="card">
+    <div class="card-title">🏭 Sector Strength (Today's Leaders)</div>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Sector</th>
+          <th>ETF</th>
+          <th class="r">1D %</th>
+          <th class="r">1W %</th>
+          <th class="r">1M %</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="muted">1</td>
+          <td>N/A</td>
+          <td class="mono muted">—</td>
+          <td class="r red">—</td>
+          <td class="r red">—</td>
+          <td class="r red">—</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<div class="section-label">🔍 Stalk List — CASH Regime · Do not enter · Watch for regime flip</div>
+
+<div class="tier-header">
+  <span>🥇</span>
+  <span style="color:var(--green)">TIER 1 — Best Setups</span>
+  <span class="badge badge-t1">1 stocks</span>
+  <span style="font-size:11px;color:var(--muted);margin-left:4px">Score ≥ 70 · 🌀 Tight 10/20 &amp; 💎 EMA10 Hold only · Extended moved to Tier 2</span>
+</div>
+
+<div class="card" style="margin-top:8px;">
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Ticker</th>
+        <th class="r">RS</th>
+        <th class="r">Price</th>
+        <th class="r">Day%</th>
+        <th class="r">→EMA10</th>
+        <th class="r">→EMA20</th>
+        <th class="r">Weekly</th>
+        <th class="r">Score</th>
+        <th>Setup</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="muted">1</td>
+        <td><a class="ticker-link" href="https://www.tradingview.com/chart/?symbol=DOW" target="_blank">DOW</a></td>
+        <td class="r yellow">80.9</td>
+        <td class="r mono">$38.63</td>
+        <td class="r muted">—</td>
+        <td class="r green">+0.3%</td>
+        <td class="r green">+0.4%</td>
+        <td class="r yellow">+6.2%</td>
+        <td class="r green">75</td>
+        <td><span class="badge badge-coil">🌀 Tight 10/20</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div style="margin-top:24px;padding-top:14px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:11px;color:var(--muted);">
+  <span>📋 Strategy: EMA Undercut & Rally · IBD RS Rating · Strong Start (SS/SSH/G2) confirmation required</span>
+  <span>Wait for CASH → LONG regime flip before acting</span>
+</div>
+
+</body>
+</html>

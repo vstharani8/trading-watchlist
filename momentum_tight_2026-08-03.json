@@ -1,0 +1,31 @@
+{
+  "date": "2026-08-03",
+  "spx_chg": 0.7,
+  "universe": 2999,
+  "count": 1,
+  "stocks": [
+    {
+      "ticker": "TXG",
+      "close": 47.27,
+      "chg": -4.37,
+      "1M": 22.7,
+      "3M": 114.4,
+      "6M": 129.7,
+      "1Y": 245.2,
+      "ema10": 46.54,
+      "ema20": 44.25,
+      "ema50": 38.01,
+      "ema200": 26.05,
+      "dist10": 1.6,
+      "dist20": 6.8,
+      "dist50": 24.4,
+      "adr": 6.1,
+      "rvol": 1.14,
+      "avgvol_m": 2.6,
+      "mcap_b": 6.0,
+      "sector": "Health Technology",
+      "industry": "Biotechnology",
+      "rs": 98.7
+    }
+  ]
+}
