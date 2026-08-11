@@ -1,0 +1,26 @@
+{
+  "date": "2026-07-29",
+  "updated_utc": "02:21",
+  "regime": "CASH",
+  "signal": "\u26a0\ufe0f TREND BROKEN \u2014 One or both indices below EMA20",
+  "spy": {
+    "price": 740.86,
+    "change_pct": 0.2394836894018295,
+    "above_ema10": false,
+    "above_ema20": false,
+    "ema10": 743.099516452003,
+    "ema20": 744.2227494244071,
+    "range_pct": 16.1,
+    "max_consec_down": 1
+  },
+  "qqq": {
+    "price": 675.49,
+    "change_pct": -0.9719697413944755,
+    "above_ema10": false,
+    "above_ema20": false,
+    "ema10": 694.0522727355384,
+    "ema20": 702.8000080503219,
+    "range_pct": -17.6,
+    "max_consec_down": 4
+  }
+}

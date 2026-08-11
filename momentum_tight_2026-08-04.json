@@ -1,0 +1,31 @@
+{
+  "date": "2026-08-04",
+  "spx_chg": 1.48,
+  "universe": 2999,
+  "count": 1,
+  "stocks": [
+    {
+      "ticker": "PBF",
+      "close": 67.91,
+      "chg": -6.05,
+      "1M": 41.1,
+      "3M": 51.4,
+      "6M": 95.3,
+      "1Y": 199.8,
+      "ema10": 65.67,
+      "ema20": 61.32,
+      "ema50": 53.41,
+      "ema200": 41.81,
+      "dist10": 3.4,
+      "dist20": 10.7,
+      "dist50": 27.2,
+      "adr": 6.0,
+      "rvol": 1.43,
+      "avgvol_m": 3.7,
+      "mcap_b": 8.0,
+      "sector": "Energy Minerals",
+      "industry": "Oil Refining/Marketing",
+      "rs": 97.0
+    }
+  ]
+}

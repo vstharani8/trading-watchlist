@@ -1,0 +1,295 @@
+{
+  "timestamp": "2026-04-18 15:04",
+  "spx_chg": 1.2037566979914223,
+  "total_universe": 2997,
+  "sector_rotation": [
+    {
+      "sector": "XLI",
+      "day_pct": 1.87
+    },
+    {
+      "sector": "XLK",
+      "day_pct": 1.53
+    },
+    {
+      "sector": "XLV",
+      "day_pct": 1.49
+    },
+    {
+      "sector": "XLF",
+      "day_pct": 0.77
+    },
+    {
+      "sector": "XLE",
+      "day_pct": -2.76
+    }
+  ],
+  "priority": [
+    {
+      "ticker": "LITE",
+      "rs": 99.7,
+      "price": 894.07,
+      "chg": 0.32,
+      "dist10": 5.0,
+      "dist20": 10.8,
+      "adr": 7.8,
+      "setup": "\ud83d\udd25",
+      "sector": "Producer Manufacturing"
+    },
+    {
+      "ticker": "GLW",
+      "rs": 96.8,
+      "price": 164.38,
+      "chg": -1.02,
+      "dist10": 0.9,
+      "dist20": 6.0,
+      "adr": 5.5,
+      "setup": "\ud83d\udd25",
+      "sector": "Electronic Technology"
+    },
+    {
+      "ticker": "DOCN",
+      "rs": 95.3,
+      "price": 85.63,
+      "chg": -3.17,
+      "dist10": 3.4,
+      "dist20": 5.4,
+      "adr": 8.8,
+      "setup": "\ud83d\udd25",
+      "sector": "Technology Services"
+    },
+    {
+      "ticker": "MRNA",
+      "rs": 90.6,
+      "price": 53.72,
+      "chg": -1.76,
+      "dist10": 2.3,
+      "dist20": 3.5,
+      "adr": 5.3,
+      "setup": "\ud83d\udd25",
+      "sector": "Health Technology"
+    }
+  ],
+  "full_rankings": [
+    {
+      "ticker": "AXTI",
+      "rs": 100.0,
+      "price": 82.56,
+      "chg": 0.95,
+      "1Y": 6896.6,
+      "dist10": 22.7,
+      "dist20": 35.8,
+      "adr": 11.6,
+      "setup": ""
+    },
+    {
+      "ticker": "SNDK",
+      "rs": 99.9,
+      "price": 920.99,
+      "chg": 0.17,
+      "1Y": 2800.8,
+      "dist10": 7.2,
+      "dist20": 16.0,
+      "adr": 6.5,
+      "setup": "\u26a1"
+    },
+    {
+      "ticker": "ERAS",
+      "rs": 99.7,
+      "price": 19.01,
+      "chg": 4.28,
+      "1Y": 1538.8,
+      "dist10": 8.1,
+      "dist20": 13.6,
+      "adr": 6.9,
+      "setup": "\u26a1"
+    },
+    {
+      "ticker": "LITE",
+      "rs": 99.7,
+      "price": 894.07,
+      "chg": 0.32,
+      "1Y": 1611.1,
+      "dist10": 5.0,
+      "dist20": 10.8,
+      "adr": 7.8,
+      "setup": "\ud83d\udd25"
+    },
+    {
+      "ticker": "AAOI",
+      "rs": 99.7,
+      "price": 159.42,
+      "chg": 1.33,
+      "1Y": 1427.0,
+      "dist10": 13.6,
+      "dist20": 27.2,
+      "adr": 8.9,
+      "setup": ""
+    },
+    {
+      "ticker": "LWLG",
+      "rs": 99.6,
+      "price": 12.54,
+      "chg": 1.37,
+      "1Y": 1286.2,
+      "dist10": 16.4,
+      "dist20": 34.1,
+      "adr": 9.2,
+      "setup": ""
+    },
+    {
+      "ticker": "AEHR",
+      "rs": 99.5,
+      "price": 83.86,
+      "chg": 3.72,
+      "1Y": 922.7,
+      "dist10": 21.2,
+      "dist20": 42.2,
+      "adr": 8.1,
+      "setup": ""
+    },
+    {
+      "ticker": "PL",
+      "rs": 99.4,
+      "price": 38.48,
+      "chg": -3.53,
+      "1Y": 1106.3,
+      "dist10": 8.1,
+      "dist20": 14.7,
+      "adr": 8.7,
+      "setup": "\u26a1"
+    },
+    {
+      "ticker": "WDC",
+      "rs": 99.3,
+      "price": 372.52,
+      "chg": 2.99,
+      "1Y": 929.6,
+      "dist10": 7.6,
+      "dist20": 14.4,
+      "adr": 5.5,
+      "setup": "\u26a1"
+    },
+    {
+      "ticker": "BE",
+      "rs": 99.3,
+      "price": 207.86,
+      "chg": -1.05,
+      "1Y": 1068.4,
+      "dist10": 12.2,
+      "dist20": 22.2,
+      "adr": 7.8,
+      "setup": ""
+    },
+    {
+      "ticker": "CAR",
+      "rs": 99.2,
+      "price": 493.86,
+      "chg": 10.0,
+      "1Y": 566.0,
+      "dist10": 37.6,
+      "dist20": 75.8,
+      "adr": 8.4,
+      "setup": ""
+    },
+    {
+      "ticker": "ALM",
+      "rs": 99.2,
+      "price": 23.42,
+      "chg": 2.85,
+      "1Y": 688.6,
+      "dist10": 16.2,
+      "dist20": 24.8,
+      "adr": 7.7,
+      "setup": ""
+    },
+    {
+      "ticker": "WULF",
+      "rs": 98.9,
+      "price": 20.64,
+      "chg": 6.89,
+      "1Y": 797.4,
+      "dist10": 9.4,
+      "dist20": 16.6,
+      "adr": 7.1,
+      "setup": "\u26a1"
+    },
+    {
+      "ticker": "RLAY",
+      "rs": 98.7,
+      "price": 16.76,
+      "chg": 4.03,
+      "1Y": 554.7,
+      "dist10": 13.5,
+      "dist20": 25.8,
+      "adr": 5.8,
+      "setup": ""
+    },
+    {
+      "ticker": "STX",
+      "rs": 98.7,
+      "price": 547.75,
+      "chg": 3.0,
+      "1Y": 645.3,
+      "dist10": 8.5,
+      "dist20": 16.0,
+      "adr": 5.1,
+      "setup": "\u26a1"
+    },
+    {
+      "ticker": "FSLY",
+      "rs": 98.5,
+      "price": 24.56,
+      "chg": -1.29,
+      "1Y": 361.7,
+      "dist10": -4.4,
+      "dist20": -5.7,
+      "adr": 12.3,
+      "setup": ""
+    },
+    {
+      "ticker": "COHR",
+      "rs": 98.5,
+      "price": 345.02,
+      "chg": 5.19,
+      "1Y": 519.2,
+      "dist10": 13.4,
+      "dist20": 20.9,
+      "adr": 6.3,
+      "setup": ""
+    },
+    {
+      "ticker": "VIAV",
+      "rs": 98.4,
+      "price": 44.135,
+      "chg": 7.23,
+      "1Y": 344.9,
+      "dist10": 9.2,
+      "dist20": 15.8,
+      "adr": 5.9,
+      "setup": "\u26a1"
+    },
+    {
+      "ticker": "MU",
+      "rs": 98.1,
+      "price": 455.07,
+      "chg": -0.47,
+      "1Y": 546.1,
+      "dist10": 5.4,
+      "dist20": 9.3,
+      "adr": 5.6,
+      "setup": "\u26a1"
+    },
+    {
+      "ticker": "HUT",
+      "rs": 97.9,
+      "price": 74.9,
+      "chg": 5.61,
+      "1Y": 577.8,
+      "dist10": 13.2,
+      "dist20": 23.3,
+      "adr": 6.7,
+      "setup": ""
+    }
+  ]
+}
