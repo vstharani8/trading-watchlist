@@ -1,7 +1,7 @@
-# Pattern Performance Audit — 2026-08-09
+# Pattern Performance Audit — 2026-08-11
 
 Lookback: 90 calendar days. Forward windows: [5, 10, 20] trading days.
-Total scan appearances: 981. With forward data: 941.
+Total scan appearances: 982. With forward data: 962.
 
 > Each scan appearance is treated as an independent entry signal. Tickers appearing
 > on consecutive days are NOT deduped — pattern repeat-ability is part of the answer.
@@ -10,24 +10,24 @@ Total scan appearances: 981. With forward data: 941.
 
 | Setup | N | 5d Win% | 5d Avg% | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| 📐 Tight | 524 | 40.1% | -2.57% | 37.6% | -3.32% | 33.8% | -6.83% |
-| 🌀 Coil | 338 | 42.1% | -1.98% | 39.8% | -2.65% | 33.5% | -7.57% |
-| 📍 Near | 79 | 25.3% | -5.07% | 41.8% | -5.1% | 34.2% | -7.32% |
+| 📐 Tight | 540 | 39.7% | -2.37% | 36.1% | -3.35% | 33.3% | -6.1% |
+| 🌀 Coil | 343 | 42.7% | -1.55% | 39.3% | -2.44% | 33.1% | -7.36% |
+| 📍 Near | 79 | 26.0% | -4.57% | 40.3% | -4.92% | 33.8% | -7.16% |
 
 ## Performance by Tier
 
 | Tier | N | 5d Win% | 5d Avg% | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| tier1 | 477 | 41.2% | -2.37% | 38.0% | -3.19% | 32.4% | -7.41% |
-| tier2 | 464 | 37.9% | -2.77% | 39.4% | -3.27% | 35.1% | -6.86% |
+| tier1 | 488 | 41.4% | -2.1% | 37.6% | -2.89% | 32.2% | -6.92% |
+| tier2 | 474 | 37.8% | -2.44% | 37.6% | -3.43% | 34.5% | -6.36% |
 
 ## Performance by RS Bucket
 
 | RS Bucket | N | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|
-| 95+ | 576 | 39.1% | -3.55% | 32.5% | -7.98% |
-| 90-94 | 230 | 40.4% | -2.35% | 39.1% | -4.86% |
-| 85-89 | 135 | 34.1% | -3.38% | 29.6% | -7.45% |
+| 95+ | 605 | 36.5% | -3.49% | 30.7% | -7.58% |
+| 90-94 | 232 | 42.6% | -1.85% | 40.7% | -3.97% |
+| 85-89 | 125 | 33.9% | -3.92% | 32.2% | -7.04% |
 
 ## Top 10 — 20d Returns
 
@@ -41,8 +41,8 @@ Total scan appearances: 981. With forward data: 941.
 | RLAY | 06-09 | 📐 Tight | 96.7 | 14.09 | 20.75 | +47.3% |
 | RLAY | 06-05 | 📐 Tight | 96.6 | 13.52 | 19.74 | +46.0% |
 | RLAY | 06-08 | 📐 Tight | 96.8 | 13.66 | 19.63 | +43.7% |
+| FSLY | 07-23 | 📐 Tight | 95.6 | 19.43 | 27.75 | +42.8% |
 | ERAS | 06-04 | 📐 Tight | 99.4 | 13.27 | 18.85 | +42.0% |
-| OUST | 05-12 | 📐 Tight | 89.2 | 27.10 | 38.39 | +41.7% |
 
 ## Bottom 10 — 20d Returns
 
