@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>moomoo Screener + EMA Coil — 2026-08-13</title>
+<style>
+  :root {
+    --bg: #0d1117; --surface: #161b22; --surface2: #1c2128;
+    --border: #30363d; --text: #e6edf3; --muted: #8b949e;
+    --accent: #58a6ff; --green: #3fb950; --red: #f85149; --yellow: #d29922;
+    --purple: #bc8cff; --orange: #ffa657;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--text); margin: 0; padding: 24px; line-height: 1.5;
+  }
+  .container { max-width: 1200px; margin: 0 auto; }
+  h1 {
+    border-bottom: 1px solid var(--border); padding-bottom: 12px;
+    margin-bottom: 8px; font-size: 22px;
+  }
+  .updated { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+  .stats {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px; margin: 16px 0 24px 0;
+  }
+  .stat {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 6px; padding: 10px 14px;
+  }
+  .stat-label { color: var(--muted); font-size: 11px; text-transform: uppercase;
+                 letter-spacing: 0.5px; }
+  .stat-value { color: var(--text); font-size: 18px; font-weight: 600; margin-top: 4px; }
+  h2.bucket {
+    color: var(--accent); font-size: 16px; margin: 24px 0 8px 0;
+    padding-bottom: 4px; border-bottom: 1px solid var(--border);
+  }
+  h2.bucket .count { color: var(--muted); font-weight: 400; font-size: 13px; }
+  table.stocks {
+    width: 100%; border-collapse: collapse; margin-bottom: 16px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
+    overflow: hidden;
+  }
+  th { background: var(--surface2); color: var(--muted); text-align: left;
+       padding: 8px 12px; font-size: 12px; font-weight: 600;
+       border-bottom: 1px solid var(--border); }
+  td { padding: 6px 12px; font-size: 13px; border-bottom: 1px solid var(--border); }
+  tr:last-child td { border-bottom: none; }
+  tr:hover { background: rgba(88,166,255,0.05); }
+  .ticker { font-weight: 600; color: var(--accent); }
+  .name { color: var(--muted); font-size: 12px; }
+  .pos { color: var(--green); }
+  .neg { color: var(--red); }
+  .badge {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.3px;
+  }
+  .badge-tight { background: #1a3a24; color: var(--green); border: 1px solid var(--green); }
+  .badge-pullback { background: #1a2a3a; color: var(--accent); border: 1px solid var(--accent); }
+  .badge-broken { background: #3a1a1a; color: var(--red); border: 1px solid var(--red); }
+  .badge-parabolic { background: #3a2a0a; color: var(--yellow); border: 1px solid var(--yellow); }
+  .badge-ext-low { background: #2a1a3a; color: var(--purple); border: 1px solid var(--purple); }
+  .badge-mild { background: #2a2a1a; color: var(--orange); border: 1px solid var(--orange); }
+  footer { color: var(--muted); font-size: 12px; margin-top: 32px;
+            padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>🔎 moomoo Screener + EMA Coil — 2026-08-13</h1>
+<div class="updated">Auto-generated from cron (Mon-Fri 2 PM SGT). Source: moomoo OpenD + Yahoo Finance.</div>
+
+<div class="stats">
+<div class="stat"><div class="stat-label">Total screened</div><div class="stat-value">30</div></div>
+<div class="stat"><div class="stat-label">🌀 Coiled (entry)</div><div class="stat-value">0</div></div>
+<div class="stat"><div class="stat-label">✅ Undercut</div><div class="stat-value">0</div></div>
+<div class="stat"><div class="stat-label">⚠️ Parabolic (wait)</div><div class="stat-value">17</div></div>
+<div class="stat"><div class="stat-label">🔴 Broken</div><div class="stat-value">0</div></div>
+<div class="stat"><div class="stat-label">Run date</div><div class="stat-value">2026-08-13</div></div>
+</div>
+
+<h2 class="bucket">📈 Mild extended <span class="count">(3)</span></h2>
+<table class="stocks">
+<thead>
+<tr><th>Ticker</th><th>Name</th><th>Price</th><th>Off 52w H</th><th>15D %</th><th>20D Vol</th><th>Mkt Cap</th><th>→EMA10</th><th>→EMA20</th><th>RSI</th><th>Bucket</th></tr>
+</thead>
+<tbody>
+<tr><td class="ticker">FIVN</td><td class="name">Five9</td><td>$31.20</td><td class="neg">-9.8%</td><td class="pos">+35.9%</td><td>73.5M</td><td>$2.3B</td><td class="pos">+2.2%</td><td class="pos">+9.3%</td><td class="">75</td><td class="bucket-mild"><span class="badge badge-mild">MILD</span></td></tr>
+<tr><td class="ticker">CBZ</td><td class="name">CBIZ Inc</td><td>$54.58</td><td class="neg">-18.8%</td><td class="pos">+35.3%</td><td>41.7M</td><td>$3.0B</td><td class="pos">+2.4%</td><td class="pos">+9.6%</td><td class="neg">95</td><td class="bucket-mild"><span class="badge badge-mild">MILD</span></td></tr>
+<tr><td class="ticker">FBRX</td><td class="name">Forte Biosciences</td><td>$76.78</td><td class="neg">-0.5%</td><td class="pos">+35.6%</td><td>45.0M</td><td>$1.6B</td><td class="pos">+2.8%</td><td class="pos">+14.6%</td><td class="neg">80</td><td class="bucket-mild"><span class="badge badge-mild">MILD</span></td></tr>
+</tbody>
+</table>
+<h2 class="bucket">📈 Extended (RSI < 80) <span class="count">(10)</span></h2>
+<table class="stocks">
+<thead>
+<tr><th>Ticker</th><th>Name</th><th>Price</th><th>Off 52w H</th><th>15D %</th><th>20D Vol</th><th>Mkt Cap</th><th>→EMA10</th><th>→EMA20</th><th>RSI</th><th>Bucket</th></tr>
+</thead>
+<tbody>
+<tr><td class="ticker">APPS</td><td class="name">Digital Turbine</td><td>$12.41</td><td class="neg">-19.1%</td><td class="pos">+46.2%</td><td>85.0M</td><td>$1.5B</td><td class="pos">+3.0%</td><td class="pos">+12.3%</td><td class="">73</td><td class="bucket-ext-low"><span class="badge badge-ext-low">EXT-LOW</span></td></tr>
+<tr><td class="ticker">AMLX</td><td class="name">Amylyx Pharmaceuticals</td><td>$23.35</td><td class="neg">-5.1%</td><td class="pos">+31.9%</td><td>40.5M</td><td>$2.6B</td><td class="pos">+5.3%</td><td class="pos">+12.0%</td><td class="">77</td><td class="bucket-ext-low"><span class="badge badge-ext-low">EXT-LOW</span></td></tr>
+<tr><td class="ticker">PLTR</td><td class="name">Palantir</td><td>$171.04</td><td class="neg">-17.6%</td><td class="pos">+37.3%</td><td>939.4M</td><td>$411.0B</td><td class="pos">+7.9%</td><td class="pos">+15.8%</td><td class="">77</td><td class="bucket-ext-low"><span class="badge badge-ext-low">EXT-LOW</span></td></tr>
+<tr><td class="ticker">UMAC</td><td class="name">Unusual Machines</td><td>$27.03</td><td class="neg">-21.3%</td><td class="pos">+37.4%</td><td>74.1M</td><td>$1.4B</td><td class="pos">+8.9%</td><td class="pos">+16.5%</td><td class="pos">62</td><td class="bucket-ext-low"><span class="badge badge-ext-low">EXT-LOW</span></td></tr>
+<tr><td class="ticker">ZETA</td><td class="name">Zeta Global</td><td>$28.55</td><td class="neg">-4.5%</td><td class="pos">+41.5%</td><td>196.0M</td><td>$7.2B</td><td class="pos">+9.8%</td><td class="pos">+17.8%</td><td class="">80</td><td class="bucket-ext-low"><span class="badge badge-ext-low">EXT-LOW</span></td></tr>
+<tr><td class="ticker">BSP</td><td class="name">BENDING SPOONS S.P.A</td><td>$48.98</td><td class="neg">-16.9%</td><td class="pos">+45.0%</td><td>51.8M</td><td>$31.1B</td><td class="pos">+9.8%</td><td class="pos">+19.5%</td><td class="">77</td><td class="bucket-ext-low"><span class="badge badge-ext-low">EXT-LOW</span></td></tr>
+<tr><td class="ticker">BLZE</td><td class="name">Backblaze</td><td>$19.34</td><td class="neg">-19.4%</td><td class="pos">+44.1%</td><td>59.7M</td><td>$1.2B</td><td class="pos">+9.8%</td><td class="pos">+19.5%</td><td class="">72</td><td class="bucket-ext-low"><span class="badge badge-ext-low">EXT-LOW</span></td></tr>
+<tr><td class="ticker">FSLY</td><td class="name">Fastly</td><td>$28.53</td><td class="neg">-18.1%</td><td class="pos">+39.4%</td><td>136.7M</td><td>$4.5B</td><td class="pos">+12.8%</td><td class="pos">+21.7%</td><td class="">77</td><td class="bucket-ext-low"><span class="badge badge-ext-low">EXT-LOW</span></td></tr>
+<tr><td class="ticker">REPL</td><td class="name">Replimune</td><td>$15.24</td><td class="neg">-2.8%</td><td class="pos">+38.5%</td><td>165.1M</td><td>$1.4B</td><td class="pos">+22.9%</td><td class="pos">+34.4%</td><td class="pos">64</td><td class="bucket-ext-low"><span class="badge badge-ext-low">EXT-LOW</span></td></tr>
+<tr><td class="ticker">AEHR</td><td class="name">Aehr Test Systems</td><td>$129.23</td><td class="neg">-3.1%</td><td class="pos">+38.2%</td><td>57.5M</td><td>$4.2B</td><td class="pos">+23.6%</td><td class="pos">+34.2%</td><td class="pos">68</td><td class="bucket-ext-low"><span class="badge badge-ext-low">EXT-LOW</span></td></tr>
+</tbody>
+</table>
+<h2 class="bucket">⚠️ Parabolic — wait for cooldown <span class="count">(17)</span></h2>
+<table class="stocks">
+<thead>
+<tr><th>Ticker</th><th>Name</th><th>Price</th><th>Off 52w H</th><th>15D %</th><th>20D Vol</th><th>Mkt Cap</th><th>→EMA10</th><th>→EMA20</th><th>RSI</th><th>Bucket</th></tr>
+</thead>
+<tbody>
+<tr><td class="ticker">RNG</td><td class="name">RingCentral</td><td>$62.88</td><td class="neg">-3.2%</td><td class="pos">+67.3%</td><td>52.9M</td><td>$5.3B</td><td class="pos">+4.8%</td><td class="pos">+14.2%</td><td class="neg">85</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">PATH</td><td class="name">UiPath</td><td>$15.26</td><td class="neg">-23.1%</td><td class="pos">+42.6%</td><td>1545.4M</td><td>$7.9B</td><td class="pos">+6.5%</td><td class="pos">+13.9%</td><td class="neg">86</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">GTLB</td><td class="name">Gitlab</td><td>$40.81</td><td class="neg">-22.1%</td><td class="pos">+30.2%</td><td>84.6M</td><td>$6.9B</td><td class="pos">+7.2%</td><td class="pos">+13.6%</td><td class="neg">84</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">MGNI</td><td class="name">Magnite</td><td>$24.34</td><td class="neg">-8.7%</td><td class="pos">+33.0%</td><td>55.5M</td><td>$3.5B</td><td class="pos">+7.3%</td><td class="pos">+13.7%</td><td class="neg">87</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">HALO</td><td class="name">Halozyme Therapeutics</td><td>$101.79</td><td class="neg">-2.9%</td><td class="pos">+30.8%</td><td>46.5M</td><td>$11.6B</td><td class="pos">+8.7%</td><td class="pos">+15.6%</td><td class="neg">89</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">TWLO</td><td class="name">Twilio</td><td>$246.62</td><td class="neg">-4.5%</td><td class="pos">+34.5%</td><td>48.4M</td><td>$37.9B</td><td class="pos">+9.8%</td><td class="pos">+15.3%</td><td class="neg">80</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">RBRK</td><td class="name">Rubrik</td><td>$96.73</td><td class="neg">-3.2%</td><td class="pos">+31.3%</td><td>53.1M</td><td>$19.9B</td><td class="pos">+9.8%</td><td class="pos">+15.7%</td><td class="neg">85</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">TNDM</td><td class="name">Tandem Diabetes Care</td><td>$23.44</td><td class="neg">-20.9%</td><td class="pos">+38.6%</td><td>45.5M</td><td>$1.6B</td><td class="pos">+10.6%</td><td class="pos">+19.0%</td><td class="neg">85</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">CHYM</td><td class="name">Chime Financial</td><td>$31.60</td><td class="neg">-5.4%</td><td class="pos">+44.8%</td><td>172.8M</td><td>$12.0B</td><td class="pos">+11.8%</td><td class="pos">+22.4%</td><td class="neg">85</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">AMPL</td><td class="name">Amplitude</td><td>$12.38</td><td class="neg">-3.8%</td><td class="pos">+41.6%</td><td>43.6M</td><td>$1.5B</td><td class="pos">+12.3%</td><td class="pos">+21.8%</td><td class="neg">89</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">U</td><td class="name">Unity Software</td><td>$44.53</td><td class="neg">-14.6%</td><td class="pos">+52.1%</td><td>232.4M</td><td>$19.6B</td><td class="pos">+12.8%</td><td class="pos">+23.2%</td><td class="neg">90</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">FIGS</td><td class="name">FIGS Inc</td><td>$14.42</td><td class="neg">-17.5%</td><td class="pos">+45.4%</td><td>73.3M</td><td>$2.4B</td><td class="pos">+13.6%</td><td class="pos">+22.3%</td><td class="neg">96</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">HRB</td><td class="name">H&R Block</td><td>$54.18</td><td class="neg">-7.7%</td><td class="pos">+37.0%</td><td>49.6M</td><td>$6.9B</td><td class="pos">+15.3%</td><td class="pos">+20.8%</td><td class="neg">83</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">TEAM</td><td class="name">Atlassian</td><td>$155.24</td><td class="neg">-15.6%</td><td class="pos">+81.8%</td><td>105.5M</td><td>$39.4B</td><td class="pos">+18.6%</td><td class="pos">+33.5%</td><td class="neg">90</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">P</td><td class="name">Everpure</td><td>$111.40</td><td class="neg">-2.1%</td><td class="pos">+49.4%</td><td>53.6M</td><td>$37.0B</td><td class="pos">+19.6%</td><td class="pos">+29.7%</td><td class="neg">87</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">NN</td><td class="name">NextNav</td><td>$19.23</td><td class="neg">-21.3%</td><td class="pos">+50.1%</td><td>67.7M</td><td>$3.2B</td><td class="pos">+21.0%</td><td class="pos">+25.7%</td><td class="neg">83</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">ABCL</td><td class="name">AbCellera Biologics</td><td>$10.36</td><td class="neg">-0.2%</td><td class="pos">+80.7%</td><td>167.2M</td><td>$3.2B</td><td class="pos">+32.3%</td><td class="pos">+46.3%</td><td class="neg">90</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+</tbody>
+</table>
+
+
+<footer>
+<b>moomoo filter</b>: US &middot; Price ≥ \$10 &middot; % off 52w H ∈ [-25%, 0%] &middot; MCap ≥ \$1B &middot; 20D Vol ≥ 40M (≈ 2M/day) &middot; 15D %-Chg ≥ 0
+<br><b>Workflow</b>: screener picks momentum runners; EMA10/EMA20 distance then sorts by coil-readiness.
+<br><b>Bucket rules</b>: 🌀 COILED = |d10| &lt; 3% &amp; |d20| &lt; 5% &middot; ✅ UNDERCUT = -5% &lt; d10 &lt; -2% &amp; d20 &gt; 0 &middot; ⚠️ PARABOLIC = d10 &gt; 3% &amp; d20 &gt; 5% &amp; RSI &gt; 80 &middot; 🔴 BROKEN = both EMAs below
+</footer>
+
+</div>
+</body>
+</html>
