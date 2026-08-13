@@ -1,7 +1,7 @@
-# Momentum Scan Performance Audit — 2026-08-12
+# Momentum Scan Performance Audit — 2026-08-13
 
 Lookback: 90 calendar days. Forward windows: [5, 10, 20] trading days.
-Total scan appearances: 2525. With forward data: 2525.
+Total scan appearances: 2563. With forward data: 2525.
 
 Setup proxies are DERIVED (no native label in momentum_scan):
 - **TIGHT**: RS≥85 AND dist10 in [-2%, +4%] — same filter as momentum_tight
@@ -27,7 +27,7 @@ Setup proxies are DERIVED (no native label in momentum_scan):
 |---|---:|---:|---:|---:|---:|---:|---:|
 | 95+ | 1413 | 39.7% | -2.57% | 40.1% | -3.3% | 35.0% | -7.67% |
 | 90-94 | 463 | 39.9% | -1.32% | 40.1% | -2.35% | 43.2% | -1.85% |
-| <85 | 380 | 42.1% | -0.49% | 49.3% | 0.57% | 56.8% | 2.53% |
+| <85 | 380 | 42.1% | -0.49% | 49.3% | 0.57% | 56.8% | 2.52% |
 | 85-89 | 269 | 42.0% | -0.81% | 47.7% | -1.61% | 52.3% | -0.99% |
 
 ## Performance by dist10 Bucket

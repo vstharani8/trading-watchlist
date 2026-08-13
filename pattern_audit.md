@@ -1,7 +1,7 @@
-# Pattern Performance Audit — 2026-08-12
+# Pattern Performance Audit — 2026-08-13
 
 Lookback: 90 calendar days. Forward windows: [5, 10, 20] trading days.
-Total scan appearances: 978. With forward data: 978.
+Total scan appearances: 998. With forward data: 978.
 
 > Each scan appearance is treated as an independent entry signal. Tickers appearing
 > on consecutive days are NOT deduped — pattern repeat-ability is part of the answer.
