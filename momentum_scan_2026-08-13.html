@@ -32,10 +32,16 @@
   }
   .stat-label { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
   .stat-value { color: var(--text); font-size: 18px; font-weight: 600; margin-top: 4px; }
-  h2.sector {
-    color: var(--accent); font-size: 16px; margin: 24px 0 8px 0;
+  h2.bucket {
+    color: var(--accent); font-size: 16px; margin: 24px 0 4px 0;
     padding-bottom: 4px; border-bottom: 1px solid var(--border);
   }
+  h2.bucket .count { color: var(--muted); font-weight: 400; font-size: 13px; }
+  .bucket-desc {
+    color: var(--muted); font-size: 12px; margin: 0 0 8px 0;
+    font-style: italic;
+  }
+  .sector-cell { color: var(--muted); font-size: 12px; }
   table.stocks {
     width: 100%; border-collapse: collapse; margin-bottom: 16px;
     background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
@@ -117,128 +123,66 @@
 <div class="container">
 
 <h1>📈 Momentum Scan — 2026-08-13</h1>
-<div class="updated">Auto-generated from cron (Mon-Fri 6 AM SGT). Source: Yahoo Finance.</div>
+<div class="updated">Auto-generated from cron (Mon-Fri 2 PM SGT). Source: Yahoo Finance. Sections ordered by actionability.</div>
 
 <div class="stats">
-<div class="stat"><div class="stat-label">Total stocks</div><div class="stat-value">38</div></div><div class="stat"><div class="stat-label">TIGHT (actionable)</div><div class="stat-value">6</div></div><div class="stat"><div class="stat-label">Pullback</div><div class="stat-value">0</div></div><div class="stat"><div class="stat-label">Early entry</div><div class="stat-value">0</div></div><div class="stat"><div class="stat-label">Extended</div><div class="stat-value">32</div></div><div class="stat"><div class="stat-label">Universe scanned</div><div class="stat-value">3,000</div></div><div class="stat"><div class="stat-label">S&P 500 change</div><div class="stat-value">+0.26%</div></div>
+<div class="stat"><div class="stat-label">Total stocks</div><div class="stat-value">38</div></div><div class="stat"><div class="stat-label">🔥 TIGHT</div><div class="stat-value">6</div></div><div class="stat"><div class="stat-label">↩ Pullback</div><div class="stat-value">0</div></div><div class="stat"><div class="stat-label">🟡 Early</div><div class="stat-value">0</div></div><div class="stat"><div class="stat-label">⚠️ Extended</div><div class="stat-value">32</div></div><div class="stat"><div class="stat-label">Universe scanned</div><div class="stat-value">3,000</div></div><div class="stat"><div class="stat-label">S&P 500 change</div><div class="stat-value">+0.26%</div></div>
 </div>
 
-<h2 class="sector">Consumer Non-Durables</h2>
+<h2 class="bucket">🔥 TIGHT (actionable) <span class="count">(6)</span></h2>
+<p class="bucket-desc">In the entry zone — |d10| <= 4%. Highest priority.</p>
 <table class="stocks">
 <thead>
-<tr><th>Ticker</th><th>RS</th><th>Price</th><th>1M%</th><th>→EMA10</th><th>Status</th></tr>
+<tr><th>Ticker</th><th>Sector</th><th>RS</th><th>Price</th><th>1M%</th><th>→EMA10</th><th>Status</th></tr>
 </thead>
 <tbody>
-<tr><td class="ticker">FIGS</td><td>89.8</td><td>$14.42</td><td class="pos">+41.1%</td><td class="pos">+13.6%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">AMC</td><td class="sector-cell">Consumer Services</td><td>91.3</td><td>$2.53</td><td class="pos">+36.0%</td><td class="neg">-0.3%</td><td class="status">🔥 TIGHT</td></tr>
+<tr><td class="ticker">CLF</td><td class="sector-cell">Non-Energy Minerals</td><td>60.2</td><td>$12.25</td><td class="pos">+30.3%</td><td class="pos">+1.6%</td><td class="status">🔥 TIGHT</td></tr>
+<tr><td class="ticker">FIVN</td><td class="sector-cell">Technology Services</td><td>89.0</td><td>$31.20</td><td class="pos">+22.3%</td><td class="pos">+2.2%</td><td class="status">🔥 TIGHT</td></tr>
+<tr><td class="ticker">GDRX</td><td class="sector-cell">Health Services</td><td>80.8</td><td>$3.59</td><td class="pos">+22.1%</td><td class="pos">+2.8%</td><td class="status">🔥 TIGHT</td></tr>
+<tr><td class="ticker">PGEN</td><td class="sector-cell">Health Technology</td><td>97.3</td><td>$6.85</td><td class="pos">+30.5%</td><td class="pos">+3.1%</td><td class="status">🔥 TIGHT</td></tr>
+<tr><td class="ticker">ADPT</td><td class="sector-cell">Health Technology</td><td>95.0</td><td>$25.25</td><td class="pos">+21.6%</td><td class="pos">+3.4%</td><td class="status">🔥 TIGHT</td></tr>
 </tbody>
 </table>
-<h2 class="sector">Consumer Services</h2>
+<h2 class="bucket">⚠️ EXTENDED <span class="count">(32)</span></h2>
+<p class="bucket-desc">Extended above EMA10 (d10 > 5%). Wait for cooldown.</p>
 <table class="stocks">
 <thead>
-<tr><th>Ticker</th><th>RS</th><th>Price</th><th>1M%</th><th>→EMA10</th><th>Status</th></tr>
+<tr><th>Ticker</th><th>Sector</th><th>RS</th><th>Price</th><th>1M%</th><th>→EMA10</th><th>Status</th></tr>
 </thead>
 <tbody>
-<tr><td class="ticker">AMC</td><td>91.3</td><td>$2.53</td><td class="pos">+36.0%</td><td class="neg">-0.3%</td><td class="status">🔥 TIGHT</td></tr>
-</tbody>
-</table>
-<h2 class="sector">Electronic Technology</h2>
-<table class="stocks">
-<thead>
-<tr><th>Ticker</th><th>RS</th><th>Price</th><th>1M%</th><th>→EMA10</th><th>Status</th></tr>
-</thead>
-<tbody>
-<tr><td class="ticker">VSAT</td><td>96.3</td><td>$87.23</td><td class="pos">+21.2%</td><td class="pos">+6.3%</td><td class="status">⚠️ EXT</td></tr>
-<tr><td class="ticker">TSEM</td><td>98.4</td><td>$260.31</td><td class="pos">+22.3%</td><td class="pos">+8.1%</td><td class="status">⚠️ EXT</td></tr>
-<tr><td class="ticker">UMAC</td><td>97.3</td><td>$27.03</td><td class="pos">+46.0%</td><td class="pos">+8.9%</td><td class="status">⚠️ EXT</td></tr>
-<tr><td class="ticker">ONDS</td><td>85.6</td><td>$9.77</td><td class="pos">+37.4%</td><td class="pos">+9.4%</td><td class="status">⚠️ EXT</td></tr>
-<tr><td class="ticker">HPE</td><td>97.8</td><td>$58.79</td><td class="pos">+22.0%</td><td class="pos">+10.8%</td><td class="status">⚠️ EXT</td></tr>
-<tr><td class="ticker">AXTI</td><td>100.0</td><td>$78.47</td><td class="pos">+42.7%</td><td class="pos">+11.5%</td><td class="status">⚠️ EXT</td></tr>
-<tr><td class="ticker">AEVA</td><td>91.2</td><td>$25.16</td><td class="pos">+23.6%</td><td class="pos">+12.9%</td><td class="status">⚠️ EXT</td></tr>
-<tr><td class="ticker">RDW</td><td>83.7</td><td>$13.49</td><td class="pos">+34.5%</td><td class="pos">+13.8%</td><td class="status">⚠️ EXT</td></tr>
-<tr><td class="ticker">P</td><td>90.1</td><td>$111.40</td><td class="pos">+42.5%</td><td class="pos">+19.6%</td><td class="status">⚠️ EXT</td></tr>
-<tr><td class="ticker">AEHR</td><td>99.7</td><td>$129.23</td><td class="pos">+85.7%</td><td class="pos">+23.6%</td><td class="status">⚠️ EXT</td></tr>
-<tr><td class="ticker">NLST</td><td>0.0</td><td>$4.93</td><td class="pos">+71.2%</td><td class="pos">+32.0%</td><td class="status">⚠️ EXT</td></tr>
-</tbody>
-</table>
-<h2 class="sector">Energy Minerals</h2>
-<table class="stocks">
-<thead>
-<tr><th>Ticker</th><th>RS</th><th>Price</th><th>1M%</th><th>→EMA10</th><th>Status</th></tr>
-</thead>
-<tbody>
-<tr><td class="ticker">PBF</td><td>97.5</td><td>$70.34</td><td class="pos">+28.1%</td><td class="pos">+6.4%</td><td class="status">⚠️ EXT</td></tr>
-</tbody>
-</table>
-<h2 class="sector">Health Services</h2>
-<table class="stocks">
-<thead>
-<tr><th>Ticker</th><th>RS</th><th>Price</th><th>1M%</th><th>→EMA10</th><th>Status</th></tr>
-</thead>
-<tbody>
-<tr><td class="ticker">GDRX</td><td>80.8</td><td>$3.59</td><td class="pos">+22.1%</td><td class="pos">+2.8%</td><td class="status">🔥 TIGHT</td></tr>
-</tbody>
-</table>
-<h2 class="sector">Health Technology</h2>
-<table class="stocks">
-<thead>
-<tr><th>Ticker</th><th>RS</th><th>Price</th><th>1M%</th><th>→EMA10</th><th>Status</th></tr>
-</thead>
-<tbody>
-<tr><td class="ticker">PGEN</td><td>97.3</td><td>$6.85</td><td class="pos">+30.5%</td><td class="pos">+3.1%</td><td class="status">🔥 TIGHT</td></tr>
-<tr><td class="ticker">ADPT</td><td>95.0</td><td>$25.25</td><td class="pos">+21.6%</td><td class="pos">+3.4%</td><td class="status">🔥 TIGHT</td></tr>
-<tr><td class="ticker">AMLX</td><td>96.2</td><td>$23.35</td><td class="pos">+33.4%</td><td class="pos">+5.3%</td><td class="status">⚠️ EXT</td></tr>
-<tr><td class="ticker">BFLY</td><td>99.6</td><td>$9.45</td><td class="pos">+20.1%</td><td class="pos">+8.6%</td><td class="status">⚠️ EXT</td></tr>
-<tr><td class="ticker">TXG</td><td>99.5</td><td>$57.75</td><td class="pos">+35.4%</td><td class="pos">+10.1%</td><td class="status">⚠️ EXT</td></tr>
-<tr><td class="ticker">IOVA</td><td>98.2</td><td>$6.74</td><td class="pos">+62.0%</td><td class="pos">+17.0%</td><td class="status">⚠️ EXT</td></tr>
-<tr><td class="ticker">REPL</td><td>98.5</td><td>$15.24</td><td class="pos">+39.7%</td><td class="pos">+22.0%</td><td class="status">⚠️ EXT</td></tr>
-<tr><td class="ticker">ABCL</td><td>98.3</td><td>$10.36</td><td class="pos">+54.3%</td><td class="pos">+32.3%</td><td class="status">⚠️ EXT</td></tr>
-</tbody>
-</table>
-<h2 class="sector">Industrial Services</h2>
-<table class="stocks">
-<thead>
-<tr><th>Ticker</th><th>RS</th><th>Price</th><th>1M%</th><th>→EMA10</th><th>Status</th></tr>
-</thead>
-<tbody>
-<tr><td class="ticker">NESR</td><td>98.3</td><td>$34.82</td><td class="pos">+22.0%</td><td class="pos">+11.0%</td><td class="status">⚠️ EXT</td></tr>
-</tbody>
-</table>
-<h2 class="sector">Non-Energy Minerals</h2>
-<table class="stocks">
-<thead>
-<tr><th>Ticker</th><th>RS</th><th>Price</th><th>1M%</th><th>→EMA10</th><th>Status</th></tr>
-</thead>
-<tbody>
-<tr><td class="ticker">CLF</td><td>60.2</td><td>$12.25</td><td class="pos">+30.3%</td><td class="pos">+1.6%</td><td class="status">🔥 TIGHT</td></tr>
-<tr><td class="ticker">TGB</td><td>91.0</td><td>$8.73</td><td class="pos">+21.6%</td><td class="pos">+7.0%</td><td class="status">⚠️ EXT</td></tr>
-<tr><td class="ticker">ASM</td><td>53.2</td><td>$7.14</td><td class="pos">+21.8%</td><td class="pos">+8.0%</td><td class="status">⚠️ EXT</td></tr>
-<tr><td class="ticker">SVM</td><td>86.8</td><td>$12.10</td><td class="pos">+29.8%</td><td class="pos">+8.2%</td><td class="status">⚠️ EXT</td></tr>
-</tbody>
-</table>
-<h2 class="sector">Process Industries</h2>
-<table class="stocks">
-<thead>
-<tr><th>Ticker</th><th>RS</th><th>Price</th><th>1M%</th><th>→EMA10</th><th>Status</th></tr>
-</thead>
-<tbody>
-<tr><td class="ticker">LWLG</td><td>96.2</td><td>$8.01</td><td class="pos">+21.5%</td><td class="pos">+8.2%</td><td class="status">⚠️ EXT</td></tr>
-</tbody>
-</table>
-<h2 class="sector">Technology Services</h2>
-<table class="stocks">
-<thead>
-<tr><th>Ticker</th><th>RS</th><th>Price</th><th>1M%</th><th>→EMA10</th><th>Status</th></tr>
-</thead>
-<tbody>
-<tr><td class="ticker">FIVN</td><td>89.0</td><td>$31.20</td><td class="pos">+22.3%</td><td class="pos">+2.2%</td><td class="status">🔥 TIGHT</td></tr>
-<tr><td class="ticker">CRSR</td><td>92.6</td><td>$12.92</td><td class="pos">+36.0%</td><td class="pos">+6.5%</td><td class="status">⚠️ EXT</td></tr>
-<tr><td class="ticker">PATH</td><td>87.4</td><td>$15.26</td><td class="pos">+29.9%</td><td class="pos">+6.5%</td><td class="status">⚠️ EXT</td></tr>
-<tr><td class="ticker">ZETA</td><td>93.3</td><td>$28.55</td><td class="pos">+33.1%</td><td class="pos">+9.8%</td><td class="status">⚠️ EXT</td></tr>
-<tr><td class="ticker">CHYM</td><td>87.9</td><td>$31.60</td><td class="pos">+49.6%</td><td class="pos">+11.8%</td><td class="status">⚠️ EXT</td></tr>
-<tr><td class="ticker">AMPL</td><td>93.4</td><td>$12.38</td><td class="pos">+32.8%</td><td class="pos">+12.3%</td><td class="status">⚠️ EXT</td></tr>
-<tr><td class="ticker">FSLY</td><td>98.1</td><td>$28.53</td><td class="pos">+45.0%</td><td class="pos">+12.8%</td><td class="status">⚠️ EXT</td></tr>
-<tr><td class="ticker">VOYG</td><td>85.5</td><td>$43.00</td><td class="pos">+39.4%</td><td class="pos">+15.5%</td><td class="status">⚠️ EXT</td></tr>
-<tr><td class="ticker">NBIS</td><td>98.0</td><td>$259.20</td><td class="pos">+21.9%</td><td class="pos">+25.5%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">AMLX</td><td class="sector-cell">Health Technology</td><td>96.2</td><td>$23.35</td><td class="pos">+33.4%</td><td class="pos">+5.3%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">VSAT</td><td class="sector-cell">Electronic Technology</td><td>96.3</td><td>$87.23</td><td class="pos">+21.2%</td><td class="pos">+6.3%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">PBF</td><td class="sector-cell">Energy Minerals</td><td>97.5</td><td>$70.34</td><td class="pos">+28.1%</td><td class="pos">+6.4%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">CRSR</td><td class="sector-cell">Technology Services</td><td>92.6</td><td>$12.92</td><td class="pos">+36.0%</td><td class="pos">+6.5%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">PATH</td><td class="sector-cell">Technology Services</td><td>87.4</td><td>$15.26</td><td class="pos">+29.9%</td><td class="pos">+6.5%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">TGB</td><td class="sector-cell">Non-Energy Minerals</td><td>91.0</td><td>$8.73</td><td class="pos">+21.6%</td><td class="pos">+7.0%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">ASM</td><td class="sector-cell">Non-Energy Minerals</td><td>53.2</td><td>$7.14</td><td class="pos">+21.8%</td><td class="pos">+8.0%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">TSEM</td><td class="sector-cell">Electronic Technology</td><td>98.4</td><td>$260.31</td><td class="pos">+22.3%</td><td class="pos">+8.1%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">SVM</td><td class="sector-cell">Non-Energy Minerals</td><td>86.8</td><td>$12.10</td><td class="pos">+29.8%</td><td class="pos">+8.2%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">LWLG</td><td class="sector-cell">Process Industries</td><td>96.2</td><td>$8.01</td><td class="pos">+21.5%</td><td class="pos">+8.2%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">BFLY</td><td class="sector-cell">Health Technology</td><td>99.6</td><td>$9.45</td><td class="pos">+20.1%</td><td class="pos">+8.6%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">UMAC</td><td class="sector-cell">Electronic Technology</td><td>97.3</td><td>$27.03</td><td class="pos">+46.0%</td><td class="pos">+8.9%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">ONDS</td><td class="sector-cell">Electronic Technology</td><td>85.6</td><td>$9.77</td><td class="pos">+37.4%</td><td class="pos">+9.4%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">ZETA</td><td class="sector-cell">Technology Services</td><td>93.3</td><td>$28.55</td><td class="pos">+33.1%</td><td class="pos">+9.8%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">TXG</td><td class="sector-cell">Health Technology</td><td>99.5</td><td>$57.75</td><td class="pos">+35.4%</td><td class="pos">+10.1%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">HPE</td><td class="sector-cell">Electronic Technology</td><td>97.8</td><td>$58.79</td><td class="pos">+22.0%</td><td class="pos">+10.8%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">NESR</td><td class="sector-cell">Industrial Services</td><td>98.3</td><td>$34.82</td><td class="pos">+22.0%</td><td class="pos">+11.0%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">AXTI</td><td class="sector-cell">Electronic Technology</td><td>100.0</td><td>$78.47</td><td class="pos">+42.7%</td><td class="pos">+11.5%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">CHYM</td><td class="sector-cell">Technology Services</td><td>87.9</td><td>$31.60</td><td class="pos">+49.6%</td><td class="pos">+11.8%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">AMPL</td><td class="sector-cell">Technology Services</td><td>93.4</td><td>$12.38</td><td class="pos">+32.8%</td><td class="pos">+12.3%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">FSLY</td><td class="sector-cell">Technology Services</td><td>98.1</td><td>$28.53</td><td class="pos">+45.0%</td><td class="pos">+12.8%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">AEVA</td><td class="sector-cell">Electronic Technology</td><td>91.2</td><td>$25.16</td><td class="pos">+23.6%</td><td class="pos">+12.9%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">FIGS</td><td class="sector-cell">Consumer Non-Durables</td><td>89.8</td><td>$14.42</td><td class="pos">+41.1%</td><td class="pos">+13.6%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">RDW</td><td class="sector-cell">Electronic Technology</td><td>83.7</td><td>$13.49</td><td class="pos">+34.5%</td><td class="pos">+13.8%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">VOYG</td><td class="sector-cell">Technology Services</td><td>85.5</td><td>$43.00</td><td class="pos">+39.4%</td><td class="pos">+15.5%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">IOVA</td><td class="sector-cell">Health Technology</td><td>98.2</td><td>$6.74</td><td class="pos">+62.0%</td><td class="pos">+17.0%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">P</td><td class="sector-cell">Electronic Technology</td><td>90.1</td><td>$111.40</td><td class="pos">+42.5%</td><td class="pos">+19.6%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">REPL</td><td class="sector-cell">Health Technology</td><td>98.5</td><td>$15.24</td><td class="pos">+39.7%</td><td class="pos">+22.0%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">AEHR</td><td class="sector-cell">Electronic Technology</td><td>99.7</td><td>$129.23</td><td class="pos">+85.7%</td><td class="pos">+23.6%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">NBIS</td><td class="sector-cell">Technology Services</td><td>98.0</td><td>$259.20</td><td class="pos">+21.9%</td><td class="pos">+25.5%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">NLST</td><td class="sector-cell">Electronic Technology</td><td>0.0</td><td>$4.93</td><td class="pos">+71.2%</td><td class="pos">+32.0%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">ABCL</td><td class="sector-cell">Health Technology</td><td>98.3</td><td>$10.36</td><td class="pos">+54.3%</td><td class="pos">+32.3%</td><td class="status">⚠️ EXT</td></tr>
 </tbody>
 </table>
 
