@@ -253,8 +253,173 @@
   .ema-below { background: var(--red-dim); color: var(--red); }
 
 </style>
+<style>.date-picker {
+  position: fixed;
+  top: 16px;
+  right: 24px;
+  background: var(--surface, #161b22);
+  border: 1px solid var(--border, #30363d);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 13px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.date-picker label {
+  color: var(--muted, #8b949e);
+  font-weight: 500;
+}
+.date-picker select {
+  background: var(--surface2, #1c2128);
+  color: var(--text, #c9d1d9);
+  border: 1px solid var(--border, #30363d);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.date-picker select:focus {
+  outline: none;
+  border-color: var(--accent, #58a6ff);
+}
+@media (max-width: 640px) {
+  .date-picker { top: 8px; right: 8px; font-size: 12px; padding: 6px 8px; }
+}</style>
 </head>
 <body>
+
+    <div class="date-picker">
+      <label for="dp_daily_scan">Date:</label>
+      <select id="dp_daily_scan" onchange="go_daily_scan()">
+        <option value="__latest__">Latest</option>
+        <option value="__latest__">Latest</option>
+      <option value="2026-08-13">2026-08-13</option>
+      <option value="2026-08-12">2026-08-12</option>
+      <option value="2026-08-11">2026-08-11</option>
+      <option value="2026-08-10">2026-08-10</option>
+      <option value="2026-08-09">2026-08-09</option>
+      <option value="2026-08-06">2026-08-06</option>
+      <option value="2026-08-05">2026-08-05</option>
+      <option value="2026-08-04">2026-08-04</option>
+      <option value="2026-08-03">2026-08-03</option>
+      <option value="2026-07-31">2026-07-31</option>
+      <option value="2026-07-30">2026-07-30</option>
+      <option value="2026-07-29">2026-07-29</option>
+      <option value="2026-07-28">2026-07-28</option>
+      <option value="2026-07-27">2026-07-27</option>
+      <option value="2026-07-24">2026-07-24</option>
+      <option value="2026-07-23">2026-07-23</option>
+      <option value="2026-07-22">2026-07-22</option>
+      <option value="2026-07-21">2026-07-21</option>
+      <option value="2026-07-20">2026-07-20</option>
+      <option value="2026-07-17">2026-07-17</option>
+      <option value="2026-07-16">2026-07-16</option>
+      <option value="2026-07-15">2026-07-15</option>
+      <option value="2026-07-14">2026-07-14</option>
+      <option value="2026-07-13">2026-07-13</option>
+      <option value="2026-07-12">2026-07-12</option>
+      <option value="2026-07-11">2026-07-11</option>
+      <option value="2026-07-10">2026-07-10</option>
+      <option value="2026-07-09">2026-07-09</option>
+      <option value="2026-07-08">2026-07-08</option>
+      <option value="2026-07-07">2026-07-07</option>
+      <option value="2026-07-06">2026-07-06</option>
+      <option value="2026-07-03">2026-07-03</option>
+      <option value="2026-07-02">2026-07-02</option>
+      <option value="2026-07-01">2026-07-01</option>
+      <option value="2026-06-30">2026-06-30</option>
+      <option value="2026-06-29">2026-06-29</option>
+      <option value="2026-06-28">2026-06-28</option>
+      <option value="2026-06-27">2026-06-27</option>
+      <option value="2026-06-26">2026-06-26</option>
+      <option value="2026-06-25">2026-06-25</option>
+      <option value="2026-06-24">2026-06-24</option>
+      <option value="2026-06-23">2026-06-23</option>
+      <option value="2026-06-22">2026-06-22</option>
+      <option value="2026-06-20">2026-06-20</option>
+      <option value="2026-06-19">2026-06-19</option>
+      <option value="2026-06-18">2026-06-18</option>
+      <option value="2026-06-17">2026-06-17</option>
+      <option value="2026-06-16">2026-06-16</option>
+      <option value="2026-06-15">2026-06-15</option>
+      <option value="2026-06-12">2026-06-12</option>
+      <option value="2026-06-11">2026-06-11</option>
+      <option value="2026-06-10">2026-06-10</option>
+      <option value="2026-06-09">2026-06-09</option>
+      <option value="2026-06-08">2026-06-08</option>
+      <option value="2026-06-07">2026-06-07</option>
+      <option value="2026-06-06">2026-06-06</option>
+      <option value="2026-06-05">2026-06-05</option>
+      <option value="2026-06-04">2026-06-04</option>
+      <option value="2026-06-03">2026-06-03</option>
+      <option value="2026-05-14">2026-05-14</option>
+      <option value="2026-05-13">2026-05-13</option>
+      <option value="2026-05-12">2026-05-12</option>
+      <option value="2026-05-11">2026-05-11</option>
+      <option value="2026-05-10">2026-05-10</option>
+      <option value="2026-05-09">2026-05-09</option>
+      <option value="2026-05-08">2026-05-08</option>
+      <option value="2026-05-07">2026-05-07</option>
+      <option value="2026-05-06">2026-05-06</option>
+      <option value="2026-05-05">2026-05-05</option>
+      <option value="2026-05-04">2026-05-04</option>
+      <option value="2026-05-03">2026-05-03</option>
+      <option value="2026-05-01">2026-05-01</option>
+      <option value="2026-04-30">2026-04-30</option>
+      <option value="2026-04-29">2026-04-29</option>
+      <option value="2026-04-28">2026-04-28</option>
+      <option value="2026-04-27">2026-04-27</option>
+      <option value="2026-04-25">2026-04-25</option>
+      <option value="2026-04-24">2026-04-24</option>
+      <option value="2026-04-23">2026-04-23</option>
+      <option value="2026-04-22">2026-04-22</option>
+      <option value="2026-04-21">2026-04-21</option>
+      <option value="2026-04-20">2026-04-20</option>
+      <option value="2026-04-19">2026-04-19</option>
+      <option value="2026-04-18">2026-04-18</option>
+      <option value="2026-04-17">2026-04-17</option>
+      <option value="2026-04-16">2026-04-16</option>
+      <option value="2026-04-15">2026-04-15</option>
+      <option value="2026-04-14">2026-04-14</option>
+      <option value="2026-04-13">2026-04-13</option>
+      <option value="2026-04-11">2026-04-11</option>
+      <option value="2026-04-10">2026-04-10</option>
+      <option value="2026-04-09">2026-04-09</option>
+      <option value="2026-04-08">2026-04-08</option>
+      <option value="2026-04-07">2026-04-07</option>
+      <option value="2026-04-06">2026-04-06</option>
+      <option value="2026-04-03">2026-04-03</option>
+      <option value="2026-04-02">2026-04-02</option>
+      <option value="2026-04-01">2026-04-01</option>
+      <option value="2026-03-31">2026-03-31</option>
+      <option value="2026-03-30" selected>2026-03-30</option>
+      <option value="2026-03-29">2026-03-29</option>
+      <option value="2026-03-28">2026-03-28</option>
+      <option value="2026-03-27">2026-03-27</option>
+      <option value="2026-03-26">2026-03-26</option>
+      <option value="2026-03-25">2026-03-25</option>
+      <option value="2026-03-24">2026-03-24</option>
+      <option value="2026-03-23">2026-03-23</option>
+      </select>
+    </div>
+    
+    <script>
+      function go_daily_scan() {
+        var sel = document.getElementById('dp_daily_scan');
+        var v = sel.value;
+        if (v === '__latest__') {
+          window.location.href = 'daily_scan.html';
+        } else {
+          window.location.href = 'daily_scan_' + v + '.html';
+        }
+      }
+    </script>
+    
+    
 
 <div class="header">
   <div>

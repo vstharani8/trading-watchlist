@@ -65,8 +65,66 @@
   footer { color: var(--muted); font-size: 12px; margin-top: 32px;
             padding-top: 16px; border-top: 1px solid var(--border); }
 </style>
+<style>.date-picker {
+  position: fixed;
+  top: 16px;
+  right: 24px;
+  background: var(--surface, #161b22);
+  border: 1px solid var(--border, #30363d);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 13px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.date-picker label {
+  color: var(--muted, #8b949e);
+  font-weight: 500;
+}
+.date-picker select {
+  background: var(--surface2, #1c2128);
+  color: var(--text, #c9d1d9);
+  border: 1px solid var(--border, #30363d);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.date-picker select:focus {
+  outline: none;
+  border-color: var(--accent, #58a6ff);
+}
+@media (max-width: 640px) {
+  .date-picker { top: 8px; right: 8px; font-size: 12px; padding: 6px 8px; }
+}</style>
 </head>
 <body>
+
+    <div class="date-picker">
+      <label for="dp_screener">Date:</label>
+      <select id="dp_screener" onchange="go_screener()">
+        <option value="__latest__ selected">Latest</option>
+      <option value="2026-08-13">2026-08-13</option>
+      </select>
+    </div>
+    
+    <script>
+      function go_screener() {
+        var sel = document.getElementById('dp_screener');
+        var v = sel.value;
+        if (v === '__latest__') {
+          window.location.href = 'screener.html';
+        } else {
+          window.location.href = 'screener_' + v + '.html';
+        }
+      }
+    </script>
+    
+    
 <div class="container">
 
 <h1>🔎 moomoo Screener + EMA Coil — 2026-08-13</h1>
