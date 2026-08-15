@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Momentum Scan — 2026-08-14</title>
+<style>
+  :root {
+    --bg: #0d1117; --surface: #161b22; --border: #30363d;
+    --text: #c9d1d9; --muted: #8b949e; --accent: #58a6ff;
+    --green: #3fb950; --red: #f85149; --yellow: #d29922;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--text);
+    margin: 0; padding: 24px; line-height: 1.5;
+  }
+  .container { max-width: 1100px; margin: 0 auto; }
+  h1 {
+    border-bottom: 1px solid var(--border); padding-bottom: 12px;
+    margin-bottom: 8px; font-size: 22px;
+  }
+  .updated { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+  .stats {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px; margin: 16px 0 24px 0;
+  }
+  .stat {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 6px; padding: 10px 14px;
+  }
+  .stat-label { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .stat-value { color: var(--text); font-size: 18px; font-weight: 600; margin-top: 4px; }
+  h2.bucket {
+    color: var(--accent); font-size: 16px; margin: 24px 0 4px 0;
+    padding-bottom: 4px; border-bottom: 1px solid var(--border);
+  }
+  h2.bucket .count { color: var(--muted); font-weight: 400; font-size: 13px; }
+  .bucket-desc {
+    color: var(--muted); font-size: 12px; margin: 0 0 8px 0;
+    font-style: italic;
+  }
+  .sector-cell { color: var(--muted); font-size: 12px; }
+  table.stocks {
+    width: 100%; border-collapse: collapse; margin-bottom: 16px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
+    overflow: hidden;
+  }
+  th { background: var(--surface); color: var(--muted); text-align: left;
+       padding: 8px 12px; font-size: 12px; font-weight: 600;
+       border-bottom: 1px solid var(--border); }
+  td { padding: 6px 12px; font-size: 13px; border-bottom: 1px solid var(--border); }
+  tr:last-child td { border-bottom: none; }
+  tr:hover { background: rgba(88,166,255,0.05); }
+  .ticker { font-weight: 600; color: var(--accent); }
+  .pos { color: var(--green); }
+  .neg { color: var(--red); }
+  .status { font-size: 12px; }
+  footer { color: var(--muted); font-size: 12px; margin-top: 32px;
+            padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<style>.date-picker {
+  position: fixed;
+  top: 16px;
+  right: 24px;
+  background: var(--surface, #161b22);
+  border: 1px solid var(--border, #30363d);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 13px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.date-picker label {
+  color: var(--muted, #8b949e);
+  font-weight: 500;
+}
+.date-picker select {
+  background: var(--surface2, #1c2128);
+  color: var(--text, #c9d1d9);
+  border: 1px solid var(--border, #30363d);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.date-picker select:focus {
+  outline: none;
+  border-color: var(--accent, #58a6ff);
+}
+@media (max-width: 640px) {
+  .date-picker { top: 8px; right: 8px; font-size: 12px; padding: 6px 8px; }
+}</style>
+</head>
+<body>
+
+    
+    <div class="date-picker">
+      <label for="dp_momentum_scan">Date:</label>
+      <select id="dp_momentum_scan" onchange="go_momentum_scan()">
+        <option value="__latest__" selected>Latest</option>
+      <option value="2026-08-14">2026-08-14</option>
+      <option value="2026-08-13">2026-08-13</option>
+      </select>
+    </div>
+    
+    <script>
+      function go_momentum_scan() {
+        var sel = document.getElementById('dp_momentum_scan');
+        var v = sel.value;
+        if (v === '__latest__') {
+          window.location.href = 'momentum_scan.html';
+        } else {
+          window.location.href = 'momentum_scan_' + v + '.html';
+        }
+      }
+    </script>
+    
+    
+    
+    
+<div class="container">
+
+<h1>📈 Momentum Scan — 2026-08-14</h1>
+<div class="updated">Auto-generated from cron (Mon-Fri 2 PM SGT). Source: Yahoo Finance. Sections ordered by actionability.</div>
+
+<div class="stats">
+<div class="stat"><div class="stat-label">Total stocks</div><div class="stat-value">31</div></div><div class="stat"><div class="stat-label">🔥 TIGHT</div><div class="stat-value">6</div></div><div class="stat"><div class="stat-label">↩ Pullback</div><div class="stat-value">0</div></div><div class="stat"><div class="stat-label">🟡 Early</div><div class="stat-value">0</div></div><div class="stat"><div class="stat-label">⚠️ Extended</div><div class="stat-value">25</div></div><div class="stat"><div class="stat-label">Universe scanned</div><div class="stat-value">3,000</div></div><div class="stat"><div class="stat-label">S&P 500 change</div><div class="stat-value">+0.65%</div></div>
+</div>
+
+<h2 class="bucket">🔥 TIGHT (actionable) <span class="count">(6)</span></h2>
+<p class="bucket-desc">In the entry zone — |d10| <= 4%. Highest priority.</p>
+<table class="stocks">
+<thead>
+<tr><th>Ticker</th><th>Sector</th><th>RS</th><th>Price</th><th>1M%</th><th>→EMA10</th><th>Status</th></tr>
+</thead>
+<tbody>
+<tr><td class="ticker">ONDS</td><td class="sector-cell">Electronic Technology</td><td>82.7</td><td>$8.91</td><td class="pos">+27.3%</td><td class="neg">-0.2%</td><td class="status">🔥 TIGHT</td></tr>
+<tr><td class="ticker">CLF</td><td class="sector-cell">Non-Energy Minerals</td><td>61.3</td><td>$12.15</td><td class="pos">+21.5%</td><td class="pos">+0.6%</td><td class="status">🔥 TIGHT</td></tr>
+<tr><td class="ticker">PGEN</td><td class="sector-cell">Health Technology</td><td>96.5</td><td>$6.49</td><td class="pos">+25.3%</td><td class="neg">-1.9%</td><td class="status">🔥 TIGHT</td></tr>
+<tr><td class="ticker">AMC</td><td class="sector-cell">Consumer Services</td><td>92.3</td><td>$2.63</td><td class="pos">+40.6%</td><td class="pos">+3.0%</td><td class="status">🔥 TIGHT</td></tr>
+<tr><td class="ticker">PGY</td><td class="sector-cell">Technology Services</td><td>81.3</td><td>$21.46</td><td class="pos">+23.8%</td><td class="pos">+3.9%</td><td class="status">🔥 TIGHT</td></tr>
+<tr><td class="ticker">APPS</td><td class="sector-cell">Technology Services</td><td>99.1</td><td>$12.62</td><td class="pos">+29.2%</td><td class="pos">+3.9%</td><td class="status">🔥 TIGHT</td></tr>
+</tbody>
+</table>
+<h2 class="bucket">⚠️ EXTENDED <span class="count">(25)</span></h2>
+<p class="bucket-desc">Extended above EMA10 (d10 > 5%). Wait for cooldown.</p>
+<table class="stocks">
+<thead>
+<tr><th>Ticker</th><th>Sector</th><th>RS</th><th>Price</th><th>1M%</th><th>→EMA10</th><th>Status</th></tr>
+</thead>
+<tbody>
+<tr><td class="ticker">UMAC</td><td class="sector-cell">Electronic Technology</td><td>96.9</td><td>$27.24</td><td class="pos">+52.9%</td><td class="pos">+7.8%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">AXTI</td><td class="sector-cell">Electronic Technology</td><td>100.0</td><td>$77.45</td><td class="pos">+41.3%</td><td class="pos">+8.0%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">PRCH</td><td class="sector-cell">Finance</td><td>89.8</td><td>$16.94</td><td class="pos">+27.6%</td><td class="pos">+8.4%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">FIVN</td><td class="sector-cell">Technology Services</td><td>92.3</td><td>$33.80</td><td class="pos">+38.6%</td><td class="pos">+8.6%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">TXG</td><td class="sector-cell">Health Technology</td><td>99.4</td><td>$58.15</td><td class="pos">+35.2%</td><td class="pos">+8.7%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">CRSR</td><td class="sector-cell">Technology Services</td><td>94.2</td><td>$13.45</td><td class="pos">+40.8%</td><td class="pos">+8.7%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">RDW</td><td class="sector-cell">Electronic Technology</td><td>74.6</td><td>$13.20</td><td class="pos">+33.3%</td><td class="pos">+9.1%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">NET</td><td class="sector-cell">Technology Services</td><td>92.3</td><td>$330.83</td><td class="pos">+23.4%</td><td class="pos">+9.3%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">PBF</td><td class="sector-cell">Energy Minerals</td><td>98.2</td><td>$74.36</td><td class="pos">+27.5%</td><td class="pos">+10.0%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">HPE</td><td class="sector-cell">Electronic Technology</td><td>98.1</td><td>$59.82</td><td class="pos">+22.4%</td><td class="pos">+10.2%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">IOVA</td><td class="sector-cell">Health Technology</td><td>98.1</td><td>$6.52</td><td class="pos">+60.6%</td><td class="pos">+10.5%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">GTLB</td><td class="sector-cell">Technology Services</td><td>88.5</td><td>$43.35</td><td class="pos">+35.9%</td><td class="pos">+11.1%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">ZETA</td><td class="sector-cell">Technology Services</td><td>93.8</td><td>$29.62</td><td class="pos">+42.8%</td><td class="pos">+11.1%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">NESR</td><td class="sector-cell">Industrial Services</td><td>98.5</td><td>$35.90</td><td class="pos">+23.3%</td><td class="pos">+11.5%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">BLZE</td><td class="sector-cell">Electronic Technology</td><td>99.5</td><td>$20.43</td><td class="pos">+24.6%</td><td class="pos">+12.7%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">PATH</td><td class="sector-cell">Technology Services</td><td>90.6</td><td>$16.68</td><td class="pos">+47.5%</td><td class="pos">+13.0%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">FIGS</td><td class="sector-cell">Consumer Non-Durables</td><td>90.5</td><td>$14.84</td><td class="pos">+47.8%</td><td class="pos">+13.4%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">AEHR</td><td class="sector-cell">Electronic Technology</td><td>99.6</td><td>$123.30</td><td class="pos">+68.2%</td><td class="pos">+14.2%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">FSLY</td><td class="sector-cell">Technology Services</td><td>98.4</td><td>$30.02</td><td class="pos">+51.3%</td><td class="pos">+14.8%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">VOYG</td><td class="sector-cell">Technology Services</td><td>86.8</td><td>$44.28</td><td class="pos">+47.5%</td><td class="pos">+15.0%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">AMPL</td><td class="sector-cell">Technology Services</td><td>94.8</td><td>$13.30</td><td class="pos">+47.6%</td><td class="pos">+16.3%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">REPL</td><td class="sector-cell">Health Technology</td><td>98.5</td><td>$15.19</td><td class="pos">+52.9%</td><td class="pos">+17.0%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">NLST</td><td class="sector-cell">Electronic Technology</td><td>0.0</td><td>$4.96</td><td class="pos">+79.1%</td><td class="pos">+25.3%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">OMER</td><td class="sector-cell">Health Technology</td><td>97.3</td><td>$17.35</td><td class="pos">+73.3%</td><td class="pos">+26.7%</td><td class="status">⚠️ EXT</td></tr>
+<tr><td class="ticker">ABCL</td><td class="sector-cell">Health Technology</td><td>98.9</td><td>$10.97</td><td class="pos">+64.0%</td><td class="pos">+30.6%</td><td class="status">⚠️ EXT</td></tr>
+</tbody>
+</table>
+
+
+<footer>
+Momentum scan filter: Perf.W > 20% &middot; EMA50 &gt; EMA200 &middot; AvgVol &gt; 2M &middot; ADR &gt; 5% &middot; MCap &gt; 1B
+<br>Status legend: 🔥 TIGHT (actionable) &middot; ↩ PULLBACK &middot; 🟡 EARLY &middot; ⚠️ EXTENDED
+</footer>
+
+</div>
+</body>
+</html>
