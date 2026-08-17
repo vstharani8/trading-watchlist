@@ -1,7 +1,7 @@
-# Momentum Scan Performance Audit — 2026-08-15
+# Momentum Scan Performance Audit — 2026-08-17
 
 Lookback: 90 calendar days. Forward windows: [5, 10, 20] trading days.
-Total scan appearances: 2628. With forward data: 2594.
+Total scan appearances: 2662. With forward data: 2594.
 
 Setup proxies are DERIVED (no native label in momentum_scan):
 - **TIGHT**: RS≥85 AND dist10 in [-2%, +4%] — same filter as momentum_tight
