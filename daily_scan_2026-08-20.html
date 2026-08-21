@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daily Swing Scan — Wednesday, Aug 19, 2026</title>
+<title>Daily Swing Scan — Monday, Aug 17, 2026</title>
 <style>
 
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
@@ -253,8 +253,193 @@
   .ema-below { background: var(--red-dim); color: var(--red); }
 
 </style>
+<style>.date-picker {
+  position: fixed;
+  top: 16px;
+  right: 24px;
+  background: var(--surface, #161b22);
+  border: 1px solid var(--border, #30363d);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 13px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.date-picker label {
+  color: var(--muted, #8b949e);
+  font-weight: 500;
+}
+.date-picker select {
+  background: var(--surface2, #1c2128);
+  color: var(--text, #c9d1d9);
+  border: 1px solid var(--border, #30363d);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.date-picker select:focus {
+  outline: none;
+  border-color: var(--accent, #58a6ff);
+}
+@media (max-width: 640px) {
+  .date-picker { top: 8px; right: 8px; font-size: 12px; padding: 6px 8px; }
+}</style>
 </head>
 <body>
+
+    
+    
+    
+    
+    
+    <div class="date-picker">
+      <label for="dp_daily_scan">Date:</label>
+      <select id="dp_daily_scan" onchange="go_daily_scan()">
+        <option value="__latest__">Latest</option>
+      <option value="2026-08-20" selected>2026-08-20</option>
+      <option value="2026-08-19">2026-08-19</option>
+      <option value="2026-08-18">2026-08-18</option>
+      <option value="2026-08-17">2026-08-17</option>
+      <option value="2026-08-15">2026-08-15</option>
+      <option value="2026-08-14">2026-08-14</option>
+      <option value="2026-08-13">2026-08-13</option>
+      <option value="2026-08-12">2026-08-12</option>
+      <option value="2026-08-11">2026-08-11</option>
+      <option value="2026-08-10">2026-08-10</option>
+      <option value="2026-08-09">2026-08-09</option>
+      <option value="2026-08-06">2026-08-06</option>
+      <option value="2026-08-05">2026-08-05</option>
+      <option value="2026-08-04">2026-08-04</option>
+      <option value="2026-08-03">2026-08-03</option>
+      <option value="2026-07-31">2026-07-31</option>
+      <option value="2026-07-30">2026-07-30</option>
+      <option value="2026-07-29">2026-07-29</option>
+      <option value="2026-07-28">2026-07-28</option>
+      <option value="2026-07-27">2026-07-27</option>
+      <option value="2026-07-24">2026-07-24</option>
+      <option value="2026-07-23">2026-07-23</option>
+      <option value="2026-07-22">2026-07-22</option>
+      <option value="2026-07-21">2026-07-21</option>
+      <option value="2026-07-20">2026-07-20</option>
+      <option value="2026-07-17">2026-07-17</option>
+      <option value="2026-07-16">2026-07-16</option>
+      <option value="2026-07-15">2026-07-15</option>
+      <option value="2026-07-14">2026-07-14</option>
+      <option value="2026-07-13">2026-07-13</option>
+      <option value="2026-07-12">2026-07-12</option>
+      <option value="2026-07-11">2026-07-11</option>
+      <option value="2026-07-10">2026-07-10</option>
+      <option value="2026-07-09">2026-07-09</option>
+      <option value="2026-07-08">2026-07-08</option>
+      <option value="2026-07-07">2026-07-07</option>
+      <option value="2026-07-06">2026-07-06</option>
+      <option value="2026-07-03">2026-07-03</option>
+      <option value="2026-07-02">2026-07-02</option>
+      <option value="2026-07-01">2026-07-01</option>
+      <option value="2026-06-30">2026-06-30</option>
+      <option value="2026-06-29">2026-06-29</option>
+      <option value="2026-06-28">2026-06-28</option>
+      <option value="2026-06-27">2026-06-27</option>
+      <option value="2026-06-26">2026-06-26</option>
+      <option value="2026-06-25">2026-06-25</option>
+      <option value="2026-06-24">2026-06-24</option>
+      <option value="2026-06-23">2026-06-23</option>
+      <option value="2026-06-22">2026-06-22</option>
+      <option value="2026-06-20">2026-06-20</option>
+      <option value="2026-06-19">2026-06-19</option>
+      <option value="2026-06-18">2026-06-18</option>
+      <option value="2026-06-17">2026-06-17</option>
+      <option value="2026-06-16">2026-06-16</option>
+      <option value="2026-06-15">2026-06-15</option>
+      <option value="2026-06-12">2026-06-12</option>
+      <option value="2026-06-11">2026-06-11</option>
+      <option value="2026-06-10">2026-06-10</option>
+      <option value="2026-06-09">2026-06-09</option>
+      <option value="2026-06-08">2026-06-08</option>
+      <option value="2026-06-07">2026-06-07</option>
+      <option value="2026-06-06">2026-06-06</option>
+      <option value="2026-06-05">2026-06-05</option>
+      <option value="2026-06-04">2026-06-04</option>
+      <option value="2026-06-03">2026-06-03</option>
+      <option value="2026-05-14">2026-05-14</option>
+      <option value="2026-05-13">2026-05-13</option>
+      <option value="2026-05-12">2026-05-12</option>
+      <option value="2026-05-11">2026-05-11</option>
+      <option value="2026-05-10">2026-05-10</option>
+      <option value="2026-05-09">2026-05-09</option>
+      <option value="2026-05-08">2026-05-08</option>
+      <option value="2026-05-07">2026-05-07</option>
+      <option value="2026-05-06">2026-05-06</option>
+      <option value="2026-05-05">2026-05-05</option>
+      <option value="2026-05-04">2026-05-04</option>
+      <option value="2026-05-03">2026-05-03</option>
+      <option value="2026-05-01">2026-05-01</option>
+      <option value="2026-04-30">2026-04-30</option>
+      <option value="2026-04-29">2026-04-29</option>
+      <option value="2026-04-28">2026-04-28</option>
+      <option value="2026-04-27">2026-04-27</option>
+      <option value="2026-04-25">2026-04-25</option>
+      <option value="2026-04-24">2026-04-24</option>
+      <option value="2026-04-23">2026-04-23</option>
+      <option value="2026-04-22">2026-04-22</option>
+      <option value="2026-04-21">2026-04-21</option>
+      <option value="2026-04-20">2026-04-20</option>
+      <option value="2026-04-19">2026-04-19</option>
+      <option value="2026-04-18">2026-04-18</option>
+      <option value="2026-04-17">2026-04-17</option>
+      <option value="2026-04-16">2026-04-16</option>
+      <option value="2026-04-15">2026-04-15</option>
+      <option value="2026-04-14">2026-04-14</option>
+      <option value="2026-04-13">2026-04-13</option>
+      <option value="2026-04-11">2026-04-11</option>
+      <option value="2026-04-10">2026-04-10</option>
+      <option value="2026-04-09">2026-04-09</option>
+      <option value="2026-04-08">2026-04-08</option>
+      <option value="2026-04-07">2026-04-07</option>
+      <option value="2026-04-06">2026-04-06</option>
+      <option value="2026-04-03">2026-04-03</option>
+      <option value="2026-04-02">2026-04-02</option>
+      <option value="2026-04-01">2026-04-01</option>
+      <option value="2026-03-31">2026-03-31</option>
+      <option value="2026-03-30">2026-03-30</option>
+      <option value="2026-03-29">2026-03-29</option>
+      <option value="2026-03-28">2026-03-28</option>
+      <option value="2026-03-27">2026-03-27</option>
+      <option value="2026-03-26">2026-03-26</option>
+      <option value="2026-03-25">2026-03-25</option>
+      <option value="2026-03-24">2026-03-24</option>
+      <option value="2026-03-23">2026-03-23</option>
+      </select>
+    </div>
+    
+    <script>
+      function go_daily_scan() {
+        var sel = document.getElementById('dp_daily_scan');
+        var v = sel.value;
+        if (v === '__latest__') {
+          window.location.href = 'daily_scan.html';
+        } else {
+          window.location.href = 'daily_scan_' + v + '.html';
+        }
+      }
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 <div class="header">
   <div>
@@ -262,48 +447,48 @@
     <div class="subtitle">EMA Undercut & Rally · IBD RS Strategy</div>
   </div>
   <div class="timestamp">
-    Wednesday, Aug 19, 2026<br>
+    Monday, Aug 17, 2026<br>
     Pre-market / EOD snapshot
   </div>
 </div>
 
 
-<div class="warning-banner">
-  <span class="icon">⚠️</span>
+<div class="warning-banner" style="background:#1a3d1a;border-color:#3fb950;">
+  <span class="icon">✅</span>
   <div>
-    <strong>CASH — Do not enter new long positions.</strong><br>
-    SPY: EMA10 -0.02%, EMA20 +0.71% | QQQ: EMA10 -0.50%, EMA20 +0.17%<br>
-    🔴 DISTRIBUTION — 4+ consecutive down days
+    <strong>LONG — Environment favorable for entries.</strong><br>
+    SPY: EMA10 +0.39%, EMA20 +1.32% | QQQ: EMA10 +1.22%, EMA20 +2.15%<br>
+    🟢 LONG — Both indices above EMA10/20, no distribution
   </div>
 </div>
 
 <div class="spx-strip">
   <div class="spx-chip">
     <div class="sym">SPX</div>
-    <div class="val green">+0.21%</div>
+    <div class="val red">-0.52%</div>
     <div class="perfs">
-      <span>1W <span class="red">-0.74%</span></span>
-      <span>1M <span class="green">+2.92%</span></span>
+      <span>1W <span class="red">-0.09%</span></span>
+      <span>1M <span class="green">+4.00%</span></span>
       <span>RS Universe: 2,999 stocks</span>
     </div>
   </div>
   <div class="spx-chip">
     <div class="sym">SPY</div>
-    <div class="val green">$769.06 <span style="font-size:14px">+0.21%</span></div>
+    <div class="val red">$772.67 <span style="font-size:14px">-0.47%</span></div>
     <div class="ema-check">
-      <span class="ema-chip ema-below">EMA10 -0.02%</span>
-      <span class="ema-chip ema-above">EMA20 +0.71%</span>
+      <span class="ema-chip ema-above">EMA10 +0.39%</span>
+      <span class="ema-chip ema-above">EMA20 +1.32%</span>
     </div>
-    <div class="perfs" style="margin-top:5px"><span>Range pos: <span class="red">15.4%</span> of 10-day</span> <span>4 consec ↑</span></div>
+    <div class="perfs" style="margin-top:5px"><span>Range pos: <span class="green">50%</span> of 10-day</span> <span>—</span></div>
   </div>
   <div class="spx-chip">
     <div class="sym">QQQ</div>
-    <div class="val red">$716.08 <span style="font-size:14px">-0.20%</span></div>
+    <div class="val red">$729.87 <span style="font-size:14px">-0.16%</span></div>
     <div class="ema-check">
-      <span class="ema-chip ema-below">EMA10 -0.50%</span>
-      <span class="ema-chip ema-above">EMA20 +0.17%</span>
+      <span class="ema-chip ema-above">EMA10 +1.22%</span>
+      <span class="ema-chip ema-above">EMA20 +2.15%</span>
     </div>
-    <div class="perfs" style="margin-top:5px"><span>Range pos: <span class="red">8.2%</span> of 10-day</span> <span>1 consec ↓</span></div>
+    <div class="perfs" style="margin-top:5px"><span>Range pos: <span class="green">50%</span> of 10-day</span> <span>—</span></div>
   </div>
 </div>
 
@@ -313,34 +498,34 @@
     
     <div class="stat-row">
       <span class="stat-label">Advancing / Declining</span>
-      <span class="stat-val green">55.5% / 40.3%</span>
+      <span class="stat-val red">34.0% / 62.2%</span>
     </div>
     <div class="progress-wrap" style="margin-bottom:8px">
-      <div class="progress-fill" style="width:55.5%;background:#3fb950"></div>
+      <div class="progress-fill" style="width:34.0%;background:#f85149"></div>
     </div>
 
     <div class="stat-row">
       <span class="stat-label">New Highs / New Lows</span>
-      <span class="stat-val green">62.3% / 37.7%</span>
+      <span class="stat-val green">52.0% / 48.0%</span>
     </div>
     <div class="progress-wrap" style="margin-bottom:8px">
-      <div class="progress-fill" style="width:62.3%;background:#3fb950"></div>
+      <div class="progress-fill" style="width:52.0%;background:#3fb950"></div>
     </div>
 
     <div class="stat-row">
       <span class="stat-label">Above SMA 50</span>
-      <span class="stat-val yellow">53.4%</span>
+      <span class="stat-val yellow">55.1%</span>
     </div>
     <div class="progress-wrap" style="margin-bottom:8px">
-      <div class="progress-fill" style="width:53.4%;background:#d29922"></div>
+      <div class="progress-fill" style="width:55.1%;background:#d29922"></div>
     </div>
 
     <div class="stat-row">
       <span class="stat-label">Above SMA 200</span>
-      <span class="stat-val yellow">54.3%</span>
+      <span class="stat-val yellow">53.4%</span>
     </div>
     <div class="progress-wrap">
-      <div class="progress-fill" style="width:54.3%;background:#d29922"></div>
+      <div class="progress-fill" style="width:53.4%;background:#d29922"></div>
     </div>
 
     <div style="margin-top:12px;padding:8px;background:#3a2a0a;border-radius:5px;font-size:12px;color:#d29922;text-align:center;font-weight:600;">
@@ -365,43 +550,43 @@
       <tbody>
         <tr>
           <td class="muted">1</td>
-          <td>Biotech</td>
-          <td class="mono muted">XBI</td>
-          <td class="r green">+5.90%</td>
-          <td class="r green">+7.22%</td>
-          <td class="r green">+9.64%</td>
+          <td>Energy</td>
+          <td class="mono muted">XLE</td>
+          <td class="r green">+1.08%</td>
+          <td class="r green">+7.54%</td>
+          <td class="r green">+7.99%</td>
         </tr>
         <tr>
           <td class="muted">2</td>
-          <td>Genomics</td>
-          <td class="mono muted">ARKG</td>
-          <td class="r green">+10.46%</td>
-          <td class="r green">+6.64%</td>
-          <td class="r green">+20.59%</td>
+          <td>Cloud Computing</td>
+          <td class="mono muted">SKYY</td>
+          <td class="r red">-1.87%</td>
+          <td class="r green">+3.92%</td>
+          <td class="r green">+21.53%</td>
         </tr>
         <tr>
           <td class="muted">3</td>
-          <td>Health Care</td>
-          <td class="mono muted">XLV</td>
+          <td>Bitcoin Miners</td>
+          <td class="mono muted">WGMI</td>
+          <td class="r green">+3.06%</td>
           <td class="r green">+3.51%</td>
-          <td class="r green">+5.56%</td>
-          <td class="r green">+9.12%</td>
+          <td class="r green">+8.84%</td>
         </tr>
         <tr>
           <td class="muted">4</td>
-          <td>Energy</td>
-          <td class="mono muted">XLE</td>
-          <td class="r red">-0.16%</td>
-          <td class="r green">+5.14%</td>
-          <td class="r green">+10.47%</td>
+          <td>Gold Miners</td>
+          <td class="mono muted">GDX</td>
+          <td class="r green">+2.13%</td>
+          <td class="r green">+3.36%</td>
+          <td class="r green">+30.53%</td>
         </tr>
         <tr>
           <td class="muted">5</td>
-          <td>Gold Miners</td>
-          <td class="mono muted">GDX</td>
-          <td class="r green">+9.42%</td>
-          <td class="r green">+5.12%</td>
-          <td class="r green">+36.81%</td>
+          <td>Emerging Markets</td>
+          <td class="mono muted">EEM</td>
+          <td class="r green">+1.07%</td>
+          <td class="r green">+3.24%</td>
+          <td class="r green">+8.06%</td>
         </tr>
       </tbody>
     </table>
@@ -409,12 +594,12 @@
 </div>
 
 
-<div class="section-label">🔍 Stalk List — CASH Regime · Do not enter · Watch for regime flip</div>
+<div class="section-label">🎯 Watchlist — Entries allowed</div>
 
 <div class="tier-header">
   <span>🥇</span>
   <span style="color:var(--green)">TIER 1 — Best Setups</span>
-  <span class="badge badge-t1">2 stocks</span>
+  <span class="badge badge-t1">1 stocks</span>
   <span style="font-size:11px;color:var(--muted);margin-left:4px">Score ≥ 70 · 🌀 Tight 10/20 &amp; 💎 EMA10 Hold only · Extended moved to Tier 2</span>
 </div>
 
@@ -436,28 +621,288 @@
     </thead>
     <tbody>
       <tr>
-        <td class="muted">1</td>
-        <td><a class="ticker-link" href="https://www.tradingview.com/chart/?symbol=MU" target="_blank">MU</a></td>
-        <td class="r orange">99.5</td>
-        <td class="r mono">$937.11</td>
+        <td class="muted">3</td>
+        <td><a class="ticker-link" href="https://www.tradingview.com/chart/?symbol=TWLO" target="_blank">TWLO</a></td>
+        <td class="r yellow">93.0</td>
+        <td class="r mono">$228.61</td>
         <td class="r muted">—</td>
-        <td class="r green">+0.8%</td>
-        <td class="r green">+2.0%</td>
-        <td class="r green">+2.0%</td>
-        <td class="r green">79</td>
+        <td class="r yellow">-0.7%</td>
+        <td class="r green">+3.8%</td>
+        <td class="r yellow">+5.8%</td>
+        <td class="r green">71</td>
         <td><span class="badge badge-under">💎 EMA10 Hold</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="tier-header" style="margin-top:14px;">
+  <span>🥈</span>
+  <span style="color:var(--yellow)">TIER 2 — Good Setups</span>
+  <span class="badge badge-t2">12 stocks</span>
+  <span style="font-size:11px;color:var(--muted);margin-left:4px">Score 50–69 · Near EMAs, pullback in progress</span>
+</div>
+
+<div class="card" style="margin-top:8px;">
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Ticker</th>
+        <th class="r">RS</th>
+        <th class="r">Price</th>
+        <th class="r">Day%</th>
+        <th class="r">→EMA10</th>
+        <th class="r">→EMA20</th>
+        <th class="r">Weekly</th>
+        <th class="r">Score</th>
+        <th>Setup</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="muted">1</td>
+        <td><a class="ticker-link" href="https://www.tradingview.com/chart/?symbol=CRSR" target="_blank">CRSR</a></td>
+        <td class="r yellow">93.4</td>
+        <td class="r mono">$12.24</td>
+        <td class="r muted">—</td>
+        <td class="r yellow">-1.6%</td>
+        <td class="r green">+4.5%</td>
+        <td class="r yellow">+11.2%</td>
+        <td class="r green">66</td>
+        <td><span class="badge badge-coil">🌀 Tight 10/20</span></td>
       </tr>
       <tr>
         <td class="muted">2</td>
-        <td><a class="ticker-link" href="https://www.tradingview.com/chart/?symbol=FA" target="_blank">FA</a></td>
-        <td class="r yellow">91.5</td>
-        <td class="r mono">$21.14</td>
+        <td><a class="ticker-link" href="https://www.tradingview.com/chart/?symbol=INTC" target="_blank">INTC</a></td>
+        <td class="r orange">97.6</td>
+        <td class="r mono">$103.49</td>
         <td class="r muted">—</td>
-        <td class="r yellow">-0.9%</td>
-        <td class="r yellow">-0.1%</td>
-        <td class="r green">+4.4%</td>
-        <td class="r green">78</td>
+        <td class="r green">+3.0%</td>
+        <td class="r green">+3.0%</td>
+        <td class="r green">-0.9%</td>
+        <td class="r green">66</td>
         <td><span class="badge badge-coil">🌀 Tight 10/20</span></td>
+      </tr>
+      <tr>
+        <td class="muted">3</td>
+        <td><a class="ticker-link" href="https://www.tradingview.com/chart/?symbol=FLEX" target="_blank">FLEX</a></td>
+        <td class="r yellow">93.9</td>
+        <td class="r mono">$130.00</td>
+        <td class="r muted">—</td>
+        <td class="r green">+4.9%</td>
+        <td class="r green">+4.9%</td>
+        <td class="r muted">—</td>
+        <td class="r yellow">63</td>
+        <td><span class="badge badge-setup">📋 Extended</span></td>
+      </tr>
+      <tr>
+        <td class="muted">4</td>
+        <td><a class="ticker-link" href="https://www.tradingview.com/chart/?symbol=APPS" target="_blank">APPS</a></td>
+        <td class="r orange">98.9</td>
+        <td class="r mono">$12.24</td>
+        <td class="r muted">—</td>
+        <td class="r green">+0.3%</td>
+        <td class="r orange">+7.3%</td>
+        <td class="r muted">—</td>
+        <td class="r yellow">61</td>
+        <td><span class="badge badge-under">💎 EMA10 Hold</span></td>
+      </tr>
+      <tr>
+        <td class="muted">5</td>
+        <td><a class="ticker-link" href="https://www.tradingview.com/chart/?symbol=MRVL" target="_blank">MRVL</a></td>
+        <td class="r orange">97.9</td>
+        <td class="r mono">$234.33</td>
+        <td class="r muted">—</td>
+        <td class="r orange">+8.1%</td>
+        <td class="r orange">+9.6%</td>
+        <td class="r muted">—</td>
+        <td class="r yellow">60</td>
+        <td><span class="badge badge-setup">📋 Extended</span></td>
+      </tr>
+      <tr>
+        <td class="muted">6</td>
+        <td><a class="ticker-link" href="https://www.tradingview.com/chart/?symbol=FCEL" target="_blank">FCEL</a></td>
+        <td class="r orange">99.0</td>
+        <td class="r mono">$22.36</td>
+        <td class="r muted">—</td>
+        <td class="r orange">+5.3%</td>
+        <td class="r orange">+5.1%</td>
+        <td class="r muted">—</td>
+        <td class="r yellow">60</td>
+        <td><span class="badge badge-setup">📋 Extended</span></td>
+      </tr>
+      <tr>
+        <td class="muted">7</td>
+        <td><a class="ticker-link" href="https://www.tradingview.com/chart/?symbol=VG" target="_blank">VG</a></td>
+        <td class="r yellow">57.2</td>
+        <td class="r mono">$13.75</td>
+        <td class="r muted">—</td>
+        <td class="r green">+1.3%</td>
+        <td class="r green">+2.7%</td>
+        <td class="r muted">—</td>
+        <td class="r yellow">59</td>
+        <td><span class="badge badge-coil">🌀 Tight 10/20</span></td>
+      </tr>
+      <tr>
+        <td class="muted">8</td>
+        <td><a class="ticker-link" href="https://www.tradingview.com/chart/?symbol=NET" target="_blank">NET</a></td>
+        <td class="r yellow">89.2</td>
+        <td class="r mono">$307.01</td>
+        <td class="r muted">—</td>
+        <td class="r green">+0.5%</td>
+        <td class="r green">+4.6%</td>
+        <td class="r muted">—</td>
+        <td class="r yellow">59</td>
+        <td><span class="badge badge-coil">🌀 Tight 10/20</span></td>
+      </tr>
+      <tr>
+        <td class="muted">9</td>
+        <td><a class="ticker-link" href="https://www.tradingview.com/chart/?symbol=OSCR" target="_blank">OSCR</a></td>
+        <td class="r yellow">94.2</td>
+        <td class="r mono">$31.55</td>
+        <td class="r muted">—</td>
+        <td class="r green">+4.4%</td>
+        <td class="r orange">+5.5%</td>
+        <td class="r muted">—</td>
+        <td class="r yellow">57</td>
+        <td><span class="badge badge-setup">📋 Extended</span></td>
+      </tr>
+      <tr>
+        <td class="muted">10</td>
+        <td><a class="ticker-link" href="https://www.tradingview.com/chart/?symbol=MU" target="_blank">MU</a></td>
+        <td class="r orange">99.6</td>
+        <td class="r mono">$1011.75</td>
+        <td class="r muted">—</td>
+        <td class="r orange">+9.3%</td>
+        <td class="r orange">+10.6%</td>
+        <td class="r muted">—</td>
+        <td class="r yellow">54</td>
+        <td><span class="badge badge-setup">📋 Extended</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="tier-header" style="margin-top:14px;">
+  <span>🥉</span>
+  <span style="color:var(--blue)">TIER 3 — Watch / Wait for Pullback</span>
+  <span class="badge badge-t3">10 stocks</span>
+  <span style="font-size:11px;color:var(--muted);margin-left:4px">Score 30–49 · Extended from EMAs, high RS</span>
+</div>
+
+<div class="card" style="margin-top:8px;">
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Ticker</th>
+        <th class="r">RS</th>
+        <th class="r">Price</th>
+        <th class="r">Day%</th>
+        <th class="r">→EMA10</th>
+        <th class="r">→EMA20</th>
+        <th class="r">Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="muted">1</td>
+        <td><a class="ticker-link" href="https://www.tradingview.com/chart/?symbol=WOLF" target="_blank">WOLF</a></td>
+        <td class="r orange">99.9</td>
+        <td class="r mono">$34.96</td>
+        <td class="r muted">—</td>
+        <td class="r orange">+14.1%</td>
+        <td class="r orange">+15.2%</td>
+        <td class="r muted">50</td>
+      </tr>
+      <tr>
+        <td class="muted">2</td>
+        <td><a class="ticker-link" href="https://www.tradingview.com/chart/?symbol=DELL" target="_blank">DELL</a></td>
+        <td class="r orange">99.1</td>
+        <td class="r mono">$479.81</td>
+        <td class="r muted">—</td>
+        <td class="r green">+3.0%</td>
+        <td class="r orange">+6.9%</td>
+        <td class="r muted">48</td>
+      </tr>
+      <tr>
+        <td class="muted">3</td>
+        <td><a class="ticker-link" href="https://www.tradingview.com/chart/?symbol=WDC" target="_blank">WDC</a></td>
+        <td class="r orange">99.1</td>
+        <td class="r mono">$536.01</td>
+        <td class="r muted">—</td>
+        <td class="r orange">+9.0%</td>
+        <td class="r orange">+7.0%</td>
+        <td class="r muted">43</td>
+      </tr>
+      <tr>
+        <td class="muted">4</td>
+        <td><a class="ticker-link" href="https://www.tradingview.com/chart/?symbol=SNDK" target="_blank">SNDK</a></td>
+        <td class="r orange">99.9</td>
+        <td class="r mono">$1786.85</td>
+        <td class="r muted">—</td>
+        <td class="r orange">+21.9%</td>
+        <td class="r orange">+23.4%</td>
+        <td class="r muted">42</td>
+      </tr>
+      <tr>
+        <td class="muted">5</td>
+        <td><a class="ticker-link" href="https://www.tradingview.com/chart/?symbol=HPE" target="_blank">HPE</a></td>
+        <td class="r orange">97.7</td>
+        <td class="r mono">$57.61</td>
+        <td class="r muted">—</td>
+        <td class="r green">+3.7%</td>
+        <td class="r orange">+9.1%</td>
+        <td class="r muted">40</td>
+      </tr>
+      <tr>
+        <td class="muted">6</td>
+        <td><a class="ticker-link" href="https://www.tradingview.com/chart/?symbol=SLS" target="_blank">SLS</a></td>
+        <td class="r orange">99.7</td>
+        <td class="r mono">$13.00</td>
+        <td class="r muted">—</td>
+        <td class="r orange">+8.1%</td>
+        <td class="r orange">+10.1%</td>
+        <td class="r muted">40</td>
+      </tr>
+      <tr>
+        <td class="muted">7</td>
+        <td><a class="ticker-link" href="https://www.tradingview.com/chart/?symbol=COHR" target="_blank">COHR</a></td>
+        <td class="r orange">96.2</td>
+        <td class="r mono">$351.22</td>
+        <td class="r muted">—</td>
+        <td class="r orange">+6.4%</td>
+        <td class="r orange">+9.3%</td>
+        <td class="r muted">39</td>
+      </tr>
+      <tr>
+        <td class="muted">8</td>
+        <td><a class="ticker-link" href="https://www.tradingview.com/chart/?symbol=OUST" target="_blank">OUST</a></td>
+        <td class="r yellow">94.2</td>
+        <td class="r mono">$48.13</td>
+        <td class="r muted">—</td>
+        <td class="r orange">+6.7%</td>
+        <td class="r orange">+11.0%</td>
+        <td class="r muted">37</td>
+      </tr>
+      <tr>
+        <td class="muted">9</td>
+        <td><a class="ticker-link" href="https://www.tradingview.com/chart/?symbol=TXG" target="_blank">TXG</a></td>
+        <td class="r orange">99.4</td>
+        <td class="r mono">$57.99</td>
+        <td class="r muted">—</td>
+        <td class="r orange">+6.0%</td>
+        <td class="r orange">+13.3%</td>
+        <td class="r muted">36</td>
+      </tr>
+      <tr>
+        <td class="muted">10</td>
+        <td><a class="ticker-link" href="https://www.tradingview.com/chart/?symbol=BLZE" target="_blank">BLZE</a></td>
+        <td class="r orange">99.3</td>
+        <td class="r mono">$19.39</td>
+        <td class="r muted">—</td>
+        <td class="r green">+4.9%</td>
+        <td class="r orange">+13.6%</td>
+        <td class="r muted">36</td>
       </tr>
     </tbody>
   </table>
@@ -465,7 +910,7 @@
 
 <div style="margin-top:24px;padding-top:14px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:11px;color:var(--muted);">
   <span>📋 Strategy: EMA Undercut & Rally · IBD RS Rating · Strong Start (SS/SSH/G2) confirmation required</span>
-  <span>Wait for CASH → LONG regime flip before acting</span>
+  <span>✅ REGIME: LONG — Suitable for entries</span>
 </div>
 
 </body>
