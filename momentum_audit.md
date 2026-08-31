@@ -1,7 +1,7 @@
-# Momentum Scan Performance Audit — 2026-08-28
+# Momentum Scan Performance Audit — 2026-08-31
 
 Lookback: 90 calendar days. Forward windows: [5, 10, 20] trading days.
-Total scan appearances: 2996. With forward data: 2957.
+Total scan appearances: 3033. With forward data: 2957.
 
 Setup proxies are DERIVED (no native label in momentum_scan):
 - **TIGHT**: RS≥85 AND dist10 in [-2%, +4%] — same filter as momentum_tight
@@ -15,7 +15,7 @@ Setup proxies are DERIVED (no native label in momentum_scan):
 
 | Setup | N | 5d Win% | 5d Avg% | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| EXTENDED | 1485 | 41.5% | -2.14% | 41.0% | -3.23% | 38.2% | -5.85% |
+| EXTENDED | 1485 | 41.3% | -2.15% | 40.7% | -3.25% | 37.8% | -5.89% |
 | TIGHT | 701 | 40.7% | -1.08% | 47.8% | -0.42% | 50.4% | -0.77% |
 | BELOW85 | 331 | 41.9% | -0.38% | 51.4% | 1.58% | 57.5% | 3.92% |
 | PULLBACK | 291 | 41.3% | -1.0% | 44.4% | -2.32% | 41.0% | -3.42% |
@@ -25,7 +25,7 @@ Setup proxies are DERIVED (no native label in momentum_scan):
 
 | RS | N | 5d Win% | 5d Avg% | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| 95+ | 1619 | 39.0% | -2.49% | 38.8% | -3.36% | 35.1% | -6.88% |
+| 95+ | 1619 | 38.8% | -2.51% | 38.6% | -3.38% | 34.8% | -6.92% |
 | 90-94 | 533 | 41.6% | -1.19% | 45.9% | -1.47% | 49.9% | -0.45% |
 | <85 | 477 | 43.0% | -0.42% | 50.0% | 0.61% | 55.3% | 2.77% |
 | 85-89 | 328 | 46.3% | -0.21% | 54.9% | -0.36% | 60.5% | 0.49% |
@@ -36,7 +36,7 @@ Setup proxies are DERIVED (no native label in momentum_scan):
 |---|---:|---:|---:|---:|---:|---:|---:|
 | tight (-2..0) | 248 | 39.8% | -0.05% | 52.0% | 2.0% | 56.9% | 3.32% |
 | lifted (0..+5) | 857 | 40.5% | -1.55% | 46.2% | -1.15% | 50.9% | -1.21% |
-| extended (>+5) | 1485 | 41.5% | -2.14% | 41.0% | -3.23% | 38.2% | -5.85% |
+| extended (>+5) | 1485 | 41.3% | -2.15% | 40.7% | -3.25% | 37.8% | -5.89% |
 | pullback (-5..-2) | 196 | 41.2% | -1.91% | 45.4% | -0.92% | 51.0% | 1.3% |
 | deep-pb (<-5) | 171 | 39.4% | -0.28% | 41.2% | -3.5% | 31.2% | -7.29% |
 
@@ -46,7 +46,7 @@ Setup proxies are DERIVED (no native label in momentum_scan):
 |---|---:|---:|---:|---:|---:|---:|---:|
 | 20-29% | 1039 | 42.0% | -1.47% | 46.5% | -1.61% | 46.1% | -2.36% |
 | 30-49% | 1158 | 43.6% | -0.56% | 46.8% | -0.47% | 45.7% | -1.7% |
-| 50+% | 760 | 35.2% | -3.65% | 35.1% | -5.07% | 37.9% | -7.25% |
+| 50+% | 760 | 34.8% | -3.69% | 34.5% | -5.13% | 37.2% | -7.33% |
 
 ## Top 12 Sectors (by 20d avg)
 
@@ -55,7 +55,7 @@ Setup proxies are DERIVED (no native label in momentum_scan):
 | Commercial Services | 19 | 100.0% | 14.38% |
 | Health Services | 97 | 51.0% | 7.71% |
 | Consumer Durables | 5 | 80.0% | 6.52% |
-| Health Technology | 947 | 60.2% | 5.86% |
+| Health Technology | 947 | 59.8% | 5.91% |
 | Retail Trade | 62 | 77.0% | 5.65% |
 | Consumer Non-Durables | 13 | 84.6% | 3.68% |
 | Energy Minerals | 30 | 63.3% | 3.41% |
