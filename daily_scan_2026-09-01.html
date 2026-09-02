@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daily Swing Scan — Tuesday, Sep 1, 2026</title>
+<title>Daily Swing Scan — Friday, Aug 21, 2026</title>
 <style>
 
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
@@ -253,8 +253,228 @@
   .ema-below { background: var(--red-dim); color: var(--red); }
 
 </style>
+<style>.date-picker {
+  position: fixed;
+  top: 16px;
+  right: 24px;
+  background: var(--surface, #161b22);
+  border: 1px solid var(--border, #30363d);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 13px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.date-picker label {
+  color: var(--muted, #8b949e);
+  font-weight: 500;
+}
+.date-picker select {
+  background: var(--surface2, #1c2128);
+  color: var(--text, #c9d1d9);
+  border: 1px solid var(--border, #30363d);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.date-picker select:focus {
+  outline: none;
+  border-color: var(--accent, #58a6ff);
+}
+@media (max-width: 640px) {
+  .date-picker { top: 8px; right: 8px; font-size: 12px; padding: 6px 8px; }
+}</style>
 </head>
 <body>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="date-picker">
+      <label for="dp_daily_scan">Date:</label>
+      <select id="dp_daily_scan" onchange="go_daily_scan()">
+        <option value="__latest__">Latest</option>
+      <option value="2026-09-01" selected>2026-09-01</option>
+      <option value="2026-08-31">2026-08-31</option>
+      <option value="2026-08-28">2026-08-28</option>
+      <option value="2026-08-27">2026-08-27</option>
+      <option value="2026-08-26">2026-08-26</option>
+      <option value="2026-08-25">2026-08-25</option>
+      <option value="2026-08-24">2026-08-24</option>
+      <option value="2026-08-21">2026-08-21</option>
+      <option value="2026-08-20">2026-08-20</option>
+      <option value="2026-08-19">2026-08-19</option>
+      <option value="2026-08-18">2026-08-18</option>
+      <option value="2026-08-17">2026-08-17</option>
+      <option value="2026-08-15">2026-08-15</option>
+      <option value="2026-08-14">2026-08-14</option>
+      <option value="2026-08-13">2026-08-13</option>
+      <option value="2026-08-12">2026-08-12</option>
+      <option value="2026-08-11">2026-08-11</option>
+      <option value="2026-08-10">2026-08-10</option>
+      <option value="2026-08-09">2026-08-09</option>
+      <option value="2026-08-06">2026-08-06</option>
+      <option value="2026-08-05">2026-08-05</option>
+      <option value="2026-08-04">2026-08-04</option>
+      <option value="2026-08-03">2026-08-03</option>
+      <option value="2026-07-31">2026-07-31</option>
+      <option value="2026-07-30">2026-07-30</option>
+      <option value="2026-07-29">2026-07-29</option>
+      <option value="2026-07-28">2026-07-28</option>
+      <option value="2026-07-27">2026-07-27</option>
+      <option value="2026-07-24">2026-07-24</option>
+      <option value="2026-07-23">2026-07-23</option>
+      <option value="2026-07-22">2026-07-22</option>
+      <option value="2026-07-21">2026-07-21</option>
+      <option value="2026-07-20">2026-07-20</option>
+      <option value="2026-07-17">2026-07-17</option>
+      <option value="2026-07-16">2026-07-16</option>
+      <option value="2026-07-15">2026-07-15</option>
+      <option value="2026-07-14">2026-07-14</option>
+      <option value="2026-07-13">2026-07-13</option>
+      <option value="2026-07-12">2026-07-12</option>
+      <option value="2026-07-11">2026-07-11</option>
+      <option value="2026-07-10">2026-07-10</option>
+      <option value="2026-07-09">2026-07-09</option>
+      <option value="2026-07-08">2026-07-08</option>
+      <option value="2026-07-07">2026-07-07</option>
+      <option value="2026-07-06">2026-07-06</option>
+      <option value="2026-07-03">2026-07-03</option>
+      <option value="2026-07-02">2026-07-02</option>
+      <option value="2026-07-01">2026-07-01</option>
+      <option value="2026-06-30">2026-06-30</option>
+      <option value="2026-06-29">2026-06-29</option>
+      <option value="2026-06-28">2026-06-28</option>
+      <option value="2026-06-27">2026-06-27</option>
+      <option value="2026-06-26">2026-06-26</option>
+      <option value="2026-06-25">2026-06-25</option>
+      <option value="2026-06-24">2026-06-24</option>
+      <option value="2026-06-23">2026-06-23</option>
+      <option value="2026-06-22">2026-06-22</option>
+      <option value="2026-06-20">2026-06-20</option>
+      <option value="2026-06-19">2026-06-19</option>
+      <option value="2026-06-18">2026-06-18</option>
+      <option value="2026-06-17">2026-06-17</option>
+      <option value="2026-06-16">2026-06-16</option>
+      <option value="2026-06-15">2026-06-15</option>
+      <option value="2026-06-12">2026-06-12</option>
+      <option value="2026-06-11">2026-06-11</option>
+      <option value="2026-06-10">2026-06-10</option>
+      <option value="2026-06-09">2026-06-09</option>
+      <option value="2026-06-08">2026-06-08</option>
+      <option value="2026-06-07">2026-06-07</option>
+      <option value="2026-06-06">2026-06-06</option>
+      <option value="2026-06-05">2026-06-05</option>
+      <option value="2026-06-04">2026-06-04</option>
+      <option value="2026-06-03">2026-06-03</option>
+      <option value="2026-05-14">2026-05-14</option>
+      <option value="2026-05-13">2026-05-13</option>
+      <option value="2026-05-12">2026-05-12</option>
+      <option value="2026-05-11">2026-05-11</option>
+      <option value="2026-05-10">2026-05-10</option>
+      <option value="2026-05-09">2026-05-09</option>
+      <option value="2026-05-08">2026-05-08</option>
+      <option value="2026-05-07">2026-05-07</option>
+      <option value="2026-05-06">2026-05-06</option>
+      <option value="2026-05-05">2026-05-05</option>
+      <option value="2026-05-04">2026-05-04</option>
+      <option value="2026-05-03">2026-05-03</option>
+      <option value="2026-05-01">2026-05-01</option>
+      <option value="2026-04-30">2026-04-30</option>
+      <option value="2026-04-29">2026-04-29</option>
+      <option value="2026-04-28">2026-04-28</option>
+      <option value="2026-04-27">2026-04-27</option>
+      <option value="2026-04-25">2026-04-25</option>
+      <option value="2026-04-24">2026-04-24</option>
+      <option value="2026-04-23">2026-04-23</option>
+      <option value="2026-04-22">2026-04-22</option>
+      <option value="2026-04-21">2026-04-21</option>
+      <option value="2026-04-20">2026-04-20</option>
+      <option value="2026-04-19">2026-04-19</option>
+      <option value="2026-04-18">2026-04-18</option>
+      <option value="2026-04-17">2026-04-17</option>
+      <option value="2026-04-16">2026-04-16</option>
+      <option value="2026-04-15">2026-04-15</option>
+      <option value="2026-04-14">2026-04-14</option>
+      <option value="2026-04-13">2026-04-13</option>
+      <option value="2026-04-11">2026-04-11</option>
+      <option value="2026-04-10">2026-04-10</option>
+      <option value="2026-04-09">2026-04-09</option>
+      <option value="2026-04-08">2026-04-08</option>
+      <option value="2026-04-07">2026-04-07</option>
+      <option value="2026-04-06">2026-04-06</option>
+      <option value="2026-04-03">2026-04-03</option>
+      <option value="2026-04-02">2026-04-02</option>
+      <option value="2026-04-01">2026-04-01</option>
+      <option value="2026-03-31">2026-03-31</option>
+      <option value="2026-03-30">2026-03-30</option>
+      <option value="2026-03-29">2026-03-29</option>
+      <option value="2026-03-28">2026-03-28</option>
+      <option value="2026-03-27">2026-03-27</option>
+      <option value="2026-03-26">2026-03-26</option>
+      <option value="2026-03-25">2026-03-25</option>
+      <option value="2026-03-24">2026-03-24</option>
+      <option value="2026-03-23">2026-03-23</option>
+      </select>
+    </div>
+    
+    <script>
+      function go_daily_scan() {
+        var sel = document.getElementById('dp_daily_scan');
+        var v = sel.value;
+        if (v === '__latest__') {
+          window.location.href = 'daily_scan.html';
+        } else {
+          window.location.href = 'daily_scan_' + v + '.html';
+        }
+      }
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 <div class="header">
   <div>
@@ -262,7 +482,7 @@
     <div class="subtitle">EMA Undercut & Rally · IBD RS Strategy</div>
   </div>
   <div class="timestamp">
-    Tuesday, Sep 1, 2026<br>
+    Friday, Aug 21, 2026<br>
     Pre-market / EOD snapshot
   </div>
 </div>
@@ -272,38 +492,38 @@
   <span class="icon">⚠️</span>
   <div>
     <strong>CASH — Do not enter new long positions.</strong><br>
-    SPY: EMA10 -0.07%, EMA20 +0.22% | QQQ: EMA10 +0.15%, EMA20 +0.33%<br>
-    🟡 CHOPPY — Mixed signals, sit out
+    SPY: EMA10 -0.24%, EMA20 +0.26% | QQQ: EMA10 -0.53%, EMA20 -0.14%<br>
+    ⚠️ TREND BROKEN — One or both indices below EMA20
   </div>
 </div>
 
 <div class="spx-strip">
   <div class="spx-chip">
     <div class="sym">SPX</div>
-    <div class="val red">-0.33%</div>
+    <div class="val green">+0.43%</div>
     <div class="perfs">
-      <span>1W <span class="green">+0.30%</span></span>
-      <span>1M <span class="green">+3.00%</span></span>
+      <span>1W <span class="red">-1.69%</span></span>
+      <span>1M <span class="green">+2.36%</span></span>
       <span>RS Universe: 2,999 stocks</span>
     </div>
   </div>
   <div class="spx-chip">
     <div class="sym">SPY</div>
-    <div class="val red">$767.05 <span style="font-size:14px">-0.30%</span></div>
+    <div class="val green">$765.72 <span style="font-size:14px">+0.41%</span></div>
     <div class="ema-check">
-      <span class="ema-chip ema-below">EMA10 -0.07%</span>
-      <span class="ema-chip ema-above">EMA20 +0.22%</span>
+      <span class="ema-chip ema-below">EMA10 -0.24%</span>
+      <span class="ema-chip ema-above">EMA20 +0.26%</span>
     </div>
-    <div class="perfs" style="margin-top:5px"><span>Range pos: <span class="green">50%</span> of 10-day</span> <span>—</span></div>
+    <div class="perfs" style="margin-top:5px"><span>Range pos: <span class="red">20.4%</span> of 10-day</span> <span>2 consec ↑</span></div>
   </div>
   <div class="spx-chip">
     <div class="sym">QQQ</div>
-    <div class="val green">$716.76 <span style="font-size:14px">+0.05%</span></div>
+    <div class="val green">$713.44 <span style="font-size:14px">+0.35%</span></div>
     <div class="ema-check">
-      <span class="ema-chip ema-above">EMA10 +0.15%</span>
-      <span class="ema-chip ema-above">EMA20 +0.33%</span>
+      <span class="ema-chip ema-below">EMA10 -0.53%</span>
+      <span class="ema-chip ema-below">EMA20 -0.14%</span>
     </div>
-    <div class="perfs" style="margin-top:5px"><span>Range pos: <span class="green">50%</span> of 10-day</span> <span>—</span></div>
+    <div class="perfs" style="margin-top:5px"><span>Range pos: <span class="red">11.9%</span> of 10-day</span> <span>6 consec ↑</span></div>
   </div>
 </div>
 
@@ -313,38 +533,38 @@
     
     <div class="stat-row">
       <span class="stat-label">Advancing / Declining</span>
-      <span class="stat-val red">35.1% / 60.4%</span>
+      <span class="stat-val green">60.5% / 35.0%</span>
     </div>
     <div class="progress-wrap" style="margin-bottom:8px">
-      <div class="progress-fill" style="width:35.1%;background:#f85149"></div>
+      <div class="progress-fill" style="width:60.5%;background:#3fb950"></div>
     </div>
 
     <div class="stat-row">
       <span class="stat-label">New Highs / New Lows</span>
-      <span class="stat-val red">26.1% / 73.9%</span>
+      <span class="stat-val green">64.3% / 35.7%</span>
     </div>
     <div class="progress-wrap" style="margin-bottom:8px">
-      <div class="progress-fill" style="width:26.1%;background:#f85149"></div>
+      <div class="progress-fill" style="width:64.3%;background:#3fb950"></div>
     </div>
 
     <div class="stat-row">
       <span class="stat-label">Above SMA 50</span>
-      <span class="stat-val yellow">46.9%</span>
+      <span class="stat-val yellow">53.8%</span>
     </div>
     <div class="progress-wrap" style="margin-bottom:8px">
-      <div class="progress-fill" style="width:46.9%;background:#d29922"></div>
+      <div class="progress-fill" style="width:53.8%;background:#d29922"></div>
     </div>
 
     <div class="stat-row">
       <span class="stat-label">Above SMA 200</span>
-      <span class="stat-val yellow">51.2%</span>
+      <span class="stat-val yellow">54.3%</span>
     </div>
     <div class="progress-wrap">
-      <div class="progress-fill" style="width:51.2%;background:#d29922"></div>
+      <div class="progress-fill" style="width:54.3%;background:#d29922"></div>
     </div>
 
-    <div style="margin-top:12px;padding:8px;background:#3a2a0a;border-radius:5px;font-size:12px;color:#d29922;text-align:center;font-weight:600;">
-      🟡 MIXED — Neutral Breadth
+    <div style="margin-top:12px;padding:8px;background:#1a3a24;border-radius:5px;font-size:12px;color:#3fb950;text-align:center;font-weight:600;">
+      🟢 BULLISH — Broad Market Strength
     </div>
     
   </div>
@@ -365,43 +585,43 @@
       <tbody>
         <tr>
           <td class="muted">1</td>
-          <td>Software</td>
-          <td class="mono muted">IGV</td>
-          <td class="r green">+0.44%</td>
-          <td class="r green">+6.98%</td>
-          <td class="r green">+17.94%</td>
+          <td>Gold Miners</td>
+          <td class="mono muted">GDX</td>
+          <td class="r green">+2.98%</td>
+          <td class="r green">+14.72%</td>
+          <td class="r green">+35.45%</td>
         </tr>
         <tr>
           <td class="muted">2</td>
-          <td>Cybersecurity</td>
-          <td class="mono muted">HACK</td>
-          <td class="r green">+1.24%</td>
-          <td class="r green">+5.49%</td>
-          <td class="r green">+10.67%</td>
+          <td>Genomics</td>
+          <td class="mono muted">ARKG</td>
+          <td class="r green">+3.80%</td>
+          <td class="r green">+12.03%</td>
+          <td class="r green">+25.96%</td>
         </tr>
         <tr>
           <td class="muted">3</td>
-          <td>Cloud Computing</td>
-          <td class="mono muted">SKYY</td>
-          <td class="r green">+0.12%</td>
-          <td class="r green">+3.12%</td>
-          <td class="r green">+17.62%</td>
+          <td>Silver Miners</td>
+          <td class="mono muted">SIL</td>
+          <td class="r green">+2.14%</td>
+          <td class="r green">+10.76%</td>
+          <td class="r green">+29.34%</td>
         </tr>
         <tr>
           <td class="muted">4</td>
-          <td>Telecom</td>
-          <td class="mono muted">IYZ</td>
-          <td class="r green">+0.16%</td>
-          <td class="r green">+1.46%</td>
-          <td class="r green">+5.61%</td>
+          <td>Copper Miners</td>
+          <td class="mono muted">COPX</td>
+          <td class="r green">+5.18%</td>
+          <td class="r green">+10.67%</td>
+          <td class="r green">+19.36%</td>
         </tr>
         <tr>
           <td class="muted">5</td>
-          <td>Energy</td>
-          <td class="mono muted">XLE</td>
-          <td class="r green">+2.04%</td>
-          <td class="r green">+1.14%</td>
-          <td class="r green">+8.54%</td>
+          <td>Biotech</td>
+          <td class="mono muted">XBI</td>
+          <td class="r green">+1.44%</td>
+          <td class="r green">+5.87%</td>
+          <td class="r green">+7.87%</td>
         </tr>
       </tbody>
     </table>
@@ -414,7 +634,7 @@
 <div class="tier-header">
   <span>🥇</span>
   <span style="color:var(--green)">TIER 1 — Best Setups</span>
-  <span class="badge badge-t1">1 stocks</span>
+  <span class="badge badge-t1">3 stocks</span>
   <span style="font-size:11px;color:var(--muted);margin-left:4px">Score ≥ 70 · 🌀 Tight 10/20 &amp; 💎 EMA10 Hold only · Extended moved to Tier 2</span>
 </div>
 
@@ -437,15 +657,39 @@
     <tbody>
       <tr>
         <td class="muted">1</td>
-        <td><a class="ticker-link" href="https://www.tradingview.com/chart/?symbol=DELL" target="_blank">DELL</a></td>
-        <td class="r orange">98.5</td>
-        <td class="r mono">$456.01</td>
+        <td><a class="ticker-link" href="https://www.tradingview.com/chart/?symbol=FA" target="_blank">FA</a></td>
+        <td class="r yellow">91.2</td>
+        <td class="r mono">$20.90</td>
         <td class="r muted">—</td>
-        <td class="r green">-0.0%</td>
-        <td class="r green">+1.0%</td>
-        <td class="r green">+3.2%</td>
-        <td class="r green">93</td>
+        <td class="r yellow">-1.6%</td>
+        <td class="r yellow">-1.1%</td>
+        <td class="r green">+3.5%</td>
+        <td class="r green">75</td>
         <td><span class="badge badge-coil">🌀 Tight 10/20</span></td>
+      </tr>
+      <tr>
+        <td class="muted">3</td>
+        <td><a class="ticker-link" href="https://www.tradingview.com/chart/?symbol=HPE" target="_blank">HPE</a></td>
+        <td class="r orange">97.2</td>
+        <td class="r mono">$53.45</td>
+        <td class="r muted">—</td>
+        <td class="r yellow">-1.9%</td>
+        <td class="r green">+0.7%</td>
+        <td class="r yellow">+8.0%</td>
+        <td class="r green">71</td>
+        <td><span class="badge badge-coil">🌀 Tight 10/20</span></td>
+      </tr>
+      <tr>
+        <td class="muted">4</td>
+        <td><a class="ticker-link" href="https://www.tradingview.com/chart/?symbol=UMAC" target="_blank">UMAC</a></td>
+        <td class="r orange">97.5</td>
+        <td class="r mono">$27.43</td>
+        <td class="r muted">—</td>
+        <td class="r yellow">-0.8%</td>
+        <td class="r orange">+5.3%</td>
+        <td class="r yellow">+12.6%</td>
+        <td class="r green">70</td>
+        <td><span class="badge badge-under">💎 EMA10 Hold</span></td>
       </tr>
     </tbody>
   </table>
