@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Combined Watchlist — 2026-09-11</title>
+<title>Combined Watchlist — 2026-09-10</title>
 <style>
   :root {
     --bg: #0d1117; --surface: #161b22; --border: #30363d;
@@ -104,11 +104,12 @@
 </head>
 <body>
 
+    
+    
     <div class="date-picker">
       <label for="dp_watchlist_combined">Date:</label>
       <select id="dp_watchlist_combined" onchange="go_watchlist_combined()">
         <option value="__latest__" selected>Latest</option>
-      <option value="2026-09-11">2026-09-11</option>
       <option value="2026-09-10">2026-09-10</option>
       <option value="2026-09-09">2026-09-09</option>
       <option value="2026-09-08">2026-09-08</option>
@@ -147,20 +148,46 @@
     </script>
     
     
+    
+    
+    
+    
 <div class="container">
 
-<h1>🎯 Combined Watchlist — 2026-09-11</h1>
+<h1>🎯 Combined Watchlist — 2026-09-10</h1>
 <div class="updated">Auto-generated from cron (Mon-Fri 6 AM SGT). Hard-cut + sector filter applied.</div>
 
 <div class="sectors">
   <div class="sectors-label">Strong sectors today</div>
-  <div class="sector-list"><span>Energy Minerals</span></div>
+  <div class="sector-list"><span>Energy Minerals</span> <span>Health Technology</span> <span>Non-Energy Minerals</span> <span>Technology Services</span></div>
 </div>
 
-<div class="stats"><div class="stat"><div class="stat-label">BUY (actionable)</div><div class="stat-value">0</div></div><div class="stat"><div class="stat-label">WATCH</div><div class="stat-value">0</div></div><div class="stat"><div class="stat-label">Skipped</div><div class="stat-value">0</div></div><div class="stat"><div class="stat-label">Strong sectors</div><div class="stat-value">1</div></div><div class="stat"><div class="stat-label">Dropped (filtered)</div><div class="stat-value">25</div></div></div>
+<div class="stats"><div class="stat"><div class="stat-label">BUY (actionable)</div><div class="stat-value">0</div></div><div class="stat"><div class="stat-label">WATCH</div><div class="stat-value">1</div></div><div class="stat"><div class="stat-label">Skipped</div><div class="stat-value">0</div></div><div class="stat"><div class="stat-label">Strong sectors</div><div class="stat-value">4</div></div><div class="stat"><div class="stat-label">Dropped (filtered)</div><div class="stat-value">25</div></div></div>
 
 <h2>✅ BUY (actionable)</h2><p class="muted">None</p>
-<h2>👁 WATCH (degraded / chop / earnings)</h2><p class="muted">None</p>
+<h2>👁 WATCH (degraded / chop / earnings)</h2>
+<table class="watch">
+<thead><tr>
+<th>Ticker</th><th>Decision</th><th>Tier</th><th>Source</th><th>Setup</th>
+<th>RS</th><th>Price</th><th>1d%</th><th>→EMA10</th><th>Score</th>
+<th>Size</th><th>Sector</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="ticker">SLS</td>
+<td class="watch">👁 WATCH</td>
+<td style="color:var(--muted)">tier2</td>
+<td>compression</td>
+<td>Tight</td>
+<td>99.8</td>
+<td>$13.95</td>
+<td class="neg">-0.1%</td>
+<td class="pos">+1.1%</td>
+<td>69.4</td>
+<td>0.7×</td>
+<td>Health Technology</td>
+</tr>
+</tbody></table>
 
 <footer>
 Filter chain: compression_scan + momentum_scan + sector_rotation → hard-cut history → shakeout signature
