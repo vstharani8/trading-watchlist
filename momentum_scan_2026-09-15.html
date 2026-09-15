@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Combined Watchlist — 2026-09-15</title>
+<title>Momentum Scan — 2026-09-14</title>
 <style>
   :root {
     --bg: #0d1117; --surface: #161b22; --border: #30363d;
@@ -16,24 +16,12 @@
     background: var(--bg); color: var(--text);
     margin: 0; padding: 24px; line-height: 1.5;
   }
-  .container { max-width: 1200px; margin: 0 auto; }
+  .container { max-width: 1100px; margin: 0 auto; }
   h1 {
     border-bottom: 1px solid var(--border); padding-bottom: 12px;
     margin-bottom: 8px; font-size: 22px;
   }
-  .updated { color: var(--muted); font-size: 13px; margin-bottom: 16px; }
-  .sectors {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 6px; padding: 12px 16px; margin-bottom: 20px;
-  }
-  .sectors-label { color: var(--muted); font-size: 11px;
-                    text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
-  .sector-list { font-size: 13px; }
-  .sector-list span {
-    display: inline-block; padding: 3px 8px; margin: 2px 4px 2px 0;
-    background: rgba(63,185,80,0.15); color: var(--green);
-    border-radius: 12px; font-size: 12px;
-  }
+  .updated { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
   .stats {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 12px; margin: 16px 0 24px 0;
@@ -44,24 +32,31 @@
   }
   .stat-label { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
   .stat-value { color: var(--text); font-size: 18px; font-weight: 600; margin-top: 4px; }
-  h2 { color: var(--accent); font-size: 16px; margin: 24px 0 8px 0; }
-  table.watch {
+  h2.bucket {
+    color: var(--accent); font-size: 16px; margin: 24px 0 4px 0;
+    padding-bottom: 4px; border-bottom: 1px solid var(--border);
+  }
+  h2.bucket .count { color: var(--muted); font-weight: 400; font-size: 13px; }
+  .bucket-desc {
+    color: var(--muted); font-size: 12px; margin: 0 0 8px 0;
+    font-style: italic;
+  }
+  .sector-cell { color: var(--muted); font-size: 12px; }
+  table.stocks {
     width: 100%; border-collapse: collapse; margin-bottom: 16px;
     background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
-    overflow: hidden; font-size: 12px;
+    overflow: hidden;
   }
   th { background: var(--surface); color: var(--muted); text-align: left;
-       padding: 8px 10px; font-size: 11px; font-weight: 600;
+       padding: 8px 12px; font-size: 12px; font-weight: 600;
        border-bottom: 1px solid var(--border); }
-  td { padding: 6px 10px; border-bottom: 1px solid var(--border); }
+  td { padding: 6px 12px; font-size: 13px; border-bottom: 1px solid var(--border); }
   tr:last-child td { border-bottom: none; }
   tr:hover { background: rgba(88,166,255,0.05); }
   .ticker { font-weight: 600; color: var(--accent); }
-  .buy { color: var(--green); font-weight: 600; }
-  .watch { color: var(--yellow); }
   .pos { color: var(--green); }
   .neg { color: var(--red); }
-  .muted { color: var(--muted); font-style: italic; }
+  .status { font-size: 12px; }
   footer { color: var(--muted); font-size: 12px; margin-top: 32px;
             padding-top: 16px; border-top: 1px solid var(--border); }
 </style>
@@ -104,11 +99,12 @@
 </head>
 <body>
 
+    
+    
     <div class="date-picker">
-      <label for="dp_watchlist_combined">Date:</label>
-      <select id="dp_watchlist_combined" onchange="go_watchlist_combined()">
+      <label for="dp_momentum_scan">Date:</label>
+      <select id="dp_momentum_scan" onchange="go_momentum_scan()">
         <option value="__latest__" selected>Latest</option>
-      <option value="2026-09-15">2026-09-15</option>
       <option value="2026-09-14">2026-09-14</option>
       <option value="2026-09-11">2026-09-11</option>
       <option value="2026-09-10">2026-09-10</option>
@@ -137,58 +133,59 @@
     </div>
     
     <script>
-      function go_watchlist_combined() {
-        var sel = document.getElementById('dp_watchlist_combined');
+      function go_momentum_scan() {
+        var sel = document.getElementById('dp_momentum_scan');
         var v = sel.value;
         if (v === '__latest__') {
-          window.location.href = 'watchlist_combined.html';
+          window.location.href = 'momentum_scan.html';
         } else {
-          window.location.href = 'watchlist_combined_' + v + '.html';
+          window.location.href = 'momentum_scan_' + v + '.html';
         }
       }
     </script>
     
     
+    
+    
+    
+    
 <div class="container">
 
-<h1>🎯 Combined Watchlist — 2026-09-15</h1>
-<div class="updated">Auto-generated from cron (Mon-Fri 6 AM SGT). Hard-cut + sector filter applied.</div>
+<h1>📈 Momentum Scan — 2026-09-14</h1>
+<div class="updated">Auto-generated from cron (Mon-Fri 2 PM SGT). Source: Yahoo Finance. Sections ordered by actionability.</div>
 
-<div class="sectors">
-  <div class="sectors-label">Strong sectors today</div>
-  <div class="sector-list"><span>Energy Minerals</span> <span>Health Services</span> <span>Health Technology</span> <span>Technology Services</span></div>
+<div class="stats">
+<div class="stat"><div class="stat-label">Total stocks</div><div class="stat-value">5</div></div><div class="stat"><div class="stat-label">🔥 TIGHT</div><div class="stat-value">4</div></div><div class="stat"><div class="stat-label">↩ Pullback</div><div class="stat-value">0</div></div><div class="stat"><div class="stat-label">🟡 Early</div><div class="stat-value">0</div></div><div class="stat"><div class="stat-label">⚠️ Extended</div><div class="stat-value">1</div></div><div class="stat"><div class="stat-label">Universe scanned</div><div class="stat-value">3,000</div></div><div class="stat"><div class="stat-label">S&P 500 change</div><div class="stat-value">+0.86%</div></div>
 </div>
 
-<div class="stats"><div class="stat"><div class="stat-label">BUY (actionable)</div><div class="stat-value">0</div></div><div class="stat"><div class="stat-label">WATCH</div><div class="stat-value">1</div></div><div class="stat"><div class="stat-label">Skipped</div><div class="stat-value">0</div></div><div class="stat"><div class="stat-label">Strong sectors</div><div class="stat-value">4</div></div><div class="stat"><div class="stat-label">Dropped (filtered)</div><div class="stat-value">16</div></div></div>
-
-<h2>✅ BUY (actionable)</h2><p class="muted">None</p>
-<h2>👁 WATCH (degraded / chop / earnings)</h2>
-<table class="watch">
-<thead><tr>
-<th>Ticker</th><th>Decision</th><th>Tier</th><th>Source</th><th>Setup</th>
-<th>RS</th><th>Price</th><th>1d%</th><th>→EMA10</th><th>Score</th>
-<th>Size</th><th>Sector</th>
-</tr></thead>
+<h2 class="bucket">🔥 TIGHT (actionable) <span class="count">(4)</span></h2>
+<p class="bucket-desc">In the entry zone — |d10| <= 4%. Highest priority.</p>
+<table class="stocks">
+<thead>
+<tr><th>Ticker</th><th>Sector</th><th>RS</th><th>Price</th><th>1M%</th><th>→EMA10</th><th>Status</th></tr>
+</thead>
 <tbody>
-<tr>
-<td class="ticker">ABCL</td>
-<td class="watch">👁 WATCH</td>
-<td style="color:var(--muted)">tier1</td>
-<td>compression</td>
-<td>Tight</td>
-<td>98.9</td>
-<td>$11.17</td>
-<td class="pos">+2.6%</td>
-<td class="pos">+0.3%</td>
-<td>75.6</td>
-<td>0.7×</td>
-<td>Health Technology</td>
-</tr>
-</tbody></table>
+<tr><td class="ticker">SNDK</td><td class="sector-cell">Electronic Technology</td><td>100.0</td><td>$1633.35</td><td class="pos">+20.3%</td><td class="neg">-0.4%</td><td class="status">🔥 TIGHT</td></tr>
+<tr><td class="ticker">BULL</td><td class="sector-cell">Technology Services</td><td>80.8</td><td>$9.22</td><td class="pos">+20.4%</td><td class="neg">-1.0%</td><td class="status">🔥 TIGHT</td></tr>
+<tr><td class="ticker">IOVA</td><td class="sector-cell">Health Technology</td><td>99.0</td><td>$8.60</td><td class="pos">+32.5%</td><td class="pos">+2.5%</td><td class="status">🔥 TIGHT</td></tr>
+<tr><td class="ticker">MRNA</td><td class="sector-cell">Health Technology</td><td>99.8</td><td>$143.97</td><td class="pos">+137.7%</td><td class="pos">+2.7%</td><td class="status">🔥 TIGHT</td></tr>
+</tbody>
+</table>
+<h2 class="bucket">⚠️ EXTENDED <span class="count">(1)</span></h2>
+<p class="bucket-desc">Extended above EMA10 (d10 > 5%). Wait for cooldown.</p>
+<table class="stocks">
+<thead>
+<tr><th>Ticker</th><th>Sector</th><th>RS</th><th>Price</th><th>1M%</th><th>→EMA10</th><th>Status</th></tr>
+</thead>
+<tbody>
+<tr><td class="ticker">DELL</td><td class="sector-cell">Electronic Technology</td><td>99.5</td><td>$567.29</td><td class="pos">+23.5%</td><td class="pos">+10.9%</td><td class="status">⚠️ EXT</td></tr>
+</tbody>
+</table>
+
 
 <footer>
-Filter chain: compression_scan + momentum_scan + sector_rotation → hard-cut history → shakeout signature
-<br>Tier legend: CLEAN (full size) &middot; DEGRADED (caution) &middot; CHOP (half size or skip)
+Momentum scan filter: Perf.W > 20% &middot; EMA50 &gt; EMA200 &middot; AvgVol &gt; 2M &middot; ADR &gt; 5% &middot; MCap &gt; 1B
+<br>Status legend: 🔥 TIGHT (actionable) &middot; ↩ PULLBACK &middot; 🟡 EARLY &middot; ⚠️ EXTENDED
 </footer>
 
 </div>
