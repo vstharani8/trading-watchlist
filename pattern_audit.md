@@ -1,7 +1,7 @@
-# Pattern Performance Audit — 2026-09-23
+# Pattern Performance Audit — 2026-09-24
 
 Lookback: 90 calendar days. Forward windows: [5, 10, 20] trading days.
-Total scan appearances: 1190. With forward data: 1154.
+Total scan appearances: 1188. With forward data: 1170.
 
 > Each scan appearance is treated as an independent entry signal. Tickers appearing
 > on consecutive days are NOT deduped — pattern repeat-ability is part of the answer.
@@ -10,24 +10,24 @@ Total scan appearances: 1190. With forward data: 1154.
 
 | Setup | N | 5d Win% | 5d Avg% | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| 📐 Tight | 628 | 42.4% | -1.69% | 44.2% | -1.14% | 46.0% | -0.18% |
-| 🌀 Coil | 423 | 46.0% | 0.67% | 43.8% | 0.36% | 47.0% | -0.18% |
-| 📍 Near | 103 | 38.8% | -3.08% | 41.7% | -4.47% | 49.5% | -1.66% |
+| 📐 Tight | 631 | 42.7% | -1.67% | 45.2% | -0.94% | 45.8% | 0.06% |
+| 🌀 Coil | 436 | 46.2% | 0.67% | 44.0% | 0.43% | 47.4% | -0.12% |
+| 📍 Near | 103 | 36.3% | -3.13% | 38.2% | -4.72% | 46.1% | -2.03% |
 
 ## Performance by Tier
 
 | Tier | N | 5d Win% | 5d Avg% | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| tier1 | 590 | 46.6% | -0.77% | 44.3% | -0.79% | 46.4% | -1.0% |
-| tier2 | 564 | 40.1% | -1.16% | 43.3% | -1.01% | 46.9% | 0.41% |
+| tier1 | 598 | 47.0% | -0.75% | 45.3% | -0.62% | 46.8% | -0.86% |
+| tier2 | 572 | 39.7% | -1.15% | 42.9% | -0.94% | 46.0% | 0.51% |
 
 ## Performance by RS Bucket
 
 | RS Bucket | N | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|
-| 95+ | 719 | 43.2% | -1.94% | 45.1% | -1.72% |
-| 90-94 | 277 | 46.3% | 2.78% | 50.0% | 3.72% |
-| 85-89 | 158 | 42.2% | -2.5% | 48.1% | -0.89% |
+| 95+ | 718 | 44.3% | -1.77% | 45.7% | -1.52% |
+| 90-94 | 287 | 44.9% | 2.88% | 47.4% | 3.85% |
+| 85-89 | 165 | 42.0% | -2.69% | 47.8% | -1.22% |
 
 ## Top 10 — 20d Returns
 
@@ -48,7 +48,6 @@ Total scan appearances: 1190. With forward data: 1154.
 
 | Ticker | Date | Setup | RS | Scan$ | 20d$ | Return |
 |---|---|---|---:|---:|---:|---:|
-| WOLF | 06-26 | 📐 Tight | 100.0 | 45.97 | 23.80 | -48.2% |
 | FORM | 06-30 | 📐 Tight | 96.5 | 159.93 | 83.45 | -47.8% |
 | WOLF | 07-01 | 📐 Tight | 100.0 | 44.56 | 23.79 | -46.6% |
 | NBIS | 06-30 | 📍 Near | 98.5 | 276.17 | 148.22 | -46.3% |
@@ -58,6 +57,7 @@ Total scan appearances: 1190. With forward data: 1154.
 | GFS | 06-30 | 📐 Tight | 94.3 | 82.41 | 47.07 | -42.9% |
 | SEDG | 07-15 | 📐 Tight | 92.0 | 54.58 | 32.02 | -41.3% |
 | SEI | 06-29 | 📐 Tight | 92.7 | 79.11 | 47.22 | -40.3% |
+| WULF | 06-30 | 📐 Tight | 98.0 | 24.70 | 15.09 | -38.9% |
 
 ## Suggested Rules (placeholder — finalize after reading the data)
 
