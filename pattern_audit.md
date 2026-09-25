@@ -1,7 +1,7 @@
-# Pattern Performance Audit — 2026-09-24
+# Pattern Performance Audit — 2026-09-25
 
 Lookback: 90 calendar days. Forward windows: [5, 10, 20] trading days.
-Total scan appearances: 1188. With forward data: 1170.
+Total scan appearances: 1203. With forward data: 1188.
 
 > Each scan appearance is treated as an independent entry signal. Tickers appearing
 > on consecutive days are NOT deduped — pattern repeat-ability is part of the answer.
@@ -10,24 +10,24 @@ Total scan appearances: 1188. With forward data: 1170.
 
 | Setup | N | 5d Win% | 5d Avg% | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| 📐 Tight | 631 | 42.7% | -1.67% | 45.2% | -0.94% | 45.8% | 0.06% |
-| 🌀 Coil | 436 | 46.2% | 0.67% | 44.0% | 0.43% | 47.4% | -0.12% |
-| 📍 Near | 103 | 36.3% | -3.13% | 38.2% | -4.72% | 46.1% | -2.03% |
+| 📐 Tight | 638 | 42.2% | -1.67% | 44.1% | -1.01% | 44.5% | -0.09% |
+| 🌀 Coil | 446 | 44.7% | 0.49% | 42.4% | 0.22% | 44.5% | -0.34% |
+| 📍 Near | 104 | 36.9% | -3.11% | 38.8% | -4.54% | 46.6% | -1.75% |
 
 ## Performance by Tier
 
 | Tier | N | 5d Win% | 5d Avg% | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| tier1 | 598 | 47.0% | -0.75% | 45.3% | -0.62% | 46.8% | -0.86% |
-| tier2 | 572 | 39.7% | -1.15% | 42.9% | -0.94% | 46.0% | 0.51% |
+| tier1 | 606 | 45.8% | -0.86% | 44.1% | -0.74% | 44.5% | -1.08% |
+| tier2 | 582 | 39.3% | -1.13% | 41.8% | -0.99% | 44.9% | 0.45% |
 
 ## Performance by RS Bucket
 
 | RS Bucket | N | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|
-| 95+ | 718 | 44.3% | -1.77% | 45.7% | -1.52% |
-| 90-94 | 287 | 44.9% | 2.88% | 47.4% | 3.85% |
-| 85-89 | 165 | 42.0% | -2.69% | 47.8% | -1.22% |
+| 95+ | 727 | 43.2% | -1.86% | 43.6% | -1.79% |
+| 90-94 | 293 | 44.6% | 2.54% | 47.4% | 3.6% |
+| 85-89 | 168 | 39.4% | -2.44% | 44.8% | -0.8% |
 
 ## Top 10 — 20d Returns
 
