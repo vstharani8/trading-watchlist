@@ -1,7 +1,7 @@
-# Pattern Performance Audit — 2026-09-30
+# Pattern Performance Audit — 2026-10-01
 
 Lookback: 90 calendar days. Forward windows: [5, 10, 20] trading days.
-Total scan appearances: 1179. With forward data: 1159.
+Total scan appearances: 1180. With forward data: 1160.
 
 > Each scan appearance is treated as an independent entry signal. Tickers appearing
 > on consecutive days are NOT deduped — pattern repeat-ability is part of the answer.
@@ -10,24 +10,24 @@ Total scan appearances: 1179. With forward data: 1159.
 
 | Setup | N | 5d Win% | 5d Avg% | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| 📐 Tight | 618 | 45.7% | -0.74% | 50.0% | 0.43% | 50.5% | 2.15% |
-| 🌀 Coil | 435 | 46.4% | 0.7% | 45.3% | 0.73% | 47.8% | 0.78% |
-| 📍 Near | 106 | 39.8% | -2.54% | 43.7% | -3.17% | 51.5% | -0.16% |
+| 📐 Tight | 618 | 46.9% | -0.49% | 51.3% | 0.86% | 52.8% | 2.68% |
+| 🌀 Coil | 434 | 47.1% | 0.8% | 47.3% | 0.97% | 51.0% | 1.02% |
+| 📍 Near | 108 | 39.0% | -2.56% | 42.9% | -3.25% | 51.4% | -0.21% |
 
 ## Performance by Tier
 
 | Tier | N | 5d Win% | 5d Avg% | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| tier1 | 588 | 48.5% | -0.26% | 48.2% | 0.16% | 49.1% | 0.74% |
-| tier2 | 571 | 42.2% | -0.46% | 47.1% | 0.28% | 50.1% | 2.12% |
+| tier1 | 589 | 49.6% | -0.14% | 50.4% | 0.45% | 52.0% | 1.1% |
+| tier2 | 571 | 42.8% | -0.25% | 47.6% | 0.6% | 52.0% | 2.5% |
 
 ## Performance by RS Bucket
 
 | RS Bucket | N | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|
-| 95+ | 720 | 48.6% | -0.65% | 49.2% | -0.02% |
-| 90-94 | 276 | 49.1% | 3.79% | 52.0% | 5.85% |
-| 85-89 | 163 | 41.0% | -2.02% | 47.2% | 0.24% |
+| 95+ | 722 | 49.3% | -0.39% | 50.1% | 0.35% |
+| 90-94 | 275 | 51.3% | 3.99% | 57.1% | 6.13% |
+| 85-89 | 163 | 43.9% | -1.37% | 51.6% | 0.75% |
 
 ## Top 10 — 20d Returns
 
@@ -48,16 +48,16 @@ Total scan appearances: 1179. With forward data: 1159.
 
 | Ticker | Date | Setup | RS | Scan$ | 20d$ | Return |
 |---|---|---|---:|---:|---:|---:|
-| QURE | 09-03 | 📐 Tight | 99.1 | 44.86 | 24.51 | -45.4% |
+| QURE | 09-03 | 📐 Tight | 99.1 | 44.86 | 24.16 | -46.1% |
 | SEDG | 07-15 | 📐 Tight | 92.0 | 54.58 | 32.02 | -41.3% |
 | SNDK | 07-10 | 🌀 Coil | 100.0 | 1915.92 | 1212.21 | -36.7% |
 | CIFR | 08-03 | 📐 Tight | 97.3 | 24.16 | 15.50 | -35.8% |
-| BRUN | 07-03 | 📐 Tight | 98.0 | 32.31 | 21.15 | -34.5% |
 | BRUN | 07-06 | 📐 Tight | 98.0 | 32.31 | 21.15 | -34.5% |
 | SNDK | 07-09 | 🌀 Coil | 100.0 | 1858.27 | 1258.58 | -32.3% |
 | CRDO | 08-11 | 📐 Tight | 92.7 | 247.69 | 167.92 | -32.2% |
 | CIFR | 07-31 | 📐 Tight | 97.3 | 22.32 | 15.17 | -32.0% |
 | FCEL | 08-05 | 🌀 Coil | 99.1 | 21.14 | 14.40 | -31.9% |
+| FCEL | 08-15 | 🌀 Coil | 99.0 | 22.36 | 15.25 | -31.8% |
 
 ## Suggested Rules (placeholder — finalize after reading the data)
 
