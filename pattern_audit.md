@@ -1,7 +1,7 @@
-# Pattern Performance Audit — 2026-10-07
+# Pattern Performance Audit — 2026-10-08
 
 Lookback: 90 calendar days. Forward windows: [5, 10, 20] trading days.
-Total scan appearances: 1162. With forward data: 1162.
+Total scan appearances: 1142. With forward data: 1142.
 
 > Each scan appearance is treated as an independent entry signal. Tickers appearing
 > on consecutive days are NOT deduped — pattern repeat-ability is part of the answer.
@@ -10,24 +10,24 @@ Total scan appearances: 1162. With forward data: 1162.
 
 | Setup | N | 5d Win% | 5d Avg% | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| 📐 Tight | 620 | 49.7% | 0.22% | 53.8% | 1.78% | 55.3% | 3.98% |
-| 🌀 Coil | 430 | 48.8% | 1.26% | 50.0% | 1.87% | 52.6% | 2.65% |
-| 📍 Near | 112 | 43.6% | -1.83% | 50.0% | -1.82% | 60.9% | 1.61% |
+| 📐 Tight | 610 | 49.7% | 0.32% | 52.8% | 1.74% | 54.3% | 3.8% |
+| 🌀 Coil | 422 | 49.8% | 1.49% | 50.5% | 1.98% | 51.7% | 2.47% |
+| 📍 Near | 110 | 44.5% | -1.76% | 50.9% | -1.77% | 60.9% | 1.33% |
 
 ## Performance by Tier
 
 | Tier | N | 5d Win% | 5d Avg% | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| tier1 | 591 | 51.1% | 0.31% | 51.8% | 1.12% | 51.8% | 2.28% |
-| tier2 | 571 | 46.3% | 0.51% | 52.2% | 1.83% | 57.9% | 4.27% |
+| tier1 | 581 | 52.2% | 0.55% | 52.0% | 1.29% | 52.3% | 2.34% |
+| tier2 | 561 | 46.2% | 0.55% | 51.5% | 1.7% | 55.6% | 3.83% |
 
 ## Performance by RS Bucket
 
 | RS Bucket | N | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|
-| 95+ | 717 | 51.8% | 0.45% | 52.7% | 1.66% |
-| 90-94 | 282 | 54.3% | 4.84% | 60.1% | 7.33% |
-| 85-89 | 163 | 48.7% | 0.13% | 55.1% | 3.28% |
+| 95+ | 701 | 51.9% | 0.62% | 52.2% | 1.75% |
+| 90-94 | 278 | 53.6% | 4.65% | 59.4% | 6.7% |
+| 85-89 | 163 | 47.9% | -0.16% | 52.1% | 2.54% |
 
 ## Top 10 — 20d Returns
 
@@ -50,7 +50,6 @@ Total scan appearances: 1162. With forward data: 1162.
 |---|---|---|---:|---:|---:|---:|
 | QURE | 09-03 | 📐 Tight | 99.1 | 44.86 | 23.46 | -47.7% |
 | SEDG | 07-15 | 📐 Tight | 92.0 | 54.58 | 32.02 | -41.3% |
-| SNDK | 07-10 | 🌀 Coil | 100.0 | 1915.92 | 1212.21 | -36.7% |
 | CIFR | 08-03 | 📐 Tight | 97.3 | 24.16 | 15.50 | -35.8% |
 | CRDO | 08-11 | 📐 Tight | 92.7 | 247.69 | 167.92 | -32.2% |
 | CIFR | 07-31 | 📐 Tight | 97.3 | 22.32 | 15.17 | -32.0% |
@@ -58,6 +57,7 @@ Total scan appearances: 1162. With forward data: 1162.
 | FCEL | 08-15 | 🌀 Coil | 99.0 | 22.36 | 15.25 | -31.8% |
 | FCEL | 08-17 | 🌀 Coil | 99.0 | 22.36 | 15.25 | -31.8% |
 | ALM | 09-07 | 📍 Near | 97.0 | 19.12 | 13.04 | -31.8% |
+| ALM | 09-08 | 📍 Near | 97.0 | 19.12 | 13.04 | -31.8% |
 
 ## Suggested Rules (placeholder — finalize after reading the data)
 
