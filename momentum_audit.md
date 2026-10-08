@@ -1,7 +1,7 @@
-# Momentum Scan Performance Audit — 2026-10-07
+# Momentum Scan Performance Audit — 2026-10-08
 
 Lookback: 90 calendar days. Forward windows: [5, 10, 20] trading days.
-Total scan appearances: 1736. With forward data: 1736.
+Total scan appearances: 1689. With forward data: 1689.
 
 Setup proxies are DERIVED (no native label in momentum_scan):
 - **TIGHT**: RS≥85 AND dist10 in [-2%, +4%] — same filter as momentum_tight
@@ -15,55 +15,55 @@ Setup proxies are DERIVED (no native label in momentum_scan):
 
 | Setup | N | 5d Win% | 5d Avg% | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| EXTENDED | 863 | 42.2% | -1.16% | 45.5% | -1.68% | 44.3% | -0.53% |
-| TIGHT | 467 | 44.4% | -0.71% | 47.3% | -0.15% | 57.3% | 4.0% |
-| BELOW85 | 230 | 37.3% | -1.69% | 43.4% | -1.18% | 39.9% | -0.93% |
-| PULLBACK | 112 | 29.5% | -4.19% | 46.4% | -4.16% | 64.3% | 10.1% |
-| EARLY | 64 | 42.2% | -1.11% | 32.8% | -2.82% | 53.1% | -0.84% |
+| EXTENDED | 842 | 40.6% | -1.29% | 43.5% | -1.88% | 41.4% | -1.08% |
+| TIGHT | 452 | 44.2% | -0.72% | 47.1% | -0.07% | 55.5% | 3.62% |
+| BELOW85 | 223 | 35.9% | -1.72% | 43.5% | -1.15% | 38.1% | -1.26% |
+| PULLBACK | 111 | 29.7% | -4.12% | 45.9% | -4.21% | 64.9% | 10.09% |
+| EARLY | 61 | 44.3% | -1.03% | 34.4% | -2.46% | 54.1% | -1.12% |
 
 ## Performance by RS Bucket
 
 | RS | N | 5d Win% | 5d Avg% | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| 95+ | 886 | 43.5% | -0.99% | 43.2% | -1.56% | 51.2% | 2.66% |
-| <85 | 365 | 36.7% | -1.78% | 45.0% | -1.44% | 40.6% | -1.63% |
-| 90-94 | 279 | 38.5% | -2.4% | 50.2% | -1.37% | 57.5% | 3.72% |
-| 85-89 | 206 | 44.0% | -0.32% | 48.0% | -0.71% | 42.0% | -2.18% |
+| 95+ | 864 | 42.5% | -1.09% | 41.9% | -1.73% | 49.1% | 2.13% |
+| <85 | 355 | 35.8% | -1.78% | 44.8% | -1.43% | 38.9% | -1.96% |
+| 90-94 | 270 | 37.4% | -2.38% | 48.5% | -1.17% | 54.1% | 3.35% |
+| 85-89 | 200 | 43.5% | -0.52% | 48.0% | -0.87% | 41.0% | -2.62% |
 
 ## Performance by dist10 Bucket
 
 | dist10 zone | N | 5d Win% | 5d Avg% | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| tight (-2..0) | 151 | 40.9% | -0.63% | 44.3% | -1.23% | 54.4% | 1.79% |
-| lifted (0..+5) | 573 | 42.3% | -1.11% | 44.2% | -0.82% | 50.6% | 1.77% |
-| extended (>+5) | 863 | 42.2% | -1.16% | 45.5% | -1.68% | 44.3% | -0.53% |
-| pullback (-5..-2) | 82 | 30.5% | -3.61% | 47.6% | -1.98% | 59.8% | 8.2% |
-| deep-pb (<-5) | 67 | 35.8% | -3.49% | 50.7% | -2.62% | 65.7% | 11.38% |
+| tight (-2..0) | 149 | 40.9% | -0.67% | 45.6% | -1.2% | 54.4% | 1.29% |
+| lifted (0..+5) | 552 | 42.0% | -1.1% | 43.8% | -0.71% | 48.7% | 1.41% |
+| extended (>+5) | 842 | 40.6% | -1.29% | 43.5% | -1.88% | 41.4% | -1.08% |
+| pullback (-5..-2) | 82 | 30.5% | -3.62% | 47.6% | -2.0% | 58.5% | 8.06% |
+| deep-pb (<-5) | 64 | 34.4% | -3.55% | 51.6% | -2.7% | 67.2% | 12.13% |
 
 ## Performance by 1M Momentum Bucket
 
 | 1M% | N | 5d Win% | 5d Avg% | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| 20-29% | 723 | 41.8% | -1.07% | 49.3% | -0.3% | 52.1% | 2.08% |
-| 30-49% | 686 | 42.6% | -0.97% | 44.1% | -1.29% | 45.3% | 0.16% |
-| 50+% | 327 | 37.4% | -2.6% | 38.7% | -4.16% | 49.4% | 2.24% |
+| 20-29% | 710 | 41.3% | -1.12% | 48.2% | -0.5% | 50.4% | 1.47% |
+| 30-49% | 669 | 41.3% | -1.2% | 42.9% | -1.51% | 42.5% | -0.33% |
+| 50+% | 310 | 36.4% | -2.35% | 38.4% | -3.68% | 47.7% | 2.27% |
 
 ## Top 12 Sectors (by 20d avg)
 
 | Sector | N | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|
 | Commercial Services | 16 | 81.2% | 10.7% |
-| Health Technology | 596 | 61.4% | 8.42% |
-| Energy Minerals | 32 | 78.1% | 7.64% |
-| Transportation | 2 | 100.0% | 5.86% |
-| Industrial Services | 28 | 55.6% | 3.9% |
-| Producer Manufacturing | 21 | 50.0% | 1.8% |
+| Health Technology | 569 | 61.1% | 8.24% |
+| Energy Minerals | 32 | 78.1% | 7.65% |
+| Industrial Services | 28 | 53.6% | 2.14% |
+| Producer Manufacturing | 19 | 47.4% | 1.81% |
 | Consumer Durables | 1 | 100.0% | 0.38% |
-| Technology Services | 405 | 49.6% | 0.19% |
-| Consumer Services | 25 | 44.0% | -0.4% |
-| Finance | 48 | 50.0% | -0.49% |
-| Health Services | 36 | 28.6% | -0.93% |
-| Retail Trade | 19 | 21.1% | -0.97% |
+| Health Services | 34 | 26.5% | -0.34% |
+| Technology Services | 401 | 46.4% | -0.47% |
+| Consumer Services | 24 | 41.7% | -0.65% |
+| Finance | 45 | 44.4% | -0.87% |
+| Retail Trade | 16 | 18.8% | -1.57% |
+| Electronic Technology | 339 | 37.8% | -4.37% |
 
 ## Top 10 — 20d Returns
 
@@ -84,7 +84,6 @@ Setup proxies are DERIVED (no native label in momentum_scan):
 
 | Ticker | Date | Setup | RS | 1M% | Scan$ | 20d$ | Return |
 |---|---|---|---:|---:|---:|---:|---:|
-| XRPN | 10-05 | EXTENDED | 99.7 | +274.7% | 38.65 | 19.20 | -50.3% |
 | AEHR | 08-15 | EXTENDED | 99.6 | +36.6% | 145.61 | 81.58 | -44.0% |
 | AEHR | 08-17 | EXTENDED | 99.6 | +36.6% | 145.61 | 81.58 | -44.0% |
 | AEVA | 08-12 | EXTENDED | 91.2 | +23.6% | 25.16 | 14.97 | -40.5% |
@@ -94,6 +93,7 @@ Setup proxies are DERIVED (no native label in momentum_scan):
 | ALOY | 08-17 | EXTENDED | 93.6 | +37.4% | 13.85 | 8.47 | -38.9% |
 | AAOI | 08-15 | EXTENDED | 99.4 | +21.4% | 154.89 | 95.29 | -38.5% |
 | AAOI | 08-17 | EXTENDED | 99.4 | +21.4% | 154.89 | 95.29 | -38.5% |
+| AEHR | 08-14 | EXTENDED | 99.6 | +68.2% | 134.06 | 83.37 | -37.8% |
 
 ## Suggested Rules (placeholder — finalize after reading the data)
 
