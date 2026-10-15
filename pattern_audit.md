@@ -1,7 +1,7 @@
-# Pattern Performance Audit — 2026-10-14
+# Pattern Performance Audit — 2026-10-15
 
 Lookback: 90 calendar days. Forward windows: [5, 10, 20] trading days.
-Total scan appearances: 1062. With forward data: 1062.
+Total scan appearances: 1042. With forward data: 1042.
 
 > Each scan appearance is treated as an independent entry signal. Tickers appearing
 > on consecutive days are NOT deduped — pattern repeat-ability is part of the answer.
@@ -10,24 +10,24 @@ Total scan appearances: 1062. With forward data: 1062.
 
 | Setup | N | 5d Win% | 5d Avg% | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| 📐 Tight | 562 | 51.4% | 0.4% | 53.7% | 1.99% | 50.7% | 2.77% |
-| 🌀 Coil | 401 | 49.9% | 1.67% | 52.4% | 2.79% | 48.6% | 2.3% |
-| 📍 Near | 99 | 43.4% | -1.53% | 45.5% | -1.65% | 53.5% | 0.27% |
+| 📐 Tight | 550 | 52.0% | 0.48% | 51.5% | 1.46% | 45.8% | 1.27% |
+| 🌀 Coil | 397 | 49.9% | 1.69% | 51.9% | 2.48% | 45.6% | 0.88% |
+| 📍 Near | 95 | 45.3% | -1.29% | 45.3% | -2.3% | 45.3% | -1.85% |
 
 ## Performance by Tier
 
 | Tier | N | 5d Win% | 5d Avg% | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| tier1 | 541 | 53.4% | 0.75% | 54.7% | 2.25% | 51.8% | 2.48% |
-| tier2 | 521 | 46.6% | 0.65% | 50.1% | 1.64% | 48.6% | 2.24% |
+| tier1 | 531 | 53.7% | 0.81% | 53.1% | 1.89% | 47.5% | 1.11% |
+| tier2 | 511 | 47.4% | 0.76% | 48.9% | 1.11% | 43.8% | 0.55% |
 
 ## Performance by RS Bucket
 
 | RS Bucket | N | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|
-| 95+ | 646 | 52.5% | 0.97% | 49.8% | 0.89% |
-| 90-94 | 256 | 56.6% | 5.94% | 54.3% | 6.5% |
-| 85-89 | 160 | 45.6% | -0.47% | 45.0% | 1.69% |
+| 95+ | 635 | 50.9% | 0.43% | 44.7% | -0.7% |
+| 90-94 | 252 | 56.0% | 5.79% | 50.8% | 5.12% |
+| 85-89 | 155 | 43.9% | -1.04% | 41.3% | 0.17% |
 
 ## Top 10 — 20d Returns
 
@@ -49,8 +49,8 @@ Total scan appearances: 1062. With forward data: 1062.
 | Ticker | Date | Setup | RS | Scan$ | 20d$ | Return |
 |---|---|---|---:|---:|---:|---:|
 | QURE | 09-03 | 📐 Tight | 99.1 | 44.86 | 23.46 | -47.7% |
+| CGEM | 09-21 | 🌀 Coil | 98.1 | 21.35 | 13.64 | -36.1% |
 | CIFR | 08-03 | 📐 Tight | 97.3 | 24.16 | 15.50 | -35.8% |
-| CGEM | 09-21 | 🌀 Coil | 98.1 | 21.35 | 14.10 | -34.0% |
 | CRDO | 08-11 | 📐 Tight | 92.7 | 247.69 | 167.92 | -32.2% |
 | CIFR | 07-31 | 📐 Tight | 97.3 | 22.32 | 15.17 | -32.0% |
 | FCEL | 08-05 | 🌀 Coil | 99.1 | 21.14 | 14.40 | -31.9% |
