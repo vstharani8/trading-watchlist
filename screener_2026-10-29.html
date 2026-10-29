@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>moomoo Screener + EMA Coil — 2026-10-29</title>
+<style>
+  :root {
+    --bg: #0d1117; --surface: #161b22; --surface2: #1c2128;
+    --border: #30363d; --text: #e6edf3; --muted: #8b949e;
+    --accent: #58a6ff; --green: #3fb950; --red: #f85149; --yellow: #d29922;
+    --purple: #bc8cff; --orange: #ffa657;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--text); margin: 0; padding: 24px; line-height: 1.5;
+  }
+  .container { max-width: 1200px; margin: 0 auto; }
+  h1 {
+    border-bottom: 1px solid var(--border); padding-bottom: 12px;
+    margin-bottom: 8px; font-size: 22px;
+  }
+  .updated { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+  .stats {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px; margin: 16px 0 24px 0;
+  }
+  .stat {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 6px; padding: 10px 14px;
+  }
+  .stat-label { color: var(--muted); font-size: 11px; text-transform: uppercase;
+                 letter-spacing: 0.5px; }
+  .stat-value { color: var(--text); font-size: 18px; font-weight: 600; margin-top: 4px; }
+  h2.bucket {
+    color: var(--accent); font-size: 16px; margin: 24px 0 8px 0;
+    padding-bottom: 4px; border-bottom: 1px solid var(--border);
+  }
+  h2.bucket .count { color: var(--muted); font-weight: 400; font-size: 13px; }
+  table.stocks {
+    width: 100%; border-collapse: collapse; margin-bottom: 16px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
+    overflow: hidden;
+  }
+  th { background: var(--surface2); color: var(--muted); text-align: left;
+       padding: 8px 12px; font-size: 12px; font-weight: 600;
+       border-bottom: 1px solid var(--border); }
+  td { padding: 6px 12px; font-size: 13px; border-bottom: 1px solid var(--border); }
+  tr:last-child td { border-bottom: none; }
+  tr:hover { background: rgba(88,166,255,0.05); }
+  .ticker { font-weight: 600; color: var(--accent); }
+  .name { color: var(--muted); font-size: 12px; }
+  .pos { color: var(--green); }
+  .neg { color: var(--red); }
+  .badge {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.3px;
+  }
+  .badge-tight { background: #1a3a24; color: var(--green); border: 1px solid var(--green); }
+  .badge-pullback { background: #1a2a3a; color: var(--accent); border: 1px solid var(--accent); }
+  .badge-broken { background: #3a1a1a; color: var(--red); border: 1px solid var(--red); }
+  .badge-parabolic { background: #3a2a0a; color: var(--yellow); border: 1px solid var(--yellow); }
+  .badge-ext-low { background: #2a1a3a; color: var(--purple); border: 1px solid var(--purple); }
+  .badge-mild { background: #2a2a1a; color: var(--orange); border: 1px solid var(--orange); }
+  footer { color: var(--muted); font-size: 12px; margin-top: 32px;
+            padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+<style>.date-picker {
+  position: fixed;
+  top: 16px;
+  right: 24px;
+  background: var(--surface, #161b22);
+  border: 1px solid var(--border, #30363d);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 13px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.date-picker label {
+  color: var(--muted, #8b949e);
+  font-weight: 500;
+}
+.date-picker select {
+  background: var(--surface2, #1c2128);
+  color: var(--text, #c9d1d9);
+  border: 1px solid var(--border, #30363d);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.date-picker select:focus {
+  outline: none;
+  border-color: var(--accent, #58a6ff);
+}
+@media (max-width: 640px) {
+  .date-picker { top: 8px; right: 8px; font-size: 12px; padding: 6px 8px; }
+}</style>
+</head>
+<body>
+
+    <div class="date-picker">
+      <label for="dp_screener">Date:</label>
+      <select id="dp_screener" onchange="go_screener()">
+        <option value="__latest__">Latest</option>
+      <option value="2026-10-29" selected>2026-10-29</option>
+      <option value="2026-10-28">2026-10-28</option>
+      <option value="2026-10-27">2026-10-27</option>
+      <option value="2026-10-26">2026-10-26</option>
+      <option value="2026-10-23">2026-10-23</option>
+      <option value="2026-10-22">2026-10-22</option>
+      <option value="2026-10-21">2026-10-21</option>
+      <option value="2026-10-20">2026-10-20</option>
+      <option value="2026-10-19">2026-10-19</option>
+      <option value="2026-10-16">2026-10-16</option>
+      <option value="2026-10-15">2026-10-15</option>
+      <option value="2026-10-14">2026-10-14</option>
+      <option value="2026-10-13">2026-10-13</option>
+      <option value="2026-10-12">2026-10-12</option>
+      <option value="2026-10-09">2026-10-09</option>
+      <option value="2026-10-08">2026-10-08</option>
+      <option value="2026-10-07">2026-10-07</option>
+      <option value="2026-10-06">2026-10-06</option>
+      <option value="2026-10-05">2026-10-05</option>
+      <option value="2026-10-02">2026-10-02</option>
+      <option value="2026-10-01">2026-10-01</option>
+      <option value="2026-09-30">2026-09-30</option>
+      <option value="2026-09-29">2026-09-29</option>
+      <option value="2026-09-28">2026-09-28</option>
+      <option value="2026-09-25">2026-09-25</option>
+      <option value="2026-09-24">2026-09-24</option>
+      <option value="2026-09-23">2026-09-23</option>
+      <option value="2026-09-22">2026-09-22</option>
+      <option value="2026-09-21">2026-09-21</option>
+      <option value="2026-09-18">2026-09-18</option>
+      <option value="2026-09-17">2026-09-17</option>
+      <option value="2026-09-16">2026-09-16</option>
+      <option value="2026-09-15">2026-09-15</option>
+      <option value="2026-09-14">2026-09-14</option>
+      <option value="2026-09-11">2026-09-11</option>
+      <option value="2026-09-10">2026-09-10</option>
+      <option value="2026-09-09">2026-09-09</option>
+      <option value="2026-09-08">2026-09-08</option>
+      <option value="2026-09-07">2026-09-07</option>
+      <option value="2026-09-04">2026-09-04</option>
+      <option value="2026-09-03">2026-09-03</option>
+      <option value="2026-09-02">2026-09-02</option>
+      <option value="2026-09-01">2026-09-01</option>
+      <option value="2026-08-31">2026-08-31</option>
+      <option value="2026-08-28">2026-08-28</option>
+      <option value="2026-08-27">2026-08-27</option>
+      <option value="2026-08-26">2026-08-26</option>
+      <option value="2026-08-25">2026-08-25</option>
+      <option value="2026-08-24">2026-08-24</option>
+      <option value="2026-08-21">2026-08-21</option>
+      <option value="2026-08-20">2026-08-20</option>
+      <option value="2026-08-19">2026-08-19</option>
+      <option value="2026-08-18">2026-08-18</option>
+      <option value="2026-08-17">2026-08-17</option>
+      <option value="2026-08-15">2026-08-15</option>
+      <option value="2026-08-14">2026-08-14</option>
+      <option value="2026-08-13">2026-08-13</option>
+      </select>
+    </div>
+    
+    <script>
+      function go_screener() {
+        var sel = document.getElementById('dp_screener');
+        var v = sel.value;
+        if (v === '__latest__') {
+          window.location.href = 'screener.html';
+        } else {
+          window.location.href = 'screener_' + v + '.html';
+        }
+      }
+    </script>
+    
+    
+<div class="container">
+
+<h1>🔎 moomoo Screener + EMA Coil — 2026-10-29</h1>
+<div class="updated">Auto-generated from cron (Mon-Fri 2 PM SGT). Source: moomoo OpenD + Yahoo Finance.</div>
+
+<div class="stats">
+<div class="stat"><div class="stat-label">Total screened</div><div class="stat-value">13</div></div>
+<div class="stat"><div class="stat-label">🌀 Coiled (entry)</div><div class="stat-value">0</div></div>
+<div class="stat"><div class="stat-label">✅ Undercut</div><div class="stat-value">0</div></div>
+<div class="stat"><div class="stat-label">⚠️ Parabolic (wait)</div><div class="stat-value">9</div></div>
+<div class="stat"><div class="stat-label">🔴 Broken</div><div class="stat-value">0</div></div>
+<div class="stat"><div class="stat-label">Run date</div><div class="stat-value">2026-10-29</div></div>
+</div>
+
+<h2 class="bucket">📈 Mild extended <span class="count">(2)</span></h2>
+<table class="stocks">
+<thead>
+<tr><th>Ticker</th><th>Name</th><th>Price</th><th>Off 52w H</th><th>15D %</th><th>20D Vol</th><th>Mkt Cap</th><th>→EMA10</th><th>→EMA20</th><th>RSI</th><th>Bucket</th></tr>
+</thead>
+<tbody>
+<tr><td class="ticker">PCRX</td><td class="name">Pacira BioSciences</td><td>$36.39</td><td class="neg">-0.8%</td><td class="pos">+44.4%</td><td>53.2M</td><td>$1.5B</td><td class="pos">+1.6%</td><td class="pos">+7.5%</td><td class="pos">50</td><td class="bucket-mild"><span class="badge badge-mild">MILD</span></td></tr>
+<tr><td class="ticker">ARQT</td><td class="name">Arcutis Biotherapeutics</td><td>$31.45</td><td class="neg">-5.6%</td><td class="pos">+30.1%</td><td>46.6M</td><td>$4.0B</td><td class="pos">+2.2%</td><td class="pos">+7.3%</td><td class="">76</td><td class="bucket-mild"><span class="badge badge-mild">MILD</span></td></tr>
+</tbody>
+</table>
+<h2 class="bucket">📈 Extended (RSI < 80) <span class="count">(2)</span></h2>
+<table class="stocks">
+<thead>
+<tr><th>Ticker</th><th>Name</th><th>Price</th><th>Off 52w H</th><th>15D %</th><th>20D Vol</th><th>Mkt Cap</th><th>→EMA10</th><th>→EMA20</th><th>RSI</th><th>Bucket</th></tr>
+</thead>
+<tbody>
+<tr><td class="ticker">BHVN</td><td class="name">Biohaven</td><td>$15.52</td><td class="neg">-14.9%</td><td class="pos">+30.6%</td><td>72.0M</td><td>$2.3B</td><td class="pos">+13.2%</td><td class="pos">+17.6%</td><td class="">70</td><td class="bucket-ext-low"><span class="badge badge-ext-low">EXT-LOW</span></td></tr>
+<tr><td class="ticker">NTSK</td><td class="name">Netskope</td><td>$26.52</td><td class="neg">-0.7%</td><td class="pos">+37.8%</td><td>142.2M</td><td>$10.8B</td><td class="pos">+13.5%</td><td class="pos">+23.0%</td><td class="">78</td><td class="bucket-ext-low"><span class="badge badge-ext-low">EXT-LOW</span></td></tr>
+</tbody>
+</table>
+<h2 class="bucket">⚠️ Parabolic — wait for cooldown <span class="count">(9)</span></h2>
+<table class="stocks">
+<thead>
+<tr><th>Ticker</th><th>Name</th><th>Price</th><th>Off 52w H</th><th>15D %</th><th>20D Vol</th><th>Mkt Cap</th><th>→EMA10</th><th>→EMA20</th><th>RSI</th><th>Bucket</th></tr>
+</thead>
+<tbody>
+<tr><td class="ticker">FIGS</td><td class="name">FIGS Inc</td><td>$20.66</td><td class="neg">-1.1%</td><td class="pos">+46.9%</td><td>85.4M</td><td>$3.4B</td><td class="pos">+4.7%</td><td class="pos">+12.9%</td><td class="neg">87</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">DXC</td><td class="name">DXC Technology</td><td>$16.09</td><td class="neg">-1.8%</td><td class="pos">+33.9%</td><td>103.2M</td><td>$2.6B</td><td class="pos">+6.0%</td><td class="pos">+14.1%</td><td class="neg">87</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">HAS</td><td class="name">Hasbro</td><td>$118.68</td><td class="neg">-1.9%</td><td class="pos">+30.8%</td><td>53.5M</td><td>$16.7B</td><td class="pos">+6.2%</td><td class="pos">+12.8%</td><td class="neg">97</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">CAI</td><td class="name">Caris Life Sciences</td><td>$35.45</td><td class="neg">-2.9%</td><td class="pos">+30.8%</td><td>72.5M</td><td>$10.0B</td><td class="pos">+9.4%</td><td class="pos">+13.5%</td><td class="neg">83</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">BRZE</td><td class="name">Braze</td><td>$45.78</td><td class="neg">-0.4%</td><td class="pos">+60.9%</td><td>149.7M</td><td>$5.2B</td><td class="pos">+10.1%</td><td class="pos">+24.1%</td><td class="neg">91</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">SLN</td><td class="name">Silence Therapeutics</td><td>$19.71</td><td class="neg">-0.8%</td><td class="pos">+100.7%</td><td>118.1M</td><td>$1.2B</td><td class="pos">+11.6%</td><td class="pos">+27.4%</td><td class="neg">87</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">RRC</td><td class="name">Range Resources</td><td>$55.88</td><td class="neg">-1.8%</td><td class="pos">+40.3%</td><td>102.1M</td><td>$13.1B</td><td class="pos">+14.9%</td><td class="pos">+23.2%</td><td class="neg">88</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">SGRY</td><td class="name">Surgery Partners</td><td>$23.24</td><td class="neg">-0.6%</td><td class="pos">+69.5%</td><td>104.0M</td><td>$3.0B</td><td class="pos">+23.6%</td><td class="pos">+37.3%</td><td class="neg">95</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">GMAB</td><td class="name">Genmab</td><td>$57.29</td><td class="neg">-4.5%</td><td class="pos">+56.3%</td><td>128.9M</td><td>$35.2B</td><td class="pos">+30.2%</td><td class="pos">+40.4%</td><td class="neg">93</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+</tbody>
+</table>
+
+
+<footer>
+<b>moomoo filter</b>: US &middot; Price ≥ $10 &middot; % off 52w H ∈ [-25%, 0%] &middot; MCap ≥ $1B &middot; 20D Vol ≥ 40M (≈ 2M/day) &middot; 15D %-Chg ≥ 0
+<br><b>Workflow</b>: screener picks momentum runners; EMA10/EMA20 distance then sorts by coil-readiness.
+<br><b>Bucket rules</b>: 🌀 COILED = |d10| &lt; 3% &amp; |d20| &lt; 5% &middot; ✅ UNDERCUT = -5% &lt; d10 &lt; -2% &amp; d20 &gt; 0 &middot; ⚠️ PARABOLIC = d10 &gt; 3% &amp; d20 &gt; 5% &amp; RSI &gt; 80 &middot; 🔴 BROKEN = both EMAs below
+</footer>
+
+</div>
+</body>
+</html>
