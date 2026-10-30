@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top RS Report — Thursday, Oct 29, 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface2: #1c2128;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --green: #3fb950;
+    --green-dim: #1a3a24;
+    --red: #f85149;
+    --red-dim: #3a1a1a;
+    --yellow: #d29922;
+    --yellow-dim: #3a2a0a;
+    --blue: #58a6ff;
+    --purple: #bc8cff;
+    --orange: #ffa657;
+    --accent: #238636;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 16px;
+  }
+  .header h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
+  .header .subtitle { color: var(--muted); font-size: 12px; margin-top: 3px; }
+  .timestamp { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); text-align: right; }
+
+  .back-link { display: inline-block; color: var(--blue); text-decoration: none; font-size: 12px; margin-bottom: 16px; }
+  .back-link:hover { text-decoration: underline; }
+
+  .summary-bar {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 12px;
+  }
+  .summary-bar .item { display: flex; flex-direction: column; }
+  .summary-bar .label { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .summary-bar .value { color: var(--text); font-weight: 600; margin-top: 2px; }
+  .summary-bar .value.green { color: var(--green); }
+  .summary-bar .value.red { color: var(--red); }
+
+  .section-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 24px 0 12px 0;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-title .count {
+    background: var(--surface2);
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+  }
+
+  .legend {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+    font-size: 11px;
+    color: var(--muted);
+  }
+  .legend-item { display: flex; align-items: center; gap: 4px; }
+  .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  th {
+    text-align: left;
+    padding: 8px 10px;
+    color: var(--muted);
+    font-weight: 500;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+  }
+  th.right, td.right { text-align: right; }
+  td {
+    padding: 7px 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  tr:hover td { background: var(--surface2); }
+  .mono { font-family: 'JetBrains Mono', monospace; font-size: 11px; }
+  .ticker { font-weight: 600; color: var(--blue); }
+  .rank { color: var(--muted); font-family: 'JetBrains Mono', monospace; font-size: 11px; }
+  .pos { color: var(--green); }
+  .neg { color: var(--red); }
+  .setup-cell { font-size: 13px; letter-spacing: 1px; }
+  .coil { color: var(--purple); }
+
+  .footer { color: var(--muted); font-size: 11px; margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); }
+
+  .pill {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 500;
+  }
+  .pill-green { background: var(--green-dim); color: var(--green); }
+  .pill-red { background: var(--red-dim); color: var(--red); }
+  .pill-blue { background: rgba(88,166,255,0.15); color: var(--blue); }
+  .pill-purple { background: rgba(188,140,255,0.15); color: var(--purple); }
+
+  .filter-bar {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .filter-bar .label {
+    color: var(--muted);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-right: 4px;
+  }
+  .filter-btn {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .filter-btn:hover { border-color: var(--accent); }
+  .filter-btn.active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+  .filter-btn .count {
+    margin-left: 6px;
+    background: rgba(255,255,255,0.15);
+    color: inherit;
+    padding: 1px 6px;
+    border-radius: 8px;
+    font-size: 10px;
+  }
+  .filter-btn:not(.active) .count {
+    background: var(--surface2);
+    color: var(--muted);
+  }
+  .row-coil { background: rgba(188,140,255,0.06); }
+  .row-coil:hover td { background: rgba(188,140,255,0.12) !important; }
+  .row-extended { opacity: 0.55; }
+  .hidden { display: none; }
+  .summary-line {
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+</style>
+<style>.date-picker {
+  position: fixed;
+  top: 16px;
+  right: 24px;
+  background: var(--surface, #161b22);
+  border: 1px solid var(--border, #30363d);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 13px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.date-picker label {
+  color: var(--muted, #8b949e);
+  font-weight: 500;
+}
+.date-picker select {
+  background: var(--surface2, #1c2128);
+  color: var(--text, #c9d1d9);
+  border: 1px solid var(--border, #30363d);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.date-picker select:focus {
+  outline: none;
+  border-color: var(--accent, #58a6ff);
+}
+@media (max-width: 640px) {
+  .date-picker { top: 8px; right: 8px; font-size: 12px; padding: 6px 8px; }
+}</style>
+</head>
+<body>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="date-picker">
+      <label for="dp_top_rs">Date:</label>
+      <select id="dp_top_rs" onchange="go_top_rs()">
+        <option value="__latest__" selected>Latest</option>
+      <option value="2026-10-29">2026-10-29</option>
+      <option value="2026-10-28">2026-10-28</option>
+      <option value="2026-10-27">2026-10-27</option>
+      <option value="2026-10-26">2026-10-26</option>
+      <option value="2026-10-23">2026-10-23</option>
+      <option value="2026-10-22">2026-10-22</option>
+      <option value="2026-10-21">2026-10-21</option>
+      <option value="2026-10-20">2026-10-20</option>
+      <option value="2026-10-19">2026-10-19</option>
+      <option value="2026-10-16">2026-10-16</option>
+      <option value="2026-10-15">2026-10-15</option>
+      <option value="2026-10-14">2026-10-14</option>
+      <option value="2026-10-13">2026-10-13</option>
+      <option value="2026-10-12">2026-10-12</option>
+      <option value="2026-10-09">2026-10-09</option>
+      <option value="2026-10-08">2026-10-08</option>
+      <option value="2026-10-07">2026-10-07</option>
+      <option value="2026-10-06">2026-10-06</option>
+      <option value="2026-10-05">2026-10-05</option>
+      <option value="2026-10-02">2026-10-02</option>
+      <option value="2026-10-01">2026-10-01</option>
+      <option value="2026-09-30">2026-09-30</option>
+      <option value="2026-09-29">2026-09-29</option>
+      <option value="2026-09-28">2026-09-28</option>
+      <option value="2026-09-25">2026-09-25</option>
+      <option value="2026-09-24">2026-09-24</option>
+      <option value="2026-09-23">2026-09-23</option>
+      <option value="2026-09-22">2026-09-22</option>
+      <option value="2026-09-21">2026-09-21</option>
+      <option value="2026-09-18">2026-09-18</option>
+      <option value="2026-09-17">2026-09-17</option>
+      <option value="2026-09-16">2026-09-16</option>
+      <option value="2026-09-15">2026-09-15</option>
+      <option value="2026-09-14">2026-09-14</option>
+      <option value="2026-09-11">2026-09-11</option>
+      <option value="2026-09-10">2026-09-10</option>
+      <option value="2026-09-09">2026-09-09</option>
+      <option value="2026-09-08">2026-09-08</option>
+      <option value="2026-09-07">2026-09-07</option>
+      <option value="2026-09-04">2026-09-04</option>
+      <option value="2026-09-03">2026-09-03</option>
+      <option value="2026-09-02">2026-09-02</option>
+      <option value="2026-09-01">2026-09-01</option>
+      <option value="2026-08-31">2026-08-31</option>
+      <option value="2026-08-28">2026-08-28</option>
+      <option value="2026-08-27">2026-08-27</option>
+      <option value="2026-08-26">2026-08-26</option>
+      <option value="2026-08-25">2026-08-25</option>
+      <option value="2026-08-24">2026-08-24</option>
+      <option value="2026-08-21">2026-08-21</option>
+      <option value="2026-08-20">2026-08-20</option>
+      <option value="2026-08-19">2026-08-19</option>
+      <option value="2026-08-18">2026-08-18</option>
+      <option value="2026-08-17">2026-08-17</option>
+      <option value="2026-08-15">2026-08-15</option>
+      <option value="2026-08-14">2026-08-14</option>
+      <option value="2026-08-13">2026-08-13</option>
+      </select>
+    </div>
+    
+    <script>
+      function go_top_rs() {
+        var sel = document.getElementById('dp_top_rs');
+        var v = sel.value;
+        if (v === '__latest__') {
+          window.location.href = 'top_rs.html';
+        } else {
+          window.location.href = 'top_rs_' + v + '.html';
+        }
+      }
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+<a href="daily_scan.html" class="back-link">← Back to Daily Scan</a>
+
+<div class="header">
+  <div>
+    <h1>🏆 Top RS Report</h1>
+    <div class="subtitle">Full universe ranked by RS Rating · No score filter · Thursday, Aug 13, 2026</div>
+  </div>
+  <div class="timestamp">2026-10-29 22:00 UTC<br>auto-generated</div>
+</div>
+
+<div class="summary-bar">
+  <div class="item">
+    <span class="label">SPX</span>
+    <span class="value pos">+0.45%%</span>
+  </div>
+  <div class="item">
+    <span class="label">RS Universe</span>
+    <span class="value">3,000 stocks</span>
+  </div>
+  <div class="item">
+    <span class="label">Filter Pass</span>
+    <span class="value">~50 (price&gt;EMA50, 6M&gt;50%, ADR&gt;5%, MCap&gt;1B)</span>
+  </div>
+  <div class="item">
+    <span class="label">Sort</span>
+    <span class="value">RS Rating (desc)</span>
+  </div>
+  <div class="item">
+    <span class="label">Score</span>
+    <span class="value" style="color:var(--muted)">removed</span>
+  </div>
+</div>
+
+<div class="legend">
+  <div class="legend-item"><span class="legend-dot" style="background:var(--green)"></span>EMA10 zone (-3% to +5%)</div>
+  <div class="legend-item"><span class="legend-dot" style="background:var(--yellow)"></span>Near EMA10 (5-10%)</div>
+  <div class="legend-item"><span class="legend-dot" style="background:var(--blue)"></span>Near EMA20 (5-10%)</div>
+  <div class="legend-item"><span class="legend-dot" style="background:var(--red)"></span>Extended (&gt;10%)</div>
+  <div class="legend-item"><span class="legend-dot" style="background:var(--purple)"></span>🌀 Coil spring (EMA10/20/50 ≤ 2%)</div>
+</div>
+
+<h2 class="section-title">Top 50 by RS Rating <span class="count">50 stocks</span></h2>
+
+<div class="filter-bar">
+  <span class="label">Filter:</span>
+  <button class="filter-btn active" data-filter="all">All <span class="count">0</span></button>
+  <button class="filter-btn" data-filter="coil">🌀 Coil / Tight 10/20 <span class="count">0</span></button>
+  <button class="filter-btn" data-filter="ema-zone">🔥 EMA zone <span class="count">0</span></button>
+  <button class="filter-btn" data-filter="near-ema">📍 Near EMA <span class="count">0</span></button>
+  <button class="filter-btn" data-filter="extended">⚠️ Extended (wait) <span class="count">0</span></button>
+</div>
+<div class="summary-line" id="filter-summary">Showing all 0 stocks.</div>
+
+<table>
+  <thead>
+    <tr>
+      <th class="right" style="width:40px">#</th>
+      <th style="width:70px">Ticker</th>
+      <th class="right" style="width:55px">RS</th>
+      <th class="right" style="width:80px">Price</th>
+      <th class="right" style="width:65px">Day%</th>
+      <th class="right" style="width:80px">1Y%</th>
+      <th class="right" style="width:70px">→EMA8</th>
+      <th class="right" style="width:70px">→EMA10</th>
+      <th class="right" style="width:70px">→EMA20</th>
+      <th class="right" style="width:55px">ADR</th>
+      <th style="width:60px">Setup</th>
+      <th>Sector</th>
+    </tr>
+  </thead>
+  <tbody>
+
+</tbody>
+</table>
+
+<div class="footer">
+  <p>Source: TradingView full-universe scan (~3,000 US stocks) + Twelve Data. RS Rating = (Q1+Q2+Q3+Q4) / SPX_equivalent × 100, percentile-ranked.</p>
+  <p>Filters: price &gt; EMA50 &amp; EMA200 · 6M perf &gt; 50% · avg vol &gt; 3M · MCap &gt; 1B · price &gt; $10 · ADR &gt; 5%.</p>
+  <p>Setup flags: 🔥 EMA10 zone (-3% to +5%) · ⚡ NEAR_EMA10 (5-10%) · 📍 NEAR_EMA20 (5-10%) · 🌀 coil (EMA10/20/50 within 2%).</p>
+  <p>Generated by <code>swing_scan_noscore.py</code> · 2026-08-13 14:35 UTC.</p>
+</div>
+
+<script>
+(function() {
+  const buttons = document.querySelectorAll('.filter-btn');
+  const rows = document.querySelectorAll('tbody tr[data-category]');
+  const summary = document.getElementById('filter-summary');
+  const totalCount = rows.length;
+
+  function applyFilter(filter) {
+    let visible = 0;
+    rows.forEach(r => {
+      const cat = r.getAttribute('data-category');
+      const show = filter === 'all' || cat === filter;
+      r.classList.toggle('hidden', !show);
+      if (show) visible++;
+    });
+    buttons.forEach(b => b.classList.toggle('active', b.getAttribute('data-filter') === filter));
+    const label = filter === 'all' ? 'all ' + totalCount : '"' + filter + '"';
+    summary.textContent = 'Showing ' + visible + ' of ' + totalCount + ' stocks (filter: ' + label + ').';
+  }
+
+  buttons.forEach(b => {
+    b.addEventListener('click', () => applyFilter(b.getAttribute('data-filter')));
+  });
+})();
+</script>
+
+</body>
+</html>
