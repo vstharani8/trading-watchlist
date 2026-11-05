@@ -1,4 +1,4 @@
-# Pattern Performance Audit — 2026-11-04
+# Pattern Performance Audit — 2026-11-05
 
 Lookback: 90 calendar days. Forward windows: [5, 10, 20] trading days.
 Total scan appearances: 795. With forward data: 795.
