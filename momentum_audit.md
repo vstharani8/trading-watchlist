@@ -1,4 +1,4 @@
-# Momentum Scan Performance Audit — 2026-11-04
+# Momentum Scan Performance Audit — 2026-11-05
 
 Lookback: 90 calendar days. Forward windows: [5, 10, 20] trading days.
 Total scan appearances: 1206. With forward data: 1206.
