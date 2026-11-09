@@ -1,7 +1,7 @@
-# Pattern Performance Audit — 2026-11-06
+# Pattern Performance Audit — 2026-11-09
 
 Lookback: 90 calendar days. Forward windows: [5, 10, 20] trading days.
-Total scan appearances: 775. With forward data: 775.
+Total scan appearances: 719. With forward data: 719.
 
 > Each scan appearance is treated as an independent entry signal. Tickers appearing
 > on consecutive days are NOT deduped — pattern repeat-ability is part of the answer.
@@ -10,39 +10,39 @@ Total scan appearances: 775. With forward data: 775.
 
 | Setup | N | 5d Win% | 5d Avg% | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| 📐 Tight | 407 | 48.9% | 0.31% | 47.7% | -0.04% | 47.2% | -0.54% |
-| 🌀 Coil | 296 | 47.0% | 1.47% | 50.7% | 1.8% | 40.5% | -0.57% |
-| 📍 Near | 72 | 44.4% | -0.75% | 38.9% | -4.31% | 40.3% | -4.84% |
+| 📐 Tight | 369 | 46.9% | -0.01% | 48.2% | -0.92% | 48.0% | -1.48% |
+| 🌀 Coil | 279 | 46.2% | 1.26% | 51.6% | 1.81% | 40.9% | -0.44% |
+| 📍 Near | 71 | 43.7% | -0.83% | 39.4% | -4.13% | 40.8% | -4.59% |
 
 ## Performance by Tier
 
 | Tier | N | 5d Win% | 5d Avg% | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| tier1 | 388 | 51.8% | 0.42% | 52.1% | 0.76% | 46.6% | 0.29% |
-| tier2 | 387 | 43.7% | 0.89% | 43.9% | -0.23% | 41.3% | -2.18% |
+| tier2 | 361 | 42.4% | 0.68% | 44.3% | -0.78% | 41.3% | -2.86% |
+| tier1 | 358 | 50.3% | 0.12% | 53.1% | 0.43% | 47.8% | 0.11% |
 
 ## Performance by RS Bucket
 
 | RS Bucket | N | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|
-| 95+ | 456 | 49.3% | -0.84% | 42.3% | -2.99% |
-| 90-94 | 193 | 49.7% | 4.33% | 46.6% | 2.62% |
-| 85-89 | 126 | 40.5% | -1.94% | 46.0% | 0.98% |
+| 95+ | 424 | 49.8% | -1.0% | 42.2% | -3.35% |
+| 90-94 | 174 | 51.1% | 2.94% | 48.3% | 1.54% |
+| 85-89 | 121 | 41.3% | -1.79% | 47.1% | 1.31% |
 
 ## Top 10 — 20d Returns
 
 | Ticker | Date | Setup | RS | Scan$ | 20d$ | Return |
 |---|---|---|---:|---:|---:|---:|
-| MRNA | 08-09 | 📐 Tight | 90.7 | 59.81 | 140.33 | +134.6% |
-| MRNA | 08-10 | 📐 Tight | 91.7 | 59.81 | 140.33 | +134.6% |
 | MRNA | 08-14 | 🌀 Coil | 93.1 | 63.32 | 146.69 | +131.7% |
 | MRNA | 08-18 | 📐 Tight | 92.1 | 62.96 | 145.62 | +131.3% |
 | MRNA | 08-13 | 🌀 Coil | 92.7 | 63.65 | 143.97 | +126.2% |
-| MRNA | 08-11 | 📐 Tight | 91.4 | 60.57 | 135.61 | +123.9% |
 | MRNA | 08-15 | 🌀 Coil | 92.3 | 64.46 | 143.77 | +123.0% |
 | MRNA | 08-17 | 🌀 Coil | 92.3 | 64.46 | 143.77 | +123.0% |
 | MRNA | 08-12 | 🌀 Coil | 92.7 | 63.67 | 136.62 | +114.6% |
 | P | 09-10 | 🌀 Coil | 87.7 | 94.10 | 150.57 | +60.0% |
+| P | 09-09 | 🌀 Coil | 89.3 | 97.06 | 152.66 | +57.3% |
+| TXG | 09-04 | 📍 Near | 99.5 | 62.65 | 97.74 | +56.0% |
+| REPL | 10-06 | 📐 Tight | 96.4 | 13.25 | 20.65 | +55.9% |
 
 ## Bottom 10 — 20d Returns
 
