@@ -1,7 +1,7 @@
-# Momentum Scan Performance Audit — 2026-11-09
+# Momentum Scan Performance Audit — 2026-11-10
 
 Lookback: 90 calendar days. Forward windows: [5, 10, 20] trading days.
-Total scan appearances: 1078. With forward data: 1078.
+Total scan appearances: 1040. With forward data: 1040.
 
 Setup proxies are DERIVED (no native label in momentum_scan):
 - **TIGHT**: RS≥85 AND dist10 in [-2%, +4%] — same filter as momentum_tight
@@ -15,9 +15,9 @@ Setup proxies are DERIVED (no native label in momentum_scan):
 
 | Setup | N | 5d Win% | 5d Avg% | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| EXTENDED | 576 | 37.7% | -3.2% | 37.2% | -5.36% | 30.7% | -8.58% |
-| TIGHT | 261 | 45.6% | -0.69% | 40.6% | -3.14% | 39.1% | -2.17% |
-| BELOW85 | 146 | 36.3% | -2.23% | 35.6% | -3.64% | 24.7% | -6.63% |
+| EXTENDED | 544 | 37.1% | -3.35% | 36.9% | -5.49% | 30.9% | -8.58% |
+| TIGHT | 257 | 45.1% | -0.74% | 39.7% | -3.26% | 39.7% | -2.14% |
+| BELOW85 | 144 | 36.8% | -2.19% | 35.4% | -3.66% | 25.0% | -6.65% |
 | PULLBACK | 49 | 32.7% | -2.49% | 38.8% | -3.83% | 49.0% | 1.98% |
 | EARLY | 46 | 43.5% | -1.28% | 37.0% | -3.53% | 39.1% | -4.17% |
 
@@ -25,18 +25,18 @@ Setup proxies are DERIVED (no native label in momentum_scan):
 
 | RS | N | 5d Win% | 5d Avg% | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| 95+ | 574 | 39.7% | -2.28% | 36.6% | -4.99% | 34.8% | -5.47% |
-| <85 | 236 | 33.1% | -3.56% | 36.4% | -4.5% | 23.3% | -8.76% |
-| 90-94 | 147 | 45.6% | -1.81% | 43.5% | -3.26% | 44.9% | -3.7% |
-| 85-89 | 121 | 43.0% | -0.93% | 39.7% | -3.15% | 29.8% | -6.75% |
+| 95+ | 555 | 39.6% | -2.37% | 36.6% | -5.07% | 35.1% | -5.42% |
+| <85 | 231 | 32.9% | -3.69% | 35.9% | -4.6% | 23.8% | -8.79% |
+| 90-94 | 140 | 45.7% | -1.67% | 43.6% | -3.17% | 45.7% | -3.41% |
+| 85-89 | 114 | 41.2% | -0.98% | 37.7% | -3.31% | 29.8% | -6.57% |
 
 ## Performance by dist10 Bucket
 
 | dist10 zone | N | 5d Win% | 5d Avg% | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| tight (-2..0) | 81 | 44.4% | -0.5% | 43.2% | -2.24% | 40.7% | -2.5% |
-| lifted (0..+5) | 346 | 42.2% | -1.23% | 36.4% | -3.87% | 31.8% | -5.01% |
-| extended (>+5) | 576 | 37.7% | -3.2% | 37.2% | -5.36% | 30.7% | -8.58% |
+| tight (-2..0) | 80 | 45.0% | -0.5% | 42.5% | -2.3% | 41.2% | -2.45% |
+| lifted (0..+5) | 341 | 41.9% | -1.25% | 35.8% | -3.96% | 32.3% | -5.03% |
+| extended (>+5) | 544 | 37.1% | -3.35% | 36.9% | -5.49% | 30.9% | -8.58% |
 | pullback (-5..-2) | 45 | 35.6% | -1.96% | 44.4% | -1.45% | 46.7% | 0.93% |
 | deep-pb (<-5) | 30 | 33.3% | -4.37% | 43.3% | -3.81% | 53.3% | 8.91% |
 
@@ -44,25 +44,25 @@ Setup proxies are DERIVED (no native label in momentum_scan):
 
 | 1M% | N | 5d Win% | 5d Avg% | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| 20-29% | 419 | 35.8% | -2.81% | 36.8% | -4.9% | 31.3% | -8.12% |
-| 30-49% | 449 | 41.2% | -2.24% | 35.4% | -4.77% | 28.5% | -7.7% |
-| 50+% | 210 | 42.9% | -1.64% | 45.2% | -2.81% | 46.7% | 1.39% |
+| 20-29% | 403 | 35.7% | -2.73% | 36.5% | -4.85% | 32.0% | -8.0% |
+| 30-49% | 431 | 40.8% | -2.38% | 35.0% | -4.94% | 28.5% | -7.77% |
+| 50+% | 206 | 42.2% | -1.87% | 44.7% | -2.99% | 46.6% | 1.47% |
 
 ## Top 12 Sectors (by 20d avg)
 
 | Sector | N | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|
-| Health Technology | 299 | 57.5% | 6.61% |
-| Consumer Services | 8 | 37.5% | 0.07% |
-| Energy Minerals | 11 | 54.5% | -0.27% |
-| Health Services | 20 | 15.0% | -3.01% |
+| Health Technology | 291 | 57.7% | 6.69% |
+| Consumer Services | 7 | 42.9% | 1.04% |
+| Energy Minerals | 10 | 50.0% | -1.29% |
+| Health Services | 19 | 15.8% | -2.82% |
 | Producer Manufacturing | 14 | 42.9% | -4.89% |
-| Technology Services | 264 | 39.4% | -6.48% |
+| Technology Services | 255 | 39.6% | -6.47% |
 | Retail Trade | 10 | 0.0% | -6.53% |
-| Industrial Services | 15 | 0.0% | -8.59% |
-| Consumer Non-Durables | 11 | 0.0% | -10.1% |
-| Non-Energy Minerals | 130 | 9.2% | -12.83% |
-| Electronic Technology | 269 | 18.2% | -15.63% |
+| Industrial Services | 14 | 0.0% | -9.0% |
+| Consumer Non-Durables | 10 | 0.0% | -10.09% |
+| Non-Energy Minerals | 126 | 8.7% | -13.15% |
+| Electronic Technology | 258 | 19.0% | -15.5% |
 | Finance | 24 | 8.3% | -18.73% |
 
 ## Top 10 — 20d Returns
