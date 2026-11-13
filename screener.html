@@ -2,7 +2,7 @@
 <html lang="en">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>moomoo Screener + EMA Coil — 2026-11-12</title>
+<title>moomoo Screener + EMA Coil — 2026-11-13</title>
 <style>
   :root {
     --bg: #0d1117; --surface: #161b22; --surface2: #1c2128;
@@ -108,6 +108,7 @@
       <label for="dp_screener">Date:</label>
       <select id="dp_screener" onchange="go_screener()">
         <option value="__latest__" selected>Latest</option>
+      <option value="2026-11-13">2026-11-13</option>
       <option value="2026-11-12">2026-11-12</option>
       <option value="2026-11-11">2026-11-11</option>
       <option value="2026-11-10">2026-11-10</option>
@@ -193,53 +194,41 @@
     
 <div class="container">
 
-<h1>🔎 moomoo Screener + EMA Coil — 2026-11-12</h1>
+<h1>🔎 moomoo Screener + EMA Coil — 2026-11-13</h1>
 <div class="updated">Auto-generated from cron (Mon-Fri 2 PM SGT). Source: moomoo OpenD + Yahoo Finance.</div>
 
 <div class="stats">
-<div class="stat"><div class="stat-label">Total screened</div><div class="stat-value">13</div></div>
+<div class="stat"><div class="stat-label">Total screened</div><div class="stat-value">9</div></div>
 <div class="stat"><div class="stat-label">🌀 Coiled (entry)</div><div class="stat-value">0</div></div>
 <div class="stat"><div class="stat-label">✅ Undercut</div><div class="stat-value">0</div></div>
-<div class="stat"><div class="stat-label">⚠️ Parabolic (wait)</div><div class="stat-value">9</div></div>
+<div class="stat"><div class="stat-label">⚠️ Parabolic (wait)</div><div class="stat-value">5</div></div>
 <div class="stat"><div class="stat-label">🔴 Broken</div><div class="stat-value">0</div></div>
-<div class="stat"><div class="stat-label">Run date</div><div class="stat-value">2026-11-12</div></div>
+<div class="stat"><div class="stat-label">Run date</div><div class="stat-value">2026-11-13</div></div>
 </div>
 
-<h2 class="bucket">📈 Mild extended <span class="count">(1)</span></h2>
+<h2 class="bucket">📈 Extended (RSI < 80) <span class="count">(4)</span></h2>
 <table class="stocks">
 <thead>
 <tr><th>Ticker</th><th>Name</th><th>Price</th><th>Off 52w H</th><th>15D %</th><th>20D Vol</th><th>Mkt Cap</th><th>→EMA10</th><th>→EMA20</th><th>RSI</th><th>Bucket</th></tr>
 </thead>
 <tbody>
-<tr><td class="ticker">GMAB</td><td class="name">Genmab</td><td>$53.87</td><td class="neg">-10.2%</td><td class="pos">+36.1%</td><td>128.7M</td><td>$33.2B</td><td class="pos">+1.4%</td><td class="pos">+8.6%</td><td class="">74</td><td class="bucket-mild"><span class="badge badge-mild">MILD</span></td></tr>
+<tr><td class="ticker">HAYW</td><td class="name">Hayward Holdings</td><td>$16.69</td><td class="neg">-4.2%</td><td class="pos">+31.3%</td><td>91.8M</td><td>$3.5B</td><td class="pos">+3.0%</td><td class="pos">+9.5%</td><td class="">79</td><td class="bucket-ext-low"><span class="badge badge-ext-low">EXT-LOW</span></td></tr>
+<tr><td class="ticker">GDYN</td><td class="name">Grid Dynamics</td><td>$13.38</td><td class="neg">-5.4%</td><td class="pos">+56.3%</td><td>40.4M</td><td>$1.1B</td><td class="pos">+3.7%</td><td class="pos">+15.0%</td><td class="">79</td><td class="bucket-ext-low"><span class="badge badge-ext-low">EXT-LOW</span></td></tr>
+<tr><td class="ticker">REAL</td><td class="name">TheRealReal</td><td>$14.31</td><td class="neg">-17.7%</td><td class="pos">+36.5%</td><td>99.8M</td><td>$1.8B</td><td class="pos">+5.7%</td><td class="pos">+14.2%</td><td class="">76</td><td class="bucket-ext-low"><span class="badge badge-ext-low">EXT-LOW</span></td></tr>
+<tr><td class="ticker">AXGN</td><td class="name">AxoGen</td><td>$55.40</td><td class="neg">-7.2%</td><td class="pos">+51.0%</td><td>41.8M</td><td>$3.3B</td><td class="pos">+8.2%</td><td class="pos">+16.3%</td><td class="">78</td><td class="bucket-ext-low"><span class="badge badge-ext-low">EXT-LOW</span></td></tr>
 </tbody>
 </table>
-<h2 class="bucket">📈 Extended (RSI < 80) <span class="count">(3)</span></h2>
+<h2 class="bucket">⚠️ Parabolic — wait for cooldown <span class="count">(5)</span></h2>
 <table class="stocks">
 <thead>
 <tr><th>Ticker</th><th>Name</th><th>Price</th><th>Off 52w H</th><th>15D %</th><th>20D Vol</th><th>Mkt Cap</th><th>→EMA10</th><th>→EMA20</th><th>RSI</th><th>Bucket</th></tr>
 </thead>
 <tbody>
-<tr><td class="ticker">HAYW</td><td class="name">Hayward Holdings</td><td>$16.77</td><td class="neg">-3.7%</td><td class="pos">+39.1%</td><td>88.8M</td><td>$3.5B</td><td class="pos">+4.2%</td><td class="pos">+11.2%</td><td class="">80</td><td class="bucket-ext-low"><span class="badge badge-ext-low">EXT-LOW</span></td></tr>
-<tr><td class="ticker">ARHS</td><td class="name">Arhaus</td><td>$14.56</td><td class="neg">-4.0%</td><td class="pos">+33.1%</td><td>47.6M</td><td>$2.1B</td><td class="pos">+7.3%</td><td class="pos">+16.1%</td><td class="">74</td><td class="bucket-ext-low"><span class="badge badge-ext-low">EXT-LOW</span></td></tr>
-<tr><td class="ticker">REAL</td><td class="name">TheRealReal</td><td>$14.55</td><td class="neg">-16.3%</td><td class="pos">+36.9%</td><td>100.6M</td><td>$1.8B</td><td class="pos">+8.8%</td><td class="pos">+17.9%</td><td class="">79</td><td class="bucket-ext-low"><span class="badge badge-ext-low">EXT-LOW</span></td></tr>
-</tbody>
-</table>
-<h2 class="bucket">⚠️ Parabolic — wait for cooldown <span class="count">(9)</span></h2>
-<table class="stocks">
-<thead>
-<tr><th>Ticker</th><th>Name</th><th>Price</th><th>Off 52w H</th><th>15D %</th><th>20D Vol</th><th>Mkt Cap</th><th>→EMA10</th><th>→EMA20</th><th>RSI</th><th>Bucket</th></tr>
-</thead>
-<tbody>
-<tr><td class="ticker">CMG</td><td class="name">Chipotle Mexican Grill</td><td>$36.64</td><td class="neg">-11.5%</td><td class="pos">+30.3%</td><td>429.5M</td><td>$46.3B</td><td class="pos">+6.9%</td><td class="pos">+11.2%</td><td class="neg">84</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
-<tr><td class="ticker">FISV</td><td class="name">Fiserv</td><td>$63.90</td><td class="neg">-9.2%</td><td class="pos">+32.5%</td><td>156.0M</td><td>$34.0B</td><td class="pos">+7.4%</td><td class="pos">+15.0%</td><td class="neg">82</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
-<tr><td class="ticker">REPL</td><td class="name">Replimune</td><td>$21.78</td><td class="neg">-7.5%</td><td class="pos">+85.8%</td><td>66.7M</td><td>$2.1B</td><td class="pos">+7.9%</td><td class="pos">+21.7%</td><td class="neg">82</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
-<tr><td class="ticker">SARO</td><td class="name">StandardAero</td><td>$28.74</td><td class="neg">-16.6%</td><td class="pos">+34.0%</td><td>82.6M</td><td>$9.4B</td><td class="pos">+8.4%</td><td class="pos">+15.5%</td><td class="neg">85</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
-<tr><td class="ticker">SGRY</td><td class="name">Surgery Partners</td><td>$26.66</td><td class="neg">-2.1%</td><td class="pos">+73.1%</td><td>150.6M</td><td>$3.5B</td><td class="pos">+10.4%</td><td class="pos">+22.5%</td><td class="neg">96</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
-<tr><td class="ticker">VRDN</td><td class="name">Viridian Therapeutics</td><td>$31.25</td><td class="neg">-8.9%</td><td class="pos">+35.8%</td><td>59.2M</td><td>$3.5B</td><td class="pos">+10.8%</td><td class="pos">+20.5%</td><td class="neg">88</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
-<tr><td class="ticker">LBTYA</td><td class="name">Liberty Global-A</td><td>$10.64</td><td class="neg">-21.3%</td><td class="pos">+35.4%</td><td>111.8M</td><td>$3.5B</td><td class="pos">+12.0%</td><td class="pos">+17.5%</td><td class="neg">81</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
-<tr><td class="ticker">LBTYK</td><td class="name">Liberty Global-C</td><td>$10.43</td><td class="neg">-20.5%</td><td class="pos">+35.5%</td><td>56.3M</td><td>$3.5B</td><td class="pos">+12.0%</td><td class="pos">+17.3%</td><td class="neg">82</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
-<tr><td class="ticker">XERS</td><td class="name">Xeris Pharmaceuticals</td><td>$16.52</td><td class="neg">-0.3%</td><td class="pos">+53.2%</td><td>67.9M</td><td>$3.0B</td><td class="pos">+20.6%</td><td class="pos">+34.0%</td><td class="neg">84</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">VRDN</td><td class="name">Viridian Therapeutics</td><td>$30.48</td><td class="neg">-11.1%</td><td class="pos">+33.6%</td><td>59.0M</td><td>$3.5B</td><td class="pos">+6.5%</td><td class="pos">+15.6%</td><td class="neg">86</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">REPL</td><td class="name">Replimune</td><td>$21.98</td><td class="neg">-6.6%</td><td class="pos">+83.3%</td><td>67.9M</td><td>$2.1B</td><td class="pos">+7.2%</td><td class="pos">+20.2%</td><td class="neg">85</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">SGRY</td><td class="name">Surgery Partners</td><td>$26.58</td><td class="neg">-2.4%</td><td class="pos">+67.2%</td><td>151.7M</td><td>$3.5B</td><td class="pos">+8.1%</td><td class="pos">+19.6%</td><td class="neg">97</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">LBTYA</td><td class="name">Liberty Global-A</td><td>$10.64</td><td class="neg">-21.3%</td><td class="pos">+30.7%</td><td>111.8M</td><td>$3.5B</td><td class="pos">+9.6%</td><td class="pos">+15.6%</td><td class="neg">87</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
+<tr><td class="ticker">XERS</td><td class="name">Xeris Pharmaceuticals</td><td>$16.65</td><td class="neg">-1.3%</td><td class="pos">+53.3%</td><td>68.2M</td><td>$3.0B</td><td class="pos">+16.9%</td><td class="pos">+30.7%</td><td class="neg">92</td><td class="bucket-parabolic"><span class="badge badge-parabolic">PARABOLIC</span></td></tr>
 </tbody>
 </table>
 
