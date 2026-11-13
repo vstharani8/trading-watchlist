@@ -1,13 +1,10 @@
 {
-  "date": "2026-11-12",
+  "date": "2026-11-13",
   "strong_sectors": [
     "Commercial Services",
     "Consumer Durables",
-    "Consumer Non-Durables",
-    "Consumer Services",
     "Health Services",
-    "Health Technology",
-    "Retail Trade"
+    "Health Technology"
   ],
   "watchlist": [],
   "dropped_count": 0
