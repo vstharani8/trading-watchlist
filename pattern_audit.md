@@ -1,7 +1,7 @@
-# Pattern Performance Audit — 2026-11-13
+# Pattern Performance Audit — 2026-11-16
 
 Lookback: 90 calendar days. Forward windows: [5, 10, 20] trading days.
-Total scan appearances: 643. With forward data: 643.
+Total scan appearances: 606. With forward data: 606.
 
 > Each scan appearance is treated as an independent entry signal. Tickers appearing
 > on consecutive days are NOT deduped — pattern repeat-ability is part of the answer.
@@ -10,31 +10,29 @@ Total scan appearances: 643. With forward data: 643.
 
 | Setup | N | 5d Win% | 5d Avg% | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| 📐 Tight | 342 | 48.5% | 0.5% | 50.3% | -0.33% | 49.4% | -0.94% |
-| 🌀 Coil | 230 | 49.1% | 0.01% | 56.1% | 0.95% | 44.3% | -0.88% |
+| 📐 Tight | 329 | 48.9% | 0.18% | 51.1% | -0.59% | 48.9% | -1.25% |
+| 🌀 Coil | 206 | 53.4% | 0.35% | 61.7% | 1.67% | 47.6% | -0.22% |
 | 📍 Near | 71 | 43.7% | -0.83% | 39.4% | -4.13% | 40.8% | -4.59% |
 
 ## Performance by Tier
 
 | Tier | N | 5d Win% | 5d Avg% | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| tier2 | 323 | 45.2% | 0.07% | 47.4% | -1.26% | 43.3% | -3.44% |
-| tier1 | 320 | 51.2% | 0.29% | 55.0% | 0.68% | 50.0% | 0.82% |
+| tier2 | 304 | 45.7% | -0.52% | 48.7% | -1.73% | 43.4% | -3.95% |
+| tier1 | 302 | 54.0% | 0.76% | 57.9% | 1.27% | 51.7% | 1.38% |
 
 ## Performance by RS Bucket
 
 | RS Bucket | N | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|
-| 95+ | 380 | 52.9% | -0.53% | 44.7% | -2.8% |
-| 90-94 | 147 | 53.7% | 1.22% | 50.3% | 0.02% |
-| 85-89 | 116 | 42.2% | -1.44% | 48.3% | 1.83% |
+| 95+ | 360 | 55.3% | 0.01% | 46.1% | -2.33% |
+| 90-94 | 136 | 55.9% | -0.1% | 51.5% | -1.24% |
+| 85-89 | 110 | 43.6% | -1.2% | 47.3% | 2.07% |
 
 ## Top 10 — 20d Returns
 
 | Ticker | Date | Setup | RS | Scan$ | 20d$ | Return |
 |---|---|---|---:|---:|---:|---:|
-| MRNA | 08-18 | 📐 Tight | 92.1 | 62.96 | 145.62 | +131.3% |
-| MRNA | 08-17 | 🌀 Coil | 92.3 | 64.46 | 143.77 | +123.0% |
 | P | 09-10 | 🌀 Coil | 87.7 | 94.10 | 150.57 | +60.0% |
 | P | 09-09 | 🌀 Coil | 89.3 | 97.06 | 152.66 | +57.3% |
 | TXG | 09-04 | 📍 Near | 99.5 | 62.65 | 97.74 | +56.0% |
@@ -43,6 +41,8 @@ Total scan appearances: 643. With forward data: 643.
 | NTSK | 09-30 | 📍 Near | 90.5 | 17.44 | 26.52 | +52.1% |
 | OKTA | 08-24 | 🌀 Coil | 89.9 | 130.97 | 196.62 | +50.1% |
 | NTSK | 10-01 | 📍 Near | 90.3 | 17.85 | 26.19 | +46.7% |
+| FIGS | 09-29 | 📐 Tight | 88.7 | 14.06 | 20.48 | +45.7% |
+| P | 09-07 | 🌀 Coil | 87.5 | 101.14 | 147.20 | +45.5% |
 
 ## Bottom 10 — 20d Returns
 
