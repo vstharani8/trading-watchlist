@@ -1,7 +1,7 @@
-# Pattern Performance Audit — 2026-11-20
+# Pattern Performance Audit — 2026-11-23
 
 Lookback: 90 calendar days. Forward windows: [5, 10, 20] trading days.
-Total scan appearances: 559. With forward data: 559.
+Total scan appearances: 529. With forward data: 529.
 
 > Each scan appearance is treated as an independent entry signal. Tickers appearing
 > on consecutive days are NOT deduped — pattern repeat-ability is part of the answer.
@@ -10,24 +10,24 @@ Total scan appearances: 559. With forward data: 559.
 
 | Setup | N | 5d Win% | 5d Avg% | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| 📐 Tight | 296 | 49.3% | 0.23% | 52.0% | -0.36% | 49.0% | -1.65% |
-| 🌀 Coil | 203 | 53.7% | 0.32% | 62.6% | 1.91% | 47.8% | -0.1% |
-| 📍 Near | 60 | 46.7% | -0.58% | 38.3% | -3.65% | 36.7% | -5.41% |
+| 📐 Tight | 277 | 50.2% | 0.32% | 50.9% | -0.8% | 47.3% | -2.49% |
+| 🌀 Coil | 197 | 53.3% | 0.2% | 62.4% | 1.75% | 47.2% | -0.47% |
+| 📍 Near | 55 | 45.5% | -0.74% | 36.4% | -4.31% | 36.4% | -5.68% |
 
 ## Performance by Tier
 
 | Tier | N | 5d Win% | 5d Avg% | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| tier1 | 285 | 54.4% | 0.81% | 59.6% | 1.71% | 51.9% | 1.56% |
-| tier2 | 274 | 46.7% | -0.48% | 48.9% | -1.54% | 42.3% | -4.66% |
+| tier1 | 272 | 54.4% | 0.79% | 59.2% | 1.51% | 51.5% | 1.13% |
+| tier2 | 257 | 47.1% | -0.49% | 47.9% | -2.04% | 40.5% | -5.46% |
 
 ## Performance by RS Bucket
 
 | RS Bucket | N | 10d Win% | 10d Avg% | 20d Win% | 20d Avg% |
 |---|---:|---:|---:|---:|---:|
-| 95+ | 329 | 56.2% | 0.27% | 45.3% | -2.73% |
+| 95+ | 304 | 55.6% | -0.15% | 43.8% | -3.52% |
 | 90-94 | 126 | 57.9% | 0.56% | 51.6% | -1.34% |
-| 85-89 | 104 | 44.2% | -0.91% | 48.1% | 2.27% |
+| 85-89 | 99 | 42.4% | -1.38% | 46.5% | 1.43% |
 
 ## Top 10 — 20d Returns
 
@@ -39,10 +39,10 @@ Total scan appearances: 559. With forward data: 559.
 | REPL | 10-06 | 📐 Tight | 96.4 | 13.25 | 20.65 | +55.9% |
 | FIGS | 09-28 | 📐 Tight | 85.1 | 13.62 | 20.83 | +52.9% |
 | NTSK | 09-30 | 📍 Near | 90.5 | 17.44 | 26.52 | +52.1% |
-| OKTA | 08-24 | 🌀 Coil | 89.9 | 130.97 | 196.62 | +50.1% |
 | NTSK | 10-01 | 📍 Near | 90.3 | 17.85 | 26.19 | +46.7% |
 | FIGS | 09-29 | 📐 Tight | 88.7 | 14.06 | 20.48 | +45.7% |
 | P | 09-07 | 🌀 Coil | 87.5 | 101.14 | 147.20 | +45.5% |
+| P | 09-08 | 🌀 Coil | 87.5 | 101.14 | 147.20 | +45.5% |
 
 ## Bottom 10 — 20d Returns
 
